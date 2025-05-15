@@ -1,0 +1,18 @@
+[
+    {
+        "image": "/images/git-global-page/image-1.svg",
+        "height": 350
+    },
+    {
+        "image": "/images/git-global-page/image-2.svg",
+        "height": 350
+    },
+    {
+        "image": "/images/git-global-page/image-3.svg",
+        "height": 250
+    },
+    {
+        "image": "/images/git-global-page/image-long.svg",
+        "height": 1200
+    }
+]

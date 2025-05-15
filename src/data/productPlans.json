@@ -1,0 +1,54 @@
+[
+    {
+        "product": "Web Design & Dev.",
+        "price": "$1000",
+        "details": "We build stunning, high-performing custom websites that match your brand and convert visitors into clients.",
+        "cta": "i need a custom site today!",
+        "features": [
+            "Custom Design & Branding",
+            "SEO Optimization & Speed",
+            " Mobile-First Design",
+            "Perfect for Founders, Creators, Startups"
+        ],
+        "productColor": "#FF15491A"   
+    },
+    {
+        "product": "SEO",
+        "price": "$700",
+        "details": "Boost your website’s visibility and outrank competitors on Google with our expert SEO services.",
+        "cta": "Boost my site’s visibility!",
+        "features": [
+            "Keyword Research & Strategy",
+            "On-page Optimization",
+            "Monthly SEO Reports",
+            "Best for SaaS, Local Biz, Online Stores"
+        ],
+        "productColor": "#F9007B1A"   
+    },
+        {
+        "product": "Social Media Marketing",
+        "price": "$600",
+        "details": "Let us run targeted, high-converting campaigns across your social media platforms to grow your brand.",
+        "cta": "run my social campaign!",
+        "features": [
+            "Strategy + Content Creation",
+            "Engagement & Automation",
+            "Performance Tracking",
+            "Ideal for Coaches, Brands, Agencies"
+        ],
+        "productColor": "#D20CA81A"   
+    },
+        {
+        "product": "PPC Advertising",
+        "price": "$500",
+        "details": "Get fast results with powerful PPC ads managed by certified experts. Maximize ROI on every dollar spent.",
+        "cta": "manage my pPC ads!",
+        "features": [
+            "Campaign setup & audience targeting.",
+            "Ad copy & creative development.",
+            "Ongoing optimization & reporting.",
+            "Best for: eCommerce, Lead Gen"
+        ],
+        "productColor": "#9140CA1A"   
+    }
+]

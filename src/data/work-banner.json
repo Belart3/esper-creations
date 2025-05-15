@@ -1,0 +1,17 @@
+[
+    {
+        "project": "GIT Global",
+        "image": "/images/work-banners/git-work-banner.webp",
+        "url": "/clients/git-global"
+    },
+    {
+        "project": "JMG Handyman",
+        "image": "/images/work-banners/jmg-work-banner.webp",
+        "url": "/clients/jmg-handyman"
+    },
+    {
+        "project": "BlockChain Management",
+        "image": "/images/work-banners/bcm-work-banner.webp",
+        "url": "/clients/blockchain-management"
+    }
+]

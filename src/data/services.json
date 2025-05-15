@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Website Design & Development",
+        "description": "Visually stunning. Performance-optimized. Built for conversion. Custom websites that align with your brand & fuel business growth. 🔍 SEO Optimized • 💡 UX-Focused • ⚡ Blazing Fast",
+        "cta": "get a high-converting website",
+        "image": "/images/services/web-design-and-development.png"
+    },
+    {
+        "title": "Organic SEO",
+        "description": "Climb search rankings, grow traffic, and get found by customers who are already searching for you. On-page SEO, keyword targeting, and content optimization for sustainable visibility.",
+        "cta": "Boost my site’s visibility!",
+        "image": "/images/services/organic-SEO.png"
+    },
+    {
+        "title": "Social Media Marketing",
+        "description": "Scale with scroll-stopping content and campaigns that convert. High-performance media, automation, and growth-driven strategies for every platform.",
+        "cta": "run my social campaign!",
+        "image": "/images/services/social-media-marketing.png"
+    },
+        {
+        "title": "PPC Advertising",
+        "description": "Every click counts. Maximize ROI with precision-targeted paid ads. Google, Meta, LinkedIn & more—managed by pros using AI + data.",
+        "cta": "manage my pPC ads!",
+        "image": "/images/services/ppc-advertising.png"
+    }
+]

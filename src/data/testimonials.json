@@ -1,0 +1,206 @@
+[
+    {
+        "image": "/images/testimonials/git-testimonial.png",
+        "service": "Web Design & Dev.",
+        "name": "Fatima Saeed",
+        "company": "git global",
+        "reviews": [
+            {
+                "name": "Fatima Saeed",
+                "message": "Since Esper revamped our site, engagement time has risen by over 60%. The new layout encourages exploration."
+            },
+            {
+                "name": "Esper Creations",  
+                "message": "Thank you for the feedback! 🙌"         
+            }
+        ],
+        "clientImage": "/images/testimonials/fatima-saeed.png"
+    },
+    {
+        "image": "/images/testimonials/jmg-testimonial.png",
+        "service": "Web Design & Dev.",
+        "name": "Timothy Furman",
+        "company": "JMG Handyman",
+        "reviews": [
+            {
+                "name": "Timothy Furman",
+                "message": "Our new website helped us get 3X more quote requests within the first 30 days. It's the best investment we've made this year."
+            },
+            {
+                "name": "Esper Creations",  
+                "message": "Appreciate that—glad it’s driving results!"         
+            }
+        ],
+        "clientImage": "/images/testimonials/timothy-furman.png"
+    },
+    {
+        "image": "/images/testimonials/bcm-testimonial.png",
+        "service": "Web Design & Dev.",
+        "name": "Cade O’Neil",
+        "company": "BlockChain Management",
+        "reviews": [
+            {
+                "name": "Cade O’Neil",
+                "message": "Our website’s churn rate reduced by 30% within the first 5 weeks of Esper redesigning our site."
+            },
+            {
+                "name": "Esper Creations",  
+                "message": "Love hearing that—thank you!"         
+            }
+        ],
+        "clientImage": "/images/testimonials/cade-oneil.png"
+    },
+    {
+        "image": "/images/testimonials/git-testimonial.png",
+        "service": "SEO",
+        "name": "Mo Nasr",
+        "company": "Weight Loss Paradise",
+        "reviews": [
+            {
+                "name": "Mo Nasr",
+                "message": "Since Esper took over SEO, bounce rate dropped 47% and traffic increased 230%. We're finally getting seen."
+            },
+            {
+                "name": "Esper Creations",  
+                "message": "Exactly what SEO should do. Appreciate it!"         
+            }
+        ],
+        "clientImage": "/images/testimonials/mo-nasr.png"
+    },
+    {
+        "image": "/images/testimonials/git-testimonial.png",
+        "service": "SEO",
+        "name": "Cade O’Neil",
+        "company": "BlockChain Management",
+        "reviews": [
+            {
+                "name": "Cade O’Neil",
+                "message": "Visitors stay longer on the site, and our domain authority increased by 18 points. Esper’s SEO work had a significant impact."
+            },
+            {
+                "name": "Esper Creations",  
+                "message": "Love seeing numbers like that—thank you!"         
+            }
+        ],
+        "clientImage": "/images/testimonials/cade-oneil.png"
+    },
+    {
+        "image": "/images/testimonials/git-testimonial.png",
+        "service": "SEO",
+        "name": "Timothy Furman",
+        "company": "JMG Handyman",
+        "reviews": [
+            {
+                "name": "Timothy Furman",
+                "message": "We’re now ranking on page one for 12 more keywords, and impressions are up 540%. That’s real growth we can feel."
+            },
+            {
+                "name": "Esper Creations",  
+                "message": "Exactly the results we aim for!"         
+            }
+        ],
+        "clientImage": "/images/testimonials/timothy-furman.png"
+    },
+    {
+        "image": "/images/testimonials/bcm-marketing.png",
+        "service": "Social Media Marketing",
+        "name": "Cade O’Neil",
+        "company": "BlockChain Management",
+        "reviews": [
+            {
+                "name": "Cade O’Neil",
+                "message": "Since Esper revamped our site, engagement time has risen by over 60%. The new layout encourages exploration."
+            },
+            {
+                "name": "Esper Creations",  
+                "message": "Thank you for the feedback! 🙌"         
+            }
+        ],
+        "clientImage": "/images/testimonials/cade-oneil.png"
+    },
+    {
+        "image": "/images/testimonials/excel-marketing.png",
+        "service": "Social Media Marketing",
+        "name": "Darcel Pledge",
+        "company": "Excel Daycare",
+        "reviews": [
+            {
+                "name": "Darcel Pledge",
+                "message": "Our new website helped us get 3X more quote requests within the first 30 days. It's the best investment we've made this year."
+            },
+            {
+                "name": "Esper Creations",  
+                "message": "Appreciate that—glad it’s driving results!"         
+            }
+        ],
+        "clientImage": "/images/testimonials/darcel-pledge.png"
+    },
+    {
+        "image": "/images/testimonials/git-testimonial.png",
+        "service": "Social Media Marketing",
+        "name": "Mo Nasr",
+        "company": "Weight Loss Paradise",
+        "reviews": [
+            {
+                "name": "Mo Nasr",
+                "message": "Our website’s churn rate reduced by 30% within the first 5 weeks of Esper redesigning our site."
+            },
+            {
+                "name": "Esper Creations",  
+                "message": "Love hearing that—thank you!"         
+            }
+        ],
+        "clientImage": "/images/testimonials/mo-nasr.png"
+    },
+    {
+        "image": "/images/testimonials/bcm-ppc.png",
+        "service": "PPC Advertising",
+        "name": "Cade O’Neil",
+        "company": "BlockChain Management",
+        "reviews": [
+            {
+                "name": "Cade O’Neil",
+                "message": "Since Esper revamped our ad strategy, site traffic from high-converting regions has surged, and our cost per lead has dropped."
+            },
+            {
+                "name": "Esper Creations",  
+                "message": "We aim for more reach, less waste."         
+            }
+        ],
+        "clientImage": "/images/testimonials/cade-oneil.png"
+    },
+    {
+        "image": "/images/testimonials/jmg-ppc.png",
+        "service": "PPC Advertising",
+        "name": "Timothy Furman",
+        "company": "JMG Handyman",
+        "reviews": [
+            {
+                "name": "Timothy Furman",
+                "message": "We spent less and earned more. Esper’s PPC team tripled our leads without raising our budget. Our most efficient campaign!"
+            },
+            {
+                "name": "Esper Creations",  
+                "message": "Great to see ads bring results."         
+            }
+        ],
+        "clientImage": "/images/testimonials/timothy-furman.png"
+    },
+    {
+        "image": "/images/testimonials/excel-ppc.png",
+        "service": "PPC Advertising",
+        "name": "Darcel Pledge",
+        "company": "Excel Daycare",
+        "reviews": [
+            {
+                "name": "Darcel Pledge",
+                "message": "Since switching to Esper, we experienced a 110% rise in impressions and a 12.5% drop in Avg. CPC. The results are clear."
+            },
+            {
+                "name": "Esper Creations",  
+                "message": "That growth makes our day—thanks!"         
+            }
+        ],
+        "clientImage": "/images/testimonials/darcel-pledge.png"
+    }
+]
