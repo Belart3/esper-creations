@@ -42,3 +42,14 @@
 html{
   scroll-behavior: smooth;
 }
+
+/* Global CSS */
+.react-phone-number-input__input {
+  border: none;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.react-phone-number-input__input:focus {
+  border-color: #FF5600 !important;
+}

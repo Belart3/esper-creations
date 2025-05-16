@@ -27,24 +27,24 @@ const Services = () => {
                         {
                             index === 0 ? (
                                 <>
-                                    <img src={"/images/services/jmg-web-design.png"} className='absolute top-[24px] left-1/2 -translate-x-3/4 h-[500px] z-0 w-[250px] rotate-[-15deg] transition-all ease-linear duration-300 group-hover/item:-translate-x-full shadow-2xl shadow-black' alt="" />
-                                    <img src={"/images/services/bcm-web-design.png"} className='absolute top-0 left-1/2 -translate-x-1/2 h-[500px] z-[1] w-[250px]' alt="" />
-                                    <img src={"/images/services/git-web-design.png"} className='absolute top-[24px] left-1/2 -translate-x-1/4 h-[500px] z-0 w-[250px] rotate-[15deg] transition-all ease-linear duration-200 group-hover/item:translate-x-0 shadow-2xl shadow-black' alt="" />
+                                    <img src={"/images/services/jmg-web-design.webp"} className='absolute bottom-[-40px] md:top-[24px] left-1/2 -translate-x-3/4 h-[200px] md:h-[460px] lg:h-[600px] z-0 w-[120px] md:w-[230px] lg:w-[300px] rotate-[-15deg] transition-all ease-linear duration-300 group-hover/item:-translate-x-full lg:group-hover/item:-translate-x-[85%] shadow-2xl shadow-[#00000070]' alt="" />
+                                    <img src={"/images/services/bcm-web-design.webp"} className='absolute bottom-[-40px] md:top-0 left-1/2 -translate-x-1/2 h-[200px] md:h-[460px] lg:h-[600px] z-[1] w-[120px] md:w-[230px] lg:w-[300px]' alt="" />
+                                    <img src={"/images/services/git-web-design.webp"} className='absolute bottom-[-40px] md:top-[24px] left-1/2 -translate-x-1/4 h-[200px] md:h-[460px] lg:h-[600px] z-0 w-[120px] md:w-[230px] lg:w-[300px] rotate-[15deg] transition-all ease-linear duration-200 group-hover/item:translate-x-0 lg:group-hover/item:-translate-x-[15%] shadow-2xl shadow-[#00000070]' alt="" />
                                 </>
                             ) : index === 1 ? (
                                 <>
-                                    <img src={"/images/services/organic-SEO-1.png"} className='absolute top-0 left-1/2 -translate-x-3/4 size-[200px] rotate-[-15deg] transition-all ease-linear duration-300 group-hover/item:-translate-x-[85%] shadow-xl z-[1]' alt="" />
-                                    <img src={"/images/services/organic-SEO-2.png"} className='absolute top-0 left-1/2 -translate-x-1/6 rotate-[15deg] transition-all ease-linear duration-200 h-[270px] w-[200px] group-hover/item:translate-x-[-10%] group-hover/item:z-[1] shadow-xl z-0' alt="" />
+                                    <img src={"/images/services/organic-SEO-1.webp"} className='absolute bottom-[30px] md:bottom-[50px] left-1/2 -translate-x-3/4 size-[130px] md:size-[220px] lg:size-[210px] rotate-[-15deg] transition-all ease-linear duration-300 group-hover/item:-translate-x-[85%] shadow-xl z-[1] rounded-[8px]' alt="" />
+                                    <img src={"/images/services/organic-SEO-2.webp"} className='absolute bottom-[30px] md:bottom-[50px] left-1/2 -translate-x-1/6 rotate-[15deg] transition-all ease-linear duration-200 h-[160px] md:h-[280px] lg:h-[270px] w-[130px] md:w-[220px] lg:w-[215px] group-hover/item:translate-x-[-10%] group-hover/item:z-[1] shadow-xl z-0 rounded-[8px]' alt="" />
                                 </>
                             ) : index === 2 ? (
                                 <>
-                                    <img src={"/images/services/social-media-marketing-1.png"} className='absolute top-0 left-1/2 -translate-x-1/2 w-[250px] h-[250px] rotate-[-3deg] transition-all ease-linear duration-300 group-hover/item:-translate-x-[15%] group-hover/item:rotate-[3deg] z-[1]' alt="" />
-                                    <img src={"/images/services/social-media-marketing-2.png"} className='absolute top-0 left-1/2 -translate-x-1/2 rotate-[-5deg] transition-all ease-linear duration-200 w-[250px] h-[250px] group-hover/item:translate-x-[-75%] group-hover/item:z-[1] z-0' alt="" />
+                                    <img src={"/images/services/social-media-marketing-1.webp"} className='absolute top-0 lg:bottom-[40px] left-1/2 -translate-x-[15%] lg:-translate-x-1/2 size-[150px] md:size-[280px] md:h-[280px] md:w-[290px] rotate-[5deg] lg:rotate-[-3deg] transition-all ease-linear duration-300 lg:group-hover/item:-translate-x-[30%] lg:group-hover/item:rotate-[3deg] z-[1]' alt="" />
+                                    <img src={"/images/services/social-media-marketing-2.webp"} className='absolute top-0 lg:bottom-[20px] left-1/2 translate-x-[-75%] lg:-translate-x-1/2 rotate-[-9deg] lg:rotate-[-5deg] transition-all ease-linear duration-200 size-[150px] md:h-[280px] md:w-[290px] group-hover/item:translate-x-[-70%] group-hover/item:z-[1] z-0' alt="" />
                                 </>
                             ) : index === 3 ? (
                                 <>
-                                    <img src={"/images/services/ppc-advertising-1.png"} className='absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-[600px] h-[200px] rotate-[-3.5deg] transition-all ease-linear duration-300 group-hover/item:-translate-y-[40%] z-[1] shadow-lg' alt="" />
-                                    <img src={"/images/services/ppc-advertising-2.png"} className='absolute top-1/2 -translate-y-3/4 left-1/2 -translate-x-1/2 rotate-[3.5deg] transition-all ease-linear duration-200 w-[600px] h-[200px] group-hover/item:translate-y-[-100%] z-0 shadow-lg' alt="" />
+                                    <img src={"/images/services/ppc-advertising-1.webp"} className='absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-full md:w-[600px] rounded-[12px] h-[89px] md:h-[180px] lg:h-[200px] rotate-[-3.5deg] transition-all ease-linear duration-300 group-hover/item:-translate-y-[40%] z-[1] shadow-lg' alt="" />
+                                    <img src={"/images/services/ppc-advertising-2.webp"} className='absolute top-1/2 rounded-[12px] -translate-y-3/4 left-1/2 -translate-x-1/2 rotate-[9deg] lg:rotate-[3.5deg] transition-all ease-linear duration-200 w-full md:w-[600px] h-[89px] md:h-[180px] lg:h-[200px] group-hover/item:translate-y-[-100%] z-0 shadow-lg' alt="" />
                                 </>
                             ) : null
                         }

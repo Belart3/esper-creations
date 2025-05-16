@@ -50,12 +50,12 @@ const page = () => {
       <main className='flex flex-col gap-16 mx-5 md:mx-6 lg:max-w-[1000px] lg:mx-auto'>
         <div className="flex flex-col gap-4">
           <div className="h-[250px] md:h-[400px] lg:h-[600px] w-full rounded-[16px] bg-black flex items-center justify-center">
-            <img src="/Images/jmg-handyman-page/jmg-logo.png" alt="" className='w-[122px] md:w-[230px] lg:w-[350px]' />
+            <img src="/Images/jmg-handyman-page/jmg-logo.webp" alt="" className='w-[122px] md:w-[230px] lg:w-[350px]' />
           </div>
-          <div className="bg-cover bg-center bg-no-repeat h-[350px] md:h-[550px] lg:h-[900px] w-full mx-auto rounded-[24px]" style={{ backgroundImage: `url(/images/jmg-handyman-page/image-1.png)` }}></div>
-          <div className="bg-cover bg-center bg-no-repeat h-[350px] md:h-[560px] lg:h-[1000px] w-full mx-auto rounded-[24px]" style={{ backgroundImage: `url(/images/jmg-handyman-page/image-2.png)` }}></div>
-          <div className="bg-cover bg-center bg-no-repeat h-[250px] md:h-[405px] lg:h-[750px] w-full mx-auto rounded-[24px]" style={{ backgroundImage: `url(/images/jmg-handyman-page/image-3.png)` }}></div>
-          <div className="bg-contain bg-[#000000B2] bg-center bg-no-repeat w-full h-[1200px] md:h-[2500px] mx-auto rounded-[24px]" style={{ backgroundImage: `url(/images/jmg-handyman-page/image-long.png)` }}></div>
+          <div className="bg-cover bg-center bg-no-repeat h-[350px] md:h-[550px] lg:h-[900px] w-full mx-auto rounded-[24px]" style={{ backgroundImage: `url(/images/jmg-handyman-page/image-1.webp)` }}></div>
+          <div className="bg-cover bg-center bg-no-repeat h-[350px] md:h-[560px] lg:h-[1000px] w-full mx-auto rounded-[24px]" style={{ backgroundImage: `url(/images/jmg-handyman-page/image-2.webp)` }}></div>
+          <div className="bg-cover bg-center bg-no-repeat h-[250px] md:h-[405px] lg:h-[750px] w-full mx-auto rounded-[24px]" style={{ backgroundImage: `url(/images/jmg-handyman-page/image-3.webp)` }}></div>
+          <div className="bg-contain bg-[#000000B2] bg-center bg-no-repeat w-full h-[1200px] md:h-[2500px] mx-auto rounded-[24px]" style={{ backgroundImage: `url(/images/jmg-handyman-page/image-long.webp)` }}></div>
         </div>
         <div className="my-10 rounded-[16px] bg-black px-5 py-10 flex flex-col items-center justify-center gap-6">
           <h2 className={`${inter.className} text-[32px]/[32px] tracking-[-1.92px] font-semibold text-white capitalize text-center`}>

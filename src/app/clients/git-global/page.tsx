@@ -54,10 +54,10 @@ const page = () => {
               GIT Global
             </h2>
           </div>
-          <div className="bg-cover bg-top bg-no-repeat h-[350px] md:h-[550px] lg:h-[800px] w-full mx-auto rounded-[24px]" style={{ backgroundImage: `url(/images/git-global-page/image-1.png)` }}></div>
-          <div className="bg-[length:290px_216px] md:bg-[length:75%_80%] bg-bottom bg-no-repeat bg-[#001F3D99] h-[357px] md:h-[500px] lg:h-[750px] w-full mx-auto rounded-[24px]" style={{ backgroundImage: `url(/images/git-global-page/image-2.png)` }}></div>
-          <div className="bg-contain bg-center bg-no-repeat h-[284px] md:h-[450px] w-full bg-[#001F3D99] mx-auto rounded-[24px]" style={{ backgroundImage: `url(/images/git-global-page/image-3.png)` }}></div>
-          <div className="bg-contain bg-center bg-no-repeat bg-[#001F3D99] w-full h-[1200px] md:h-[2500px] mx-auto rounded-[24px]" style={{ backgroundImage: `url(/images/git-global-page/image-long.png)` }}></div>
+          <div className="bg-cover bg-top bg-no-repeat h-[350px] md:h-[550px] lg:h-[800px] w-full mx-auto rounded-[24px]" style={{ backgroundImage: `url(/images/git-global-page/image-1.webp)` }}></div>
+          <div className="bg-[length:290px_216px] md:bg-[length:75%_80%] bg-bottom bg-no-repeat bg-[#001F3D99] h-[357px] md:h-[500px] lg:h-[750px] w-full mx-auto rounded-[24px]" style={{ backgroundImage: `url(/images/git-global-page/image-2.webp)` }}></div>
+          <div className="bg-contain bg-center bg-no-repeat h-[284px] md:h-[450px] w-full bg-[#001F3D99] mx-auto rounded-[24px]" style={{ backgroundImage: `url(/images/git-global-page/image-3.webp)` }}></div>
+          <div className="bg-contain bg-center bg-no-repeat bg-[#001F3D99] w-full h-[1200px] md:h-[2500px] mx-auto rounded-[24px]" style={{ backgroundImage: `url(/images/git-global-page/image-long.webp)` }}></div>
         </div>
         <div className="my-10 rounded-[16px] bg-black px-5 py-10 flex flex-col items-center justify-center gap-6">
           <h2 className={`${inter.className} text-[32px]/[32px] tracking-[-1.92px] font-semibold text-white capitalize text-center`}>

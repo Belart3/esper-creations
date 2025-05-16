@@ -19,10 +19,10 @@ const pages = [
 ]
 
 const Navbar = () => {
-    const [isOpen, setIsOpen] = useState(false)
+    const [open, setOpen] = useState(false)
     const handleToggle = () => {
-        setIsOpen(!isOpen);
-        document.body.style.overflow = isOpen ? 'auto' : 'hidden';
+        setOpen(!open);
+        document.body.style.overflow = open ? 'auto' : 'hidden';
     }
   return (
     <nav className='p-1 md:p-[10px] rounded-[40px] flex justify-between items-center bg-white w-[calc(100%-40px)] md:w-[calc(100%-48px)] max-w-[1104px] mx-auto absolute top-5 left-1/2 transform -translate-x-1/2 z-50'>
@@ -56,24 +56,9 @@ const Navbar = () => {
                 color="#fff"
                 label="Show menu"
                 distance="sm"
-                toggled={isOpen} toggle={setIsOpen}
+                toggled={open} toggle={setOpen}
             />
         </button>
-        <div className={`w-full h-screen fixed right-0 top-0 flex lg:hidden items-center justify-center z-[10] ${isOpen ? 'translate-x-0' : 'translate-x-[150%]'} transition-all ease-linear duration-300`}>
-            <div className={`w-[calc(100%+44px)] md:w-1/2 lg:w-2/5 h-full bg-black fixed top-[-20px] right-[-24px] p-5 md:p-10 lg:p-14 `}>
-                <div className="flex flex-col gap-10 mt-17">
-                    <Link href={'/'} className='text-[53px]/[53px] font-semibold text-white tracking-[-3.18px] relative before:rounded-full before:size-[10px] before:bg-white rounded-full before:content-[""] before:absolute before:-left-[20px] before:-translate-y-1/2 before:top-1/2'>
-                        Home
-                    </Link>
-                    <Link href={'/'} className='text-[53px]/[53px] font-semibold text-white tracking-[-3.18px] capitalize'>
-                        Work
-                    </Link>
-                    <Link href={'/'} className='text-[53px]/[53px] font-semibold text-white tracking-[-3.18px] capitalize'>
-                        Contact
-                    </Link>
-                </div>
-            </div>
-        </div>
     </nav>
   )
 }

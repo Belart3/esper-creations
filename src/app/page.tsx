@@ -3,12 +3,16 @@ import { Inter } from "next/font/google";
 import services from "@/data/services.json"
 import SectionHead from "@/components/SectionHead";
 import plans from '@/data/productPlans.json';
-import faq from '@/data/faq.json'
+import faq from '@/data/faq.json';
 import AccordionComponent from "@/components/AccordionComponent";
 import WorkBanner from "@/components/WorkBanner";
 import BtnOrange from "@/components/BtnOrange";
 import Services from "@/components/Services";
 import Reviews from "@/components/Reviews";
+import 'react-phone-number-input/style.css';
+import PhoneInput from 'react-phone-number-input';
+import { useEffect, useState, useRef } from "react";
+import React from "react";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -16,10 +20,47 @@ const inter = Inter({
 });
 
 export default function Home() {
+  const containerRef = useRef<HTMLDivElement>(null)
+  const [value, setValue]= useState<string | undefined>(undefined)
+  const [float, setFloat] = useState(false);
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  // const router = useRouter();
+  // const isActive = router.pathname;
+
+  useEffect(() => {
+    // if (containerRef.current) {
+    //   console.log("Actual height:", containerRef.current.offsetHeight);
+    // }
+
+    const handleScroll = () => {
+
+      const scrollPosition = window.scrollY || window.pageYOffset;
+      const scrollTop = window.scrollY;
+      const windowHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / windowHeight) * 100;
+      setScrollPosition(scrollPercent);
+      // console.log(scrollPercent)
+      // const scrollHeight = containerRef.current ? containerRef.current.offsetHeight : 0;
+
+      if (scrollPosition > 0) {
+        setFloat(true)
+      } else {
+        setFloat(false);
+      }
+  };
+    window.addEventListener('scroll', handleScroll);
+    
+    // Clean up the event listener on component unmount
+    return () => {
+        window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
 
   return (
     <>
-      <header className="bg-[#FFEEE6CC] pt-[150px] pb-9 overflow-hidden">
+      <header className="bg-[#FFEEE6CC] pt-[150px] pb-9 overflow-hidden" ref={containerRef}>
         <div className=" max-w-[1440px] mx-auto">
           <div className="mx-5 md:mx-6 flex flex-col gap-16 xl:max-w-[1226px] xl:mx-auto relative z-0">
             <div className="flex flex-col gap-12">
@@ -33,9 +74,14 @@ export default function Home() {
               </div>
               <div className="flex p-4 md:p-6 xl:py-8 xl:px-10 rounded-[24px] bg-white flex-col items-center justify-between xl:flex-row xl:justify-around gap-6 xl:gap-10 w-full max-w-[500px] xl:max-w-none mx-auto">
                 <form action="" className="flex flex-col xl:flex-row gap-3 xl:gap-6 w-full xl:w-fit">
-                    <input type="text" className={`${inter.className} w-full xl:w-[250px] p-4 rounded-[16px] bg-[#F4F5FA] placeholder-shown:text-[#666666] placeholder-shown:text-[14px]/[21px] tracking-[-0.56px] font-normal`} placeholder="Full Name" />
-                    <input type="email" className={`${inter.className} w-full xl:w-[250px] p-4 rounded-[16px] bg-[#F4F5FA] placeholder-shown:text-[#666666] placeholder-shown:text-[14px]/[21px] tracking-[-0.56px] font-normal`} placeholder="Email Address" />
-                    <input type="tel" className={`${inter.className} w-full xl:w-[250px] p-4 rounded-[16px] bg-[#F4F5FA] placeholder-shown:text-[#666666] placeholder-shown:text-[14px]/[21px] tracking-[-0.56px] font-normal`} placeholder="Phone Number" />
+                    <input type="text" className={`${inter.className} w-full xl:w-[250px] p-4 rounded-[16px] bg-[#F4F5FA] placeholder-shown:text-[#666666] placeholder-shown:text-[14px]/[21px] tracking-[-0.56px] font-normal border-none outline-[#FF5600] focus:outline-[#FF5600] focus:border-[#FF5600] focus:ring-[#FF5600]`} placeholder="Full Name" />
+                    <input type="email" className={`${inter.className} w-full xl:w-[250px] p-4 rounded-[16px] bg-[#F4F5FA] placeholder-shown:text-[#666666] placeholder-shown:text-[14px]/[21px] tracking-[-0.56px] font-normal border-none outline-[#FF5600] focus:outline-[#FF5600] focus:border-[#FF5600] focus:ring-[#FF5600]`} placeholder="Email Address" />
+                    <PhoneInput
+                    placeholder="Phone Number"
+                    defaultCountry="US"
+                    value={value}
+                    onChange={setValue}
+                    className={`${inter.className} w-full xl:w-[250px] p-4 rounded-[16px] bg-[#F4F5FA] placeholder-shown:text-[#666666] placeholder-shown:text-[14px]/[21px] tracking-[-0.56px] font-normal focus:outline-[#FF5600] focus:border-[#FF5600] focus:ring-[#FF5600] border-none outline-[#FF5600]`}/>
                 </form>
                 <BtnOrange  cta="transform my online presence!" />
               </div>
@@ -66,11 +112,11 @@ export default function Home() {
               </div>
             </div>
             {/* floating header boxes */}
-            <img src={'/images/hero-floats/ad-1.png'} className="hidden md:flex size-[120px] lg:size-[150px] absolute -top-[100px] lg:-top-[100px] left-1/2 -translate-x-1/2 z-[0] rotate-[-15deg] shadow-2xl shadow-[#00000080]" alt="Less Average CPC, More Ads Impressions" />
-            <img src={'/images/hero-floats/ad-2.png'} className="hidden md:flex size-[120px] lg:size-[150px] absolute top-[70px] -left-[53px] lg:left-[5px] z-[-10] rotate-[-15deg] shadow-2xl shadow-[#00000080]" alt="Git-Global Immigration Services Ad" />
-            <img src={'/images/hero-floats/ad-3.png'} className="hidden md:flex size-[120px] lg:size-[150px] absolute top-[344px] lg:top-[350px] left-[80px] z-[-10] rotate-[15deg] shadow-2xl shadow-[#00000080]" alt="Increase in Ad Clicks" />
-            <img src={'/images/hero-floats/ad-4.png'} className="hidden md:flex size-[120px] lg:size-[150px] absolute top-[344px] lg:top-[350px] right-[80px] z-[-10] rotate-[-15deg] shadow-2xl shadow-[#00000080]" alt="Increase in Average Session Duration" />
-            <img src={'/images/hero-floats/ad-5.png'} className="hidden md:flex size-[120px] lg:size-[150px] absolute top-[70px] -right-[53px] lg:right-[5px] z-[-10] rotate-[15deg] shadow-2xl shadow-[#00000080]" alt="Git-Global Website Revivified" />
+            <img src={'/images/hero-floats/ad-1.webp'} className={`${float ? ' delay-0' : ''} transition-all duration-300 ease-linear hidden md:flex size-[120px] lg:size-[150px] absolute -top-[100px] lg:-top-[100px] left-1/2 -translate-x-1/2 z-[0] rotate-[-15deg] shadow-2xl shadow-[#00000080]`} alt="Less Average CPC, More Ads Impressions" style={{transform: `translateY(-${scrollPosition * 40}%)`}} />
+            <img src={'/images/hero-floats/ad-2.webp'} className={`${float ? '! delay-0' : ''} transition-all duration-300 ease-linear  hidden md:flex size-[120px] lg:size-[150px] absolute top-[70px] -left-[53px] lg:left-[5px] z-[-10] rotate-[-15deg] shadow-2xl shadow-[#00000080]`} alt="Git-Global Immigration Services Ad" style={{transform: `translateX(-${scrollPosition * 40}%)`}} />
+            <img src={'/images/hero-floats/ad-3.webp'} className={`${float ? 'delay-0' : ''} transition-all duration-300 ease-linear hidden md:flex size-[120px] lg:size-[150px] absolute top-[344px] lg:top-[350px] left-[80px] z-[-10] rotate-[15deg] shadow-2xl shadow-[#00000080]`} alt="Increase in Ad Clicks" style={{transform: `translateX(-${scrollPosition * 40}%)`}} />
+            <img src={'/images/hero-floats/ad-4.webp'} className={`${float ? ' delay-0' : ''} transition-all duration-300 ease-linear hidden md:flex size-[120px] lg:size-[150px] absolute top-[344px] lg:top-[350px] right-[80px] z-[-10] rotate-[-15deg] shadow-2xl shadow-[#00000080]`} alt="Increase in Average Session Duration" style={{transform: `translateX(${scrollPosition * 40}%)`}} />
+            <img src={'/images/hero-floats/ad-5.webp'} className={`${float ? 'delay-0' : ''} transition-all duration-300 ease-linear  hidden md:flex size-[120px] lg:size-[150px] absolute top-[70px] -right-[53px] lg:right-[5px] z-[-10] rotate-[15deg] shadow-2xl shadow-[#00000080]`} alt="Git-Global Website Revivified" style={{transform: `translateX(${scrollPosition * 40}%)`}} />
           </div>
         </div>
       </header>
@@ -156,7 +202,7 @@ export default function Home() {
               i still have questions!
             </button>
           </section>
-          <section className="flex flex-col gap-10 bg-black rounded-[40px] p-10 scroll-mt-25" id="contact-us">
+          <section className="flex flex-col gap-10 bg-black rounded-[40px] p-10 scroll-mt-25 bg-contain bg-bottom bg-no-repeat" id="contact-us" style={{backgroundImage: 'url(./images/transparent-esper-text.png)'}}>
             <div className="flex flex-col lg:grid lg:grid-cols-2 lg:items-center gap-10">
               <div className="flex flex-col gap-5">
                 <h2 className={`${inter.className} text-[32px]/[32px] md:text-[53px]/[53px] xl:text-[73px]/[73px] font-semibold tracking-[-1.92px] md:tracking-[-3.18px] text-center lg:text-start text-white`}>

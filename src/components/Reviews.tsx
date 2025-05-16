@@ -21,7 +21,7 @@ const Reviews = () => {
                 <div className="flex flex-col md:flex-row items-center justify-center relative w-full md:w-fit">
                 {
                     filters.map((filter, index) => (
-                    <button className={`${inter.className} rounded-[32px] ${activeFilter == index ? ' text-[#FF5600] md:bg-white drop-shadow-lg drop-shadow-[#00000033]' : 'text-[#666666]'}  py-4 px-6  text-[16px]/[16px] font-semibold tracking-[-0.64px] capitalize w-full z-10 transition-all ease-linear duration-300 md:w-fit cursor-pointer`} key={index} onClick={() => (
+                    <button className={`${inter.className} rounded-[32px] ${activeFilter == index ? ' text-[#FF5600] md:bg-white drop-shadow-lg drop-shadow-[#00000033] text-shadow-none' : 'text-[#666666]'}  py-4 px-6  text-[16px]/[16px] font-semibold tracking-[-0.64px] capitalize w-full z-10 text-shadow-none transition-all ease-linear duration-300 md:w-fit cursor-pointer lg:hover:text-[#FF5600] lg:hover:bg-white lg:hover:drop-shadow-lg lg:hover:drop-shadow-[#00000033] `} key={index} onClick={() => (
                         setActiveFilter(index),
                         setSelectedService(filter.service)
                     )}>
