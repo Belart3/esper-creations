@@ -1,3 +1,4 @@
+"use client"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import work from '@/data/work-banner.json';
@@ -21,11 +22,12 @@ export default function WorkBanner () {
         pagination={{ 
           clickable: true 
         }}
+        freeMode={true}
         className="mySwiper w-full flex flex-row gap-4 h-[500px] md:h-[600px]"
       >
         {
             work.map((item, index) => (
-                <SwiperSlide className='rounded-[40px] w-full md:!w-[400px] h-[500px] md:h-[600px] p-3 pb-[20px] !flex items-end group bg-[#00000033] bg-no-repeat bg-center bg-cover overflow-hidden cursor-pointer' style={{backgroundImage: `url(${item.image})`}} key={index}>
+                <SwiperSlide className='rounded-[40px] w-full md:!w-[400px] h-[500px] md:h-[600px] p-3 pb-[20px] !flex items-end group bg-[#00000033] bg-no-repeat bg-center bg-cover overflow-hidden cursor-pointer' key={index}>
                     <div className="flex justify-between w-full items-center rounded-[32px] border border-[#E6E6E6] p-1 ps-4 backdrop-blur-[7.5px] bg-[#00000066] lg:translate-y-[200%] lg:group-hover:translate-y-0 transition-all duration-500 ease-linear">
                         <p className={`${inter.className} text-white text-[18px]/[18px] tracking-[-1.08px] font-semibold`}>
                             {item.project}

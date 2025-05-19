@@ -35,22 +35,22 @@ export default function Home() {
 
     const handleScroll = () => {
 
-      const scrollPosition = window.scrollY || window.pageYOffset;
-      const scrollTop = window.scrollY;
-      const windowHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const scrollPercent = (scrollTop / windowHeight) * 100;
-      setScrollPosition(scrollPercent);
-      // console.log(scrollPercent)
-      // const scrollHeight = containerRef.current ? containerRef.current.offsetHeight : 0;
+    const scrollPosition = window.scrollY || window.pageYOffset;
+    const scrollTop = window.scrollY;
+    const windowHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / windowHeight) * 100;
+    setScrollPosition(scrollPercent);
+    // console.log(scrollPercent)
+    // const scrollHeight = containerRef.current ? containerRef.current.offsetHeight : 0;
 
-      if (scrollPosition > 0) {
-        setFloat(true)
-      } else {
-        setFloat(false);
-      }
+    if (scrollPosition > 0) {
+      setFloat(true)
+    } else {
+      setFloat(false);
+    }
   };
     window.addEventListener('scroll', handleScroll);
-    
+
     // Clean up the event listener on component unmount
     return () => {
         window.removeEventListener('scroll', handleScroll);
@@ -187,7 +187,7 @@ export default function Home() {
                 Frequently Asked Questions.
               </h2>
               <p className={`${inter.className} text-[#666666] text-center text-[16px]/[24px] md:text-[18px]/[27px] tracking-[-0.64px] md:tracking-[-0.72px] font-normal`}>
-                Can’t find your answer? please send us a mail by clicking the button below. 
+                Can’t find your answer? please send us a mail by clicking the button below.
               </p>
               <BtnOrange cta="i still have questions!" />
             </div>

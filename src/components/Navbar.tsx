@@ -39,7 +39,7 @@ const Navbar = () => {
                 {
                     pages.map((page, index) => (
                         <Link href={page.link} key={index}>
-                            <p className={`${inter.className} text-[14px]/[14px] tracking-[-0.56px] capitalize text-[#666666] font-medium`}>
+                            <p className={`${inter.className} transition-colors ease-linear duration-300 text-[14px]/[14px] tracking-[-0.56px] capitalize text-[#666666] hover:text-[#FF5600] font-medium`}>
                                 {page.name}
                             </p>
                         </Link>
