@@ -42,7 +42,7 @@ const page = () => {
               About
             </p>
             <p className={`${inter.className} text-[16px]/[24px] md:text-[18px]/[27px] md:tracking-[-0.72px] font-normal tracking-[-0.64px] text-black capitalize`}>
-              Massa laoreet nibh ligula sit phasellus leo et viverra fusce. Eget donec viverra ultrices non ut eu phasellus. Nam elit sed urna dui pellentesque aliquam sagittis ut. Nec enim dictum est laoreet tristique purus nulla egestas pulvinar. 
+              BC Management is a blockchain-focused service provider specializing in crypto tax calculations, DeFi transaction reporting, and portfolio tracking. The company helps traders, investors, and businesses simplify their crypto finances by offering clear, audit-ready reports and personalized support. With deep expertise across major chains and platforms, BC Management ensures accuracy, compliance, and peace of mind in an ever-evolving crypto landscape. 
             </p>
           </div>
         </div>
@@ -52,9 +52,9 @@ const page = () => {
           <div className="h-[250px] md:h-[400px] lg:h-[600px] w-full rounded-[16px] bg-black flex items-center justify-center">
             <img src="/Images/jmg-handyman-page/jmg-logo.webp" alt="" className='w-[122px] md:w-[400px]' />
           </div>
-          <div className="bg-cover bg-center bg-no-repeat h-[350px] md:h-[450px] w-full mx-auto rounded-[24px]" style={{ backgroundImage: `url(/images/jmg-handyman-page/image-1.webp)` }}></div>
-          <div className="bg-cover bg-center bg-no-repeat h-[350px] md:h-[600px] w-full mx-auto rounded-[24px]" style={{ backgroundImage: `url(/images/jmg-handyman-page/image-2.webp)` }}></div>
-          <div className="bg-cover bg-center bg-no-repeat h-[250px] md:h-[450px] w-full mx-auto rounded-[24px]" style={{ backgroundImage: `url(/images/jmg-handyman-page/image-3.webp)` }}></div>
+          <div className="bg-cover bg-center bg-no-repeat h-[350px] md:h-[450px] w-full mx-auto rounded-[24px]" style={{ backgroundImage: `url(/images/blockchain-management-page/image-1.png)` }}></div>
+          <div className="bg-cover bg-center bg-no-repeat h-[350px] md:h-[600px] w-full mx-auto rounded-[24px]" style={{ backgroundImage: `url(/images/blockchain-management-page/image-2.png)` }}></div>
+          <div className="bg-cover bg-center bg-no-repeat h-[250px] md:h-[450px] w-full mx-auto rounded-[24px]" style={{ backgroundImage: `url(/images/blockchain-management-page/image-3.png)` }}></div>
           <div className="bg-contain bg-[#FF7833] bg-center bg-no-repeat w-full h-[1200px] md:h-[2500px] mx-auto rounded-[24px]" style={{ backgroundImage: `url(/images/blockchain-management-page/image-long.webp)` }}></div>
         </div>
         <div className="rounded-[16px] bg-black px-5 mb-5 py-10 flex flex-col items-center justify-center gap-6">

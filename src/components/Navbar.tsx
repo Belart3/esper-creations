@@ -48,9 +48,11 @@ const Navbar = () => {
                 }
             </div>
         </div>
-        <button className={`${inter.className} rounded-[32px] bg-[#FFEEE6] py-5 px-6 capitalize text-[#FF5600] font-semibold text-[16px]/[16px] tracking-[-0.64px] hidden lg:flex`}>
-            transform my online presence
-        </button>
+        <Link href='/#pricing'>
+            <button className={`${inter.className} rounded-[32px] bg-[#FFEEE6] py-5 px-6 capitalize text-[#FF5600] font-semibold text-[16px]/[16px] tracking-[-0.64px] hidden lg:flex cursor-pointer`}>
+                transform my online presence
+            </button>
+        </Link>
         <button className="size-14 rounded-full bg-[#FF5600] flex items-center justify-center shadow-lg shadow-[#FF560060] lg:hidden z-[51]" onClick={handleToggle}>
             <Hamburger
                 color="#fff"

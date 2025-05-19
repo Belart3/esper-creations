@@ -42,7 +42,7 @@ const page = () => {
               About
             </p>
             <p className={`${inter.className} text-[16px]/[24px] md:text-[18px]/[27px] md:tracking-[-0.72px] font-normal tracking-[-0.64px] text-black capitalize`}>
-              Massa laoreet nibh ligula sit phasellus leo et viverra fusce. Eget donec viverra ultrices non ut eu phasellus. Nam elit sed urna dui pellentesque aliquam sagittis ut. Nec enim dictum est laoreet tristique purus nulla egestas pulvinar. 
+              JMG HandyMania is a reliable handyman service based in Iowa City, offering a wide range of home repair and improvement solutions. From electrical and plumbing fixes to painting, carpentry, and lawn maintenance, their team delivers quality work with efficiency and professionalism. With transparent pricing and a strong focus on customer satisfaction, JMG HandyMania is a go-to choice for both homeowners and small businesses. 
             </p>
           </div>
         </div>

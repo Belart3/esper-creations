@@ -13,6 +13,7 @@ import 'react-phone-number-input/style.css';
 import PhoneInput from 'react-phone-number-input';
 import { useEffect, useState, useRef } from "react";
 import React from "react";
+import Marquee from "react-fast-marquee";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -21,37 +22,40 @@ const inter = Inter({
 
 export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null)
-  const [value, setValue]= useState<string | undefined>(undefined)
   const [float, setFloat] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
 
+  // hero form fields logic
+  const [heroForm, setHeroForm ] = useState({
+    fullName: '',
+    email: '',
+    phone: ''
+  })
+
+  const [footerForm, setFooterForm] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    service: '',
+    issue: ''
+  })
   // const router = useRouter();
   // const isActive = router.pathname;
 
   useEffect(() => {
-    // if (containerRef.current) {
-    //   console.log("Actual height:", containerRef.current.offsetHeight);
-    // }
-
     const handleScroll = () => {
+      const scrollTop = window.scrollY || window.pageYOffset;
+      const windowHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / windowHeight) * 100;
+      setScrollPosition(scrollPercent);
 
-    const scrollPosition = window.scrollY || window.pageYOffset;
-    const scrollTop = window.scrollY;
-    const windowHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const scrollPercent = (scrollTop / windowHeight) * 100;
-    setScrollPosition(scrollPercent);
-    // console.log(scrollPercent)
-    // const scrollHeight = containerRef.current ? containerRef.current.offsetHeight : 0;
-
-    if (scrollPosition > 0) {
-      setFloat(true)
-    } else {
-      setFloat(false);
-    }
-  };
+      if (scrollTop > 0) {
+        setFloat(true)
+      } else {
+        setFloat(false);
+      }
+    };
     window.addEventListener('scroll', handleScroll);
-
-    // Clean up the event listener on component unmount
     return () => {
         window.removeEventListener('scroll', handleScroll);
     };
@@ -73,54 +77,124 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex p-4 md:p-6 xl:py-8 xl:px-10 rounded-[24px] bg-white flex-col items-center justify-between xl:flex-row xl:justify-around gap-6 xl:gap-10 w-full max-w-[500px] xl:max-w-none mx-auto">
-                <form action="" className="flex flex-col xl:flex-row gap-3 xl:gap-6 w-full xl:w-fit">
-                    <input type="text" className={`${inter.className} w-full xl:w-[250px] p-4 rounded-[16px] bg-[#F4F5FA] placeholder-shown:text-[#666666] placeholder-shown:text-[14px]/[21px] tracking-[-0.56px] font-normal border-none outline-[#FF5600] focus:outline-[#FF5600] focus:border-[#FF5600] focus:ring-[#FF5600]`} placeholder="Full Name" />
-                    <input type="email" className={`${inter.className} w-full xl:w-[250px] p-4 rounded-[16px] bg-[#F4F5FA] placeholder-shown:text-[#666666] placeholder-shown:text-[14px]/[21px] tracking-[-0.56px] font-normal border-none outline-[#FF5600] focus:outline-[#FF5600] focus:border-[#FF5600] focus:ring-[#FF5600]`} placeholder="Email Address" />
-                    <PhoneInput
+                <form action="" onSubmit={(e) => {e.preventDefault()}} className="flex flex-col xl:flex-row gap-3 xl:gap-6 w-full xl:w-fit">
+                  <input
+                    name="full name"
+                    aria-label="full name" 
+                    type="text" 
+                    className={`${inter.className} w-full xl:w-[250px] p-4 rounded-[16px] bg-[#F4F5FA] placeholder-shown:text-[#666666] placeholder-shown:text-[14px]/[21px] tracking-[-0.56px] font-normal border-none outline-[#FF5600] focus:outline-[#FF5600] focus:border-[#FF5600] focus:ring-[#FF5600] transition-all ease-linear duration-300 ${ heroForm.fullName.trim() !== '' ? '!bg-[#FFEEE6]' : '' }`} 
+                    placeholder="Full Name" 
+                    value={heroForm.fullName}
+                    onChange={(e) => {
+                      setHeroForm({...heroForm, fullName: e.target.value })
+                    }}
+                  />
+                  <input
+                    name="email"
+                    aria-label="email" 
+                    type="email" 
+                    className={`${inter.className} w-full xl:w-[250px] p-4 rounded-[16px] bg-[#F4F5FA] placeholder-shown:text-[#666666] placeholder-shown:text-[14px]/[21px] tracking-[-0.56px] font-normal border-none outline-[#FF5600] focus:outline-[#FF5600] focus:border-[#FF5600] focus:ring-[#FF5600] transition-all ease-linear duration-300 ${ heroForm.email.trim() !== '' && heroForm.email.includes('@') ? '!bg-[#FFEEE6]' : '' }`} 
+                    placeholder="Email Address" 
+                    value={heroForm.email}
+                    onChange={(e) => {
+                      setHeroForm({ ...heroForm, email: e.target.value });
+                    }}
+                  />
+                  <PhoneInput
+                    name="phone"
+                    aria-label="phone"
                     placeholder="Phone Number"
                     defaultCountry="US"
-                    value={value}
-                    onChange={setValue}
-                    className={`${inter.className} w-full xl:w-[250px] p-4 rounded-[16px] bg-[#F4F5FA] placeholder-shown:text-[#666666] placeholder-shown:text-[14px]/[21px] tracking-[-0.56px] font-normal focus:outline-[#FF5600] focus:border-[#FF5600] focus:ring-[#FF5600] border-none outline-[#FF5600]`}/>
+                    value={heroForm.phone}
+                    onChange={(value) => {
+                      setHeroForm({ ...heroForm, phone: value || '' });
+                    }}
+                    className={`${inter.className} w-full xl:w-[250px] p-4 rounded-[16px] bg-[#F4F5FA] placeholder-shown:text-[#666666] placeholder-shown:text-[14px]/[21px] tracking-[-0.56px] font-normal focus:outline-[#FF5600] focus:border-[#FF5600] focus:ring-[#FF5600] border-none outline-[#FF5600] transition-all ease-linear duration-300 ${ heroForm.phone.trim() !== '' ? '!bg-[#FFEEE6]' : '' }`}
+                  />
+                  <button 
+                    className={`${inter.className} rounded-[32px] bg-[#FF5600] py-5 px-6 capitalize text-white font-semibold text-[16px]/[16px] tracking-[-0.64px] w-full lg:w-fit custom-shadow-orange cursor-pointer`}
+                    type="submit"
+                  >
+                    transform my online presence!
+                  </button>
                 </form>
-                <BtnOrange  cta="transform my online presence!" />
-              </div>
-            </div>
-            <div className="flex flex-col gap-5">
-              <h2 className={`${inter.className} text-center text-[#999999] text-[18px]/[18px] md:text-[20px]/[20px] font-semibold tracking-[-1.08px] md:tracking-[-1.2px] max-w-[600px] mx-auto`}>
-                Trusted by 2,500+ modern businesses, founders & creators
-              </h2>
-              <div className="flex gap-8 md:gap-14 items-center justify-center overflow-hidden">
-                <a href="" className="flex !shrink-0">
-                  <img src={"/images/partners/acapulco-grocery-and-bakery.png"} alt="acapulco-grocery-and-bakery" className='h-[67px]'/>
-                </a>
-                <a href="" className="flex !shrink-0 w-[84px] md:w-[130px]">
-                  <img src={"/images/partners/cardmines.png"} alt="cardmines" className='' />
-                </a>
-                <a href="" className="flex !shrink-0 w-[84px] md:w-[130px]">
-                  <img src={"/images/partners/iowa-digital-solutions.png" }alt="iowa-digital-solutions" className='' />
-                </a>
-                <a href="" className="flex !shrink-0 w-[84px] md:w-[130px]">
-                  <img src={"/images/partners/esport-iowa-city.png" }alt="esport-iowa-city" className='' />
-                </a>
-                <a href="" className="flex !shrink-0 w-[84px] md:w-[130px]">
-                  <img src={"/images/partners/magic-bail-bonds.png"} alt="magic-bail-bonds" className='' />
-                </a>
-                <a href="" className="flex !shrink-0 w-[84px] md:w-[130px]">
-                  <img src={"/images/partners/rose-heaven-nursing-home.png"}alt="rose-heaven-nursing-home" className='' />
-                </a>
               </div>
             </div>
             {/* floating header boxes */}
-            <img src={'/images/hero-floats/ad-1.webp'} className={`${float ? ' delay-0' : ''} transition-all duration-300 ease-linear hidden md:flex size-[120px] lg:size-[150px] absolute -top-[100px] lg:-top-[100px] left-1/2 -translate-x-1/2 z-[0] rotate-[-15deg] shadow-2xl shadow-[#00000080]`} alt="Less Average CPC, More Ads Impressions" style={{transform: `translateY(-${scrollPosition * 40}%)`}} />
-            <img src={'/images/hero-floats/ad-2.webp'} className={`${float ? '! delay-0' : ''} transition-all duration-300 ease-linear  hidden md:flex size-[120px] lg:size-[150px] absolute top-[70px] -left-[53px] lg:left-[5px] z-[-10] rotate-[-15deg] shadow-2xl shadow-[#00000080]`} alt="Git-Global Immigration Services Ad" style={{transform: `translateX(-${scrollPosition * 40}%)`}} />
-            <img src={'/images/hero-floats/ad-3.webp'} className={`${float ? 'delay-0' : ''} transition-all duration-300 ease-linear hidden md:flex size-[120px] lg:size-[150px] absolute top-[344px] lg:top-[350px] left-[80px] z-[-10] rotate-[15deg] shadow-2xl shadow-[#00000080]`} alt="Increase in Ad Clicks" style={{transform: `translateX(-${scrollPosition * 40}%)`}} />
-            <img src={'/images/hero-floats/ad-4.webp'} className={`${float ? ' delay-0' : ''} transition-all duration-300 ease-linear hidden md:flex size-[120px] lg:size-[150px] absolute top-[344px] lg:top-[350px] right-[80px] z-[-10] rotate-[-15deg] shadow-2xl shadow-[#00000080]`} alt="Increase in Average Session Duration" style={{transform: `translateX(${scrollPosition * 40}%)`}} />
-            <img src={'/images/hero-floats/ad-5.webp'} className={`${float ? 'delay-0' : ''} transition-all duration-300 ease-linear  hidden md:flex size-[120px] lg:size-[150px] absolute top-[70px] -right-[53px] lg:right-[5px] z-[-10] rotate-[15deg] shadow-2xl shadow-[#00000080]`} alt="Git-Global Website Revivified" style={{transform: `translateX(${scrollPosition * 40}%)`}} />
+            <img 
+              src={'/images/hero-floats/ad-1.webp'} 
+              className={`${float ? ' delay-0' : ''} transition-all duration-300 ease-linear hidden md:flex size-[120px] lg:size-[150px] absolute -top-[100px] lg:-top-[100px] left-1/2 -translate-x-1/2 z-[0] rotate-[-15deg] shadow-2xl shadow-[#00000080]`} 
+              alt="Less Average CPC, More Ads Impressions" 
+              style={{
+                transform: `translateY(-${Math.min(scrollPosition * 40, 220)}%)`,
+                opacity: `${100 - (scrollPosition * 50)}%`
+              }}
+            />  
+            <img 
+              src={'/images/hero-floats/ad-2.webp'} 
+              className={`${float ? '! delay-0' : ''} transition-all duration-300 ease-linear  hidden md:flex size-[120px] lg:size-[150px] absolute top-[70px] -left-[53px] lg:left-[5px] z-[-10] rotate-[-15deg] shadow-2xl shadow-[#00000080]`} 
+              alt="Git-Global Immigration Services Ad" 
+              style={{
+                transform: `translateX(-${Math.min(scrollPosition * 40, 220)}%)`,
+                opacity: `${100 - (scrollPosition * 50)}%`
+              }}
+            />
+            <img 
+              src={'/images/hero-floats/ad-3.webp'} 
+              className={`${float ? 'delay-0' : ''} transition-all duration-300 ease-linear hidden md:flex size-[120px] lg:size-[150px] absolute top-[344px] lg:top-[350px] left-[80px] z-[-10] rotate-[15deg] shadow-2xl shadow-[#00000080]`} 
+              alt="Increase in Ad Clicks" 
+              style={{
+                transform: `translateX(-${Math.min(scrollPosition * 40, 220)}%)`,
+                opacity: `${100 - (scrollPosition * 50)}%`
+              }}
+            />  
+            <img 
+              src={'/images/hero-floats/ad-4.webp'} 
+              className={`${float ? ' delay-0' : ''} transition-all duration-300 ease-linear hidden md:flex size-[120px] lg:size-[150px] absolute top-[344px] lg:top-[350px] right-[80px] z-[-10] rotate-[-15deg] shadow-2xl shadow-[#00000080]`} 
+              alt="Increase in Average Session Duration"               
+              style={{
+                transform: `translateX(${Math.min(scrollPosition * 40, 220)}%)`,
+                opacity: `${100 - (scrollPosition * 50)}%`
+              }}
+            />
+            <img 
+              src={'/images/hero-floats/ad-5.webp'} 
+              className={`${float ? 'delay-0' : ''} transition-all duration-300 ease-linear  hidden md:flex size-[120px] lg:size-[150px] absolute top-[70px] -right-[53px] lg:right-[5px] z-[-10] rotate-[15deg] shadow-2xl shadow-[#00000080]`} 
+              alt="Git-Global Website Revivified"
+              style={{
+                transform: `translateX(${Math.min(scrollPosition * 40, 220)}%)`,
+                opacity: `${100 - (scrollPosition * 50)}%`
+              }}
+            />
+          </div>
+          <div className="flex flex-col gap-5 mt-16">
+            <h2 className={`${inter.className} text-center text-[#999999] text-[18px]/[18px] md:text-[20px]/[20px] font-semibold tracking-[-1.08px] md:tracking-[-1.2px] max-w-[600px] mx-auto`}>
+              Trusted by 2,500+ modern businesses, founders & creators
+            </h2>
+            <Marquee speed={100} loop={0} pauseOnHover={true} gradient={true} gradientWidth={150} gradientColor="#FFEEE6CC" className="cursor-pointer">
+              <a href="" className="flex !shrink-0 mx-10">
+                <img src={"/images/partners/acapulco-grocery-and-bakery.png"} alt="acapulco-grocery-and-bakery" className='h-[67px]'/>
+              </a>
+              <a href="" className="flex !shrink-0 w-[84px] md:w-[130px] mx-5 lg:mx-16">
+                <img src={"/images/partners/cardmines.png"} alt="cardmines" className='' />
+              </a>
+              <a href="" className="flex !shrink-0 w-[84px] md:w-[130px] mx-5 lg:mx-16">
+                <img src={"/images/partners/iowa-digital-solutions.png" }alt="iowa-digital-solutions" className='' />
+              </a>
+              <a href="" className="flex !shrink-0 w-[84px] md:w-[130px] mx-5 lg:mx-16">
+                <img src={"/images/partners/esport-iowa-city.png" }alt="esport-iowa-city" className='' />
+              </a>
+              <a href="" className="flex !shrink-0 w-[84px] md:w-[130px] mx-5 lg:mx-16">
+                <img src={"/images/partners/magic-bail-bonds.png"} alt="magic-bail-bonds" className='' />
+              </a>
+              <a href="" className="flex !shrink-0 w-[84px] md:w-[130px] mx-5 lg:mx-16">
+                <img src={"/images/partners/rose-heaven-nursing-home.png"}alt="rose-heaven-nursing-home" className='' />
+              </a>      
+            </Marquee>
           </div>
         </div>
       </header>
-      <main className="">
+      <main>
         <section className=" max-w-[1440px] mx-auto py-16 px-5 md:py-[104px] md:px-6 lg:py- lg:px-14 flex flex-col gap-[104px]">
           <section className="flex flex-col gap-12 md:gap-16 lg:p-5 scroll-mt-25" id="services">
             <SectionHead title="Results-driven Marketing." description="You deserve more than likes and pretty websites. We build systems designed to convert, scale, and dominate your market." />
@@ -161,7 +235,7 @@ export default function Home() {
                           {plan.cta}
                         </button>
                     </div>
-                    <div className="py-6 px-2 rounded-[24px] flex flex-col gap-2 bg-[#F4F5FA] shadow-inner shadow-[inset_0px_4px_8px_rgba(0,0,0,0.08)]">
+                    <div className="py-6 px-2 rounded-[24px] flex flex-col gap-2 bg-[#F4F5FA] custom-inset-shadow">
                       {
                         plan.features.map((feature, index) => (
                           <div className="flex items-center gap-2" key={index}>
@@ -202,7 +276,7 @@ export default function Home() {
               i still have questions!
             </button>
           </section>
-          <section className="flex flex-col gap-10 bg-black rounded-[40px] p-10 scroll-mt-25 bg-contain bg-bottom bg-no-repeat" id="contact-us" style={{backgroundImage: 'url(./images/transparent-esper-text.png)'}}>
+          <section className="flex flex-col gap-10 bg-black rounded-[40px] p-5 md:p-10 scroll-mt-25 bg-contain bg-bottom sm:bg-[50%_110%] lg:bg-[50%_140%] bg-no-repeat" id="contact-us" style={{backgroundImage: 'url(./images/transparent-esper-text.png)'}}>
             <div className="flex flex-col lg:grid lg:grid-cols-2 lg:items-center gap-10">
               <div className="flex flex-col gap-5">
                 <h2 className={`${inter.className} text-[32px]/[32px] md:text-[53px]/[53px] xl:text-[73px]/[73px] font-semibold tracking-[-1.92px] md:tracking-[-3.18px] text-center lg:text-start text-white`}>
@@ -214,12 +288,44 @@ export default function Home() {
               </div>
               <div className="p-4 md:p-6 gap-6 md:gap-10 bg-white rounded-[24px] flex flex-col items-center">
                 <form action="" className="flex flex-col gap-4 md:gap-6 w-full">
-                  <input type="text" className={`${inter.className} text-[14px]/[21px] tracking-[-0.56px] text-[#B3B3B3] p-4 rounded-[16px] bg-[#E6E6E699]`} placeholder="Name *" required />
-                  <input type="email" className={`${inter.className} text-[14px]/[21px] tracking-[-0.56px] text-[#B3B3B3] p-4 rounded-[16px] bg-[#E6E6E699]`} placeholder="Email *" required />
-                  <input type="tel" className={`${inter.className} text-[14px]/[21px] tracking-[-0.56px] text-[#B3B3B3] p-4 rounded-[16px] bg-[#E6E6E699]`} placeholder="Phone" />
+                  <input 
+                    name="name"
+                    aria-label="name"
+                    type="text" 
+                    className={`${inter.className} text-[14px]/[21px] tracking-[-0.56px] text-[#B3B3B3] p-4 rounded-[16px] bg-[#E6E6E699] focus:outline-[#FF5600] focus:border-[#FF5600] focus:ring-[#FF5600] border-none outline-[#FF5600] transition-all ease-linear duration-300 ${ footerForm.name.trim() !== '' ? '!bg-[#FFEEE6]' : '' }`} 
+                    placeholder="Name *" 
+                    required 
+                    value={footerForm.name}
+                    onChange={(e) => {
+                      setFooterForm({...footerForm, name: e.target.value})
+                    }}
+                  />
+                  <input 
+                    name="email"
+                    aria-label="email"
+                    type="email" 
+                    className={`${inter.className} text-[14px]/[21px] tracking-[-0.56px] text-[#B3B3B3] p-4 rounded-[16px] bg-[#E6E6E699] focus:outline-[#FF5600] focus:border-[#FF5600] focus:ring-[#FF5600] border-none outline-[#FF5600] transition-all ease-linear duration-300 ${ footerForm.email.trim() !== '' && footerForm.email.includes('@') ? '!bg-[#FFEEE6]' : '' }`} 
+                    placeholder="Email *" 
+                    required 
+                    value={footerForm.email}
+                    onChange={(e) => {
+                      setFooterForm({ ...footerForm , email: e.target.value})
+                    }}
+                  />
+                  <PhoneInput
+                    name="phone"
+                    aria-label="phone"
+                    placeholder="Phone Number"
+                    defaultCountry="US"
+                    value={footerForm.phone}
+                    onChange={(value) => {
+                      setFooterForm({ ...footerForm, phone: value || '' });
+                    }}
+                    className={`${inter.className} text-[14px]/[21px] tracking-[-0.56px] text-[#B3B3B3] p-4 rounded-[16px] bg-[#E6E6E699] focus:outline-[#FF5600] focus:border-[#FF5600] focus:ring-[#FF5600] border-none outline-[#FF5600] transition-all ease-linear duration-300 ${ footerForm.phone.trim() !== '' ? '!bg-[#FFEEE6]' : '' }`}
+                  />
                   <select name="" id="" className={`${inter.className} text-[14px]/[21px] tracking-[-0.56px] text-[#B3B3B3] p-4 rounded-[16px] bg-[#E6E6E699]`}>
                     <option value="A brief description of your issue (Optional)" disabled selected className={`${inter.className} text-[14px]/[21px] tracking-[-0.56px] text-[#B3B3B3] p-4 rounded-[16px] bg-[#E6E6E699]`}>
-                      A brief description of your issue (Optional)
+                      What service are you in need of? *
                     </option>
                   {
                     services.map((service, index) => (
@@ -229,9 +335,19 @@ export default function Home() {
                     ))
                   }
                   </select>
-                  <textarea name="" id="" className={`${inter.className} text-[14px]/[21px] tracking-[-0.56px] text-[#B3B3B3] p-4 rounded-[16px] bg-[#E6E6E699]`} placeholder="A brief description of your issue (Optional)"></textarea>
+                  <textarea 
+                    name="issue" 
+                    id="" 
+                    className={`${inter.className} text-[14px]/[21px] tracking-[-0.56px] text-[#B3B3B3] p-4 rounded-[16px] bg-[#E6E6E699] focus:outline-[#FF5600] focus:border-[#FF5600] focus:ring-[#FF5600] border-none outline-[#FF5600] transition-all ease-linear duration-300 ${ footerForm.issue.trim() !== '' ? '!bg-[#FFEEE6]' : '' }`} 
+                    placeholder="A brief description of your issue (Optional)"
+                  ></textarea>
+                  <button 
+                    className={`${inter.className} rounded-[32px] bg-[#FF5600] py-5 px-6 capitalize text-white font-semibold text-[16px]/[16px] tracking-[-0.64px] w-full lg:w-fit custom-shadow-orange cursor-pointer mx-auto`}
+                    type="submit"
+                  >
+                    transform my online presence!
+                  </button>
                 </form>
-                <BtnOrange cta="transform my online presence!" />
               </div>
             </div>
             <div className="h-px w-full bg-[#333]"></div>

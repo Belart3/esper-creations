@@ -63,6 +63,10 @@ html{
     0px 4px 9px 0px rgba(0, 0, 0, 0.10);
 }
 
+.custom-inset-shadow {
+  box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.08);
+}
+
 
 
 

@@ -42,7 +42,7 @@ const page = () => {
               About
             </p>
             <p className={`${inter.className} text-[16px]/[24px] md:text-[18px]/[27px] md:tracking-[-0.72px] font-normal tracking-[-0.64px] text-black capitalize`}>
-              Massa laoreet nibh ligula sit phasellus leo et viverra fusce. Eget donec viverra ultrices non ut eu phasellus. Nam elit sed urna dui pellentesque aliquam sagittis ut. Nec enim dictum est laoreet tristique purus nulla egestas pulvinar. 
+              GIT Global is an Iowa-based immigration service provider focused on making the U.S. immigration process more accessible, affordable, and transparent. They assist clients with visa applications, green card processing, and general immigration documentation. With a commitment to clarity and care, GIT Global supports individuals and families navigating complex legal systems with professionalism and integrity.
             </p>
           </div>
         </div>
