@@ -2,6 +2,7 @@ import BtnTransparent from '@/components/BtnTransparent'
 import SectionTitle from '@/components/SectionTitle'
 import { Inter } from 'next/font/google';
 import React from 'react'
+import ClientFooter from '@/components/ClientFooter';
 
 const inter = Inter({
   variable: "--font-inter",
@@ -57,23 +58,7 @@ const page = () => {
           <div className="bg-cover bg-center bg-no-repeat h-[250px] md:h-[405px] lg:h-[750px] w-full mx-auto rounded-[24px]" style={{ backgroundImage: `url(/images/jmg-handyman-page/image-3.webp)` }}></div>
           <div className="bg-contain bg-[#000000B2] bg-center bg-no-repeat w-full h-[1200px] md:h-[2500px] mx-auto rounded-[24px]" style={{ backgroundImage: `url(/images/jmg-handyman-page/image-long.webp)` }}></div>
         </div>
-        <div className="my-10 rounded-[16px] bg-black px-5 py-10 flex flex-col items-center justify-center gap-6">
-          <h2 className={`${inter.className} text-[32px]/[32px] tracking-[-1.92px] font-semibold text-white capitalize text-center`}>
-            Let’s build together!
-          </h2>
-          <button className={`${inter.className} rounded-[32px] bg-[#FF5600] py-5 px-6 capitalize text-white font-semibold text-[16px]/[16px] tracking-[-0.64px] shadow-lg shadow-[#FF560060] w-full md:w-fit`}>
-            sure, why not!
-          </button>
-          <div className="h-px w-full bg-[#333]"></div>
-          <div className='flex flex-col lg:flex-row lg:justify-between lg:items-center gap-6 md:gap-10 w-full max-w-[1440px] mx-auto'>
-            <h2 className={`${inter.className} text-[#FF5600] text-[16px]/[16px] text-center tracking-[-0.64px] font-semibold capitalize`}>
-                I want to send an email!
-            </h2>
-            <p className={`${inter.className} text-[14px]/[21px] md:text-[16px]/[24px] tracking-[-0.56px] md:tracking-[-0.64] text-[#666666] capitalize font-normal text-center`}>
-                © 2025 Esper Creations All rights reserved
-            </p>
-          </div>
-        </div>
+        <ClientFooter />
       </main>
     </>
   )

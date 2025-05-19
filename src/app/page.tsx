@@ -1,6 +1,5 @@
 "use client";
 import { Inter } from "next/font/google";
-import services from "@/data/services.json"
 import SectionHead from "@/components/SectionHead";
 import plans from '@/data/productPlans.json';
 import faq from '@/data/faq.json';
@@ -10,10 +9,12 @@ import BtnOrange from "@/components/BtnOrange";
 import Services from "@/components/Services";
 import Reviews from "@/components/Reviews";
 import 'react-phone-number-input/style.css';
-import PhoneInput from 'react-phone-number-input';
 import { useEffect, useState, useRef } from "react";
 import React from "react";
 import Marquee from "react-fast-marquee";
+import BookingForm from "@/components/BookingForm";
+import HeroForm from "@/components/HeroForm";
+import PricingCards from "@/components/PricingCards";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -25,20 +26,6 @@ export default function Home() {
   const [float, setFloat] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
 
-  // hero form fields logic
-  const [heroForm, setHeroForm ] = useState({
-    fullName: '',
-    email: '',
-    phone: ''
-  })
-
-  const [footerForm, setFooterForm] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    service: '',
-    issue: ''
-  })
   // const router = useRouter();
   // const isActive = router.pathname;
 
@@ -77,47 +64,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex p-4 md:p-6 xl:py-8 xl:px-10 rounded-[24px] bg-white flex-col items-center justify-between xl:flex-row xl:justify-around gap-6 xl:gap-10 w-full max-w-[500px] xl:max-w-none mx-auto">
-                <form action="" onSubmit={(e) => {e.preventDefault()}} className="flex flex-col xl:flex-row gap-3 xl:gap-6 w-full xl:w-fit">
-                  <input
-                    name="full name"
-                    aria-label="full name" 
-                    type="text" 
-                    className={`${inter.className} w-full xl:w-[250px] p-4 rounded-[16px] bg-[#F4F5FA] placeholder-shown:text-[#666666] placeholder-shown:text-[14px]/[21px] tracking-[-0.56px] font-normal border-none outline-[#FF5600] focus:outline-[#FF5600] focus:border-[#FF5600] focus:ring-[#FF5600] transition-all ease-linear duration-300 ${ heroForm.fullName.trim() !== '' ? '!bg-[#FFEEE6]' : '' }`} 
-                    placeholder="Full Name" 
-                    value={heroForm.fullName}
-                    onChange={(e) => {
-                      setHeroForm({...heroForm, fullName: e.target.value })
-                    }}
-                  />
-                  <input
-                    name="email"
-                    aria-label="email" 
-                    type="email" 
-                    className={`${inter.className} w-full xl:w-[250px] p-4 rounded-[16px] bg-[#F4F5FA] placeholder-shown:text-[#666666] placeholder-shown:text-[14px]/[21px] tracking-[-0.56px] font-normal border-none outline-[#FF5600] focus:outline-[#FF5600] focus:border-[#FF5600] focus:ring-[#FF5600] transition-all ease-linear duration-300 ${ heroForm.email.trim() !== '' && heroForm.email.includes('@') ? '!bg-[#FFEEE6]' : '' }`} 
-                    placeholder="Email Address" 
-                    value={heroForm.email}
-                    onChange={(e) => {
-                      setHeroForm({ ...heroForm, email: e.target.value });
-                    }}
-                  />
-                  <PhoneInput
-                    name="phone"
-                    aria-label="phone"
-                    placeholder="Phone Number"
-                    defaultCountry="US"
-                    value={heroForm.phone}
-                    onChange={(value) => {
-                      setHeroForm({ ...heroForm, phone: value || '' });
-                    }}
-                    className={`${inter.className} w-full xl:w-[250px] p-4 rounded-[16px] bg-[#F4F5FA] placeholder-shown:text-[#666666] placeholder-shown:text-[14px]/[21px] tracking-[-0.56px] font-normal focus:outline-[#FF5600] focus:border-[#FF5600] focus:ring-[#FF5600] border-none outline-[#FF5600] transition-all ease-linear duration-300 ${ heroForm.phone.trim() !== '' ? '!bg-[#FFEEE6]' : '' }`}
-                  />
-                  <button 
-                    className={`${inter.className} rounded-[32px] bg-[#FF5600] py-5 px-6 capitalize text-white font-semibold text-[16px]/[16px] tracking-[-0.64px] w-full lg:w-fit custom-shadow-orange cursor-pointer`}
-                    type="submit"
-                  >
-                    transform my online presence!
-                  </button>
-                </form>
+                <HeroForm />
               </div>
             </div>
             {/* floating header boxes */}
@@ -213,41 +160,16 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
               {
                 plans.map((plan, index) => (
-                  <div className="p-4 rounded-[40px] bg-white flex flex-col gap-16" key={index}>
-                    <div className="flex flex-col gap-8">
-                      <div className="rounded-[32px] p-6 flex flex-col gap-10 items-start bg-[#FF15491A]" style={{backgroundColor: `${plan.productColor}`}}>
-                        <button className={`${inter.className} px-4 py-3 bg-white rounded-[32px] text-black text-[16px]/[24px] tracking-[-0.64px] font-semibold`}>
-                          {plan.product}
-                        </button>
-                        <div className="flex flex-col gap-2">
-                          <p className={`${inter.className} text-[18px]/[27px] tracking-[-0.72px] font-normal text-[#999999]`}>
-                            Starts at
-                          </p>
-                          <p className={`${inter.className} text-[53px]/[53px] tracking-[-3.18px] font-semibold text-black`}>
-                            {plan.price}
-                          </p>
-                        </div>
-                      </div>
-                        <p className={`${inter.className} text-[16px]/[24px] tracking-[-0.64px] font-normal text-black`}>
-                          {plan.details}
-                        </p>
-                        <button className={`${inter.className} rounded-[32px] bg-[#FF5600] py-5 px-6 capitalize text-white font-semibold text-[16px]/[16px] tracking-[-0.64px] custom-shadow-orange w-full`}>
-                          {plan.cta}
-                        </button>
-                    </div>
-                    <div className="py-6 px-2 rounded-[24px] flex flex-col gap-2 bg-[#F4F5FA] custom-inset-shadow">
-                      {
-                        plan.features.map((feature, index) => (
-                          <div className="flex items-center gap-2" key={index}>
-                            <span className="text-[24px]">👌</span>
-                            <p className={`${inter.className} text-[16px]/[24px] tracking-[-0.64px] font-normal text-[#666666]`}>
-                              {feature}
-                            </p>
-                          </div>
-                        ))
-                      }
-                    </div>
-                </div>
+                  <PricingCards
+                    key={index}
+                    index={index}
+                    productColor={plan.productColor}
+                    product={plan.product}
+                    price={plan.price}
+                    details={plan.details}
+                    features={plan.features}
+                    cta={plan.cta}
+                  />
                 ))
               }
             </div>
@@ -286,68 +208,8 @@ export default function Home() {
                   We are ready to turn your business into an unforgettable brand and transform your online presence into consistent revenue—at scale.
                 </p>
               </div>
-              <div className="p-4 md:p-6 gap-6 md:gap-10 bg-white rounded-[24px] flex flex-col items-center">
-                <form action="" className="flex flex-col gap-4 md:gap-6 w-full">
-                  <input 
-                    name="name"
-                    aria-label="name"
-                    type="text" 
-                    className={`${inter.className} text-[14px]/[21px] tracking-[-0.56px] text-[#B3B3B3] p-4 rounded-[16px] bg-[#E6E6E699] focus:outline-[#FF5600] focus:border-[#FF5600] focus:ring-[#FF5600] border-none outline-[#FF5600] transition-all ease-linear duration-300 ${ footerForm.name.trim() !== '' ? '!bg-[#FFEEE6]' : '' }`} 
-                    placeholder="Name *" 
-                    required 
-                    value={footerForm.name}
-                    onChange={(e) => {
-                      setFooterForm({...footerForm, name: e.target.value})
-                    }}
-                  />
-                  <input 
-                    name="email"
-                    aria-label="email"
-                    type="email" 
-                    className={`${inter.className} text-[14px]/[21px] tracking-[-0.56px] text-[#B3B3B3] p-4 rounded-[16px] bg-[#E6E6E699] focus:outline-[#FF5600] focus:border-[#FF5600] focus:ring-[#FF5600] border-none outline-[#FF5600] transition-all ease-linear duration-300 ${ footerForm.email.trim() !== '' && footerForm.email.includes('@') ? '!bg-[#FFEEE6]' : '' }`} 
-                    placeholder="Email *" 
-                    required 
-                    value={footerForm.email}
-                    onChange={(e) => {
-                      setFooterForm({ ...footerForm , email: e.target.value})
-                    }}
-                  />
-                  <PhoneInput
-                    name="phone"
-                    aria-label="phone"
-                    placeholder="Phone Number"
-                    defaultCountry="US"
-                    value={footerForm.phone}
-                    onChange={(value) => {
-                      setFooterForm({ ...footerForm, phone: value || '' });
-                    }}
-                    className={`${inter.className} text-[14px]/[21px] tracking-[-0.56px] text-[#B3B3B3] p-4 rounded-[16px] bg-[#E6E6E699] focus:outline-[#FF5600] focus:border-[#FF5600] focus:ring-[#FF5600] border-none outline-[#FF5600] transition-all ease-linear duration-300 ${ footerForm.phone.trim() !== '' ? '!bg-[#FFEEE6]' : '' }`}
-                  />
-                  <select name="" id="" className={`${inter.className} text-[14px]/[21px] tracking-[-0.56px] text-[#B3B3B3] p-4 rounded-[16px] bg-[#E6E6E699]`}>
-                    <option value="A brief description of your issue (Optional)" disabled selected className={`${inter.className} text-[14px]/[21px] tracking-[-0.56px] text-[#B3B3B3] p-4 rounded-[16px] bg-[#E6E6E699]`}>
-                      What service are you in need of? *
-                    </option>
-                  {
-                    services.map((service, index) => (
-                      <option value={service.title} className={`${inter.className} text-[14px]/[21px] tracking-[-0.56px] text-[#B3B3B3] p-4 rounded-[16px] bg-[#E6E6E699]`} key={index}>
-                        {service.title}
-                      </option>
-                    ))
-                  }
-                  </select>
-                  <textarea 
-                    name="issue" 
-                    id="" 
-                    className={`${inter.className} text-[14px]/[21px] tracking-[-0.56px] text-[#B3B3B3] p-4 rounded-[16px] bg-[#E6E6E699] focus:outline-[#FF5600] focus:border-[#FF5600] focus:ring-[#FF5600] border-none outline-[#FF5600] transition-all ease-linear duration-300 ${ footerForm.issue.trim() !== '' ? '!bg-[#FFEEE6]' : '' }`} 
-                    placeholder="A brief description of your issue (Optional)"
-                  ></textarea>
-                  <button 
-                    className={`${inter.className} rounded-[32px] bg-[#FF5600] py-5 px-6 capitalize text-white font-semibold text-[16px]/[16px] tracking-[-0.64px] w-full lg:w-fit custom-shadow-orange cursor-pointer mx-auto`}
-                    type="submit"
-                  >
-                    transform my online presence!
-                  </button>
-                </form>
+              <div className="p-4 md:p-6 bg-white rounded-[24px] flex flex-col items-center">
+                <BookingForm />
               </div>
             </div>
             <div className="h-px w-full bg-[#333]"></div>
