@@ -36,7 +36,7 @@ const PricingCards = (props: Props) => {
             <p className={`${inter.className} text-[16px]/[24px] tracking-[-0.64px] font-normal text-black`}>
                 {props.details}
             </p>
-            <button className={`${inter.className} rounded-[32px] bg-[#FF5600] py-5 px-6 capitalize text-white font-semibold text-[16px]/[16px] tracking-[-0.64px] custom-shadow-orange w-full`}>
+            <button className={`${inter.className} rounded-[32px] bg-[#FF5600] py-5 px-6 capitalize text-white font-semibold text-[16px]/[16px] tracking-[-0.64px] custom-shadow-orange w-full transition-all ease-linear duration-300 hover:!shadow-none cursor-pointer`}>
                 {props.cta}
             </button>
         </div>

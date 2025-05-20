@@ -15,6 +15,7 @@ import Marquee from "react-fast-marquee";
 import BookingForm from "@/components/BookingForm";
 import HeroForm from "@/components/HeroForm";
 import PricingCards from "@/components/PricingCards";
+import Image from "next/image";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -198,7 +199,7 @@ export default function Home() {
               i still have questions!
             </button>
           </section>
-          <section className="flex flex-col gap-10 bg-black rounded-[40px] p-5 md:p-10 scroll-mt-25 bg-contain bg-bottom sm:bg-[50%_110%] lg:bg-[50%_140%] bg-no-repeat" id="contact-us" style={{backgroundImage: 'url(./images/transparent-esper-text.png)'}}>
+          <section className="flex flex-col gap-10 bg-black rounded-[40px] py-10 px-5 md:py-14 md:px-10 lg:p-10 scroll-mt-25 bg-contain bg-bottom sm:bg-[50%_110%] lg:bg-[50%_140%] bg-no-repeat relative" id="contact-us">
             <div className="flex flex-col lg:grid lg:grid-cols-2 lg:items-center gap-10">
               <div className="flex flex-col gap-5">
                 <h2 className={`${inter.className} text-[32px]/[32px] md:text-[53px]/[53px] xl:text-[73px]/[73px] font-semibold tracking-[-1.92px] md:tracking-[-3.18px] text-center lg:text-start text-white`}>
@@ -221,6 +222,7 @@ export default function Home() {
                   © 2025 Esper Creations All rights reserved
               </p>
             </div>
+            <Image src='/images/transparent-esper-text.png' alt='Esper Creations' className='absolute bottom-[-40px] md:bottom-[-70px] lg:bottom-[-150px] left-0 w-full z-0' width={400} height={200}  />
           </section>
         </section>
       </main>

@@ -9,7 +9,7 @@ const inter = Inter({
 
 const ClientFooter = () => {
   return (
-    <div className="rounded-[16px] bg-black px-5 mb-5 py-10 flex flex-col items-center justify-center gap-6 bg-cover bg-[50%_-75%] bg-no-repeat"  style={{backgroundImage: 'url(/images/transparent-esper-text.png)'}}>
+    <div className="rounded-[16px] bg-black px-5 mb-5 py-10 flex flex-col items-center justify-center gap-6 bg-contain bg-[50%_-75%] bg-no-repeat"  style={{backgroundImage: 'url(/images/transparent-esper-text.png)'}}>
         <h2 className={`${inter.className} text-[32px]/[32px] tracking-[-1.92px] font-semibold text-white capitalize text-center`}>
         Let’s build together!
         </h2>

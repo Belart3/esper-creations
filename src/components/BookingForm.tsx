@@ -18,7 +18,7 @@ const BookingForm = () => {
         issue: ''
     })
   return (
-    <form action="" className="flex flex-col gap-4 md:gap-6 w-full">
+    <form action="" className="flex flex-col gap-4 md:gap-6 w-full z-10">
         <input 
         name="name"
         aria-label="name"
@@ -55,11 +55,12 @@ const BookingForm = () => {
         className={`${inter.className} text-[14px]/[21px] tracking-[-0.56px] text-[#B3B3B3] p-4 rounded-[16px] bg-[#E6E6E699] focus:outline-[#FF5600] focus:border-[#FF5600] focus:ring-[#FF5600] border-none outline-[#FF5600] transition-all ease-linear duration-300 ${ footerForm.phone.trim() !== '' ? '!bg-[#FFEEE6]' : '' }`}
         />
         <select 
+        defaultValue='What service are you in need of? *'
         name="" 
         id="" 
         className={`${inter.className} text-[14px]/[21px] tracking-[-0.56px] text-[#B3B3B3] p-4 rounded-[16px] bg-[#E6E6E699] focus:outline-[#FF5600] focus:border-[#FF5600] focus:ring-[#FF5600] border-none outline-[#FF5600] transition-all ease-linear duration-300`}
         >
-        <option value="A brief description of your issue (Optional)" disabled selected className={`${inter.className} text-[14px]/[21px] tracking-[-0.56px] text-[#B3B3B3] p-4 rounded-[16px] bg-[#E6E6E699]`}>
+        <option value="A brief description of your issue (Optional)" disabled className={`${inter.className} text-[14px]/[21px] tracking-[-0.56px] text-[#B3B3B3] p-4 rounded-[16px] bg-[#E6E6E699]`}>
             What service are you in need of? *
         </option>
         {
@@ -85,10 +86,10 @@ const BookingForm = () => {
         placeholder="A brief description of your issue (Optional)"
         ></textarea>
         <button 
-        className={`${inter.className} rounded-[32px] bg-[#FF5600] py-5 px-6 capitalize text-white font-semibold text-[16px]/[16px] tracking-[-0.64px] w-full lg:w-fit custom-shadow-orange cursor-pointer mx-auto`}
+        className={`${inter.className} rounded-[32px] bg-[#FF5600] py-5 px-6 capitalize text-white font-semibold text-[16px]/[16px] tracking-[-0.64px] w-full lg:w-fit custom-shadow-orange cursor-pointer mx-auto transition-all ease-linear duration-300 hover:!shadow-none`}
         type="submit"
         >
-        transform my online presence!
+            transform my online presence!
         </button>
     </form>
   )
