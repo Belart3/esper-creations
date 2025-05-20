@@ -5,6 +5,7 @@ import FloatingNav from "@/components/FloatingNav";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
   title: "Esper Creations",
@@ -24,6 +25,7 @@ export default function RootLayout({
         <FloatingNav />
         <Navbar />
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );

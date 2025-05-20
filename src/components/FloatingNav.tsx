@@ -49,7 +49,7 @@ const FloatingNav = () => {
         {/* round menu hamburger */}
         <div className={`size-[64px] md:size-[80px] transition-all bg-[#FF5600] rounded-full duration-300 ease-linear fixed z-[100] flex items-center justify-center right-4 md:right-7 lg:right-10 top-[50px] lg:hover:top-[40px] lg:hover:right-8 group overflow-hidden ${float ? 'translate-x-0' : 'translate-x-[150%]'} transition-all duration-500 cursor-pointer ${open == true ? '!translate-x-0' : ''} `} onClick={handleToggle} >
             <div className={`absolute top-0 left-0 h-full w-full rounded-full ${open ? 'translate-y-0' : 'translate-y-[100%]'} bg-[#FF5622] lg:group-hover:translate-y-0 transition-all duration-300`}></div>
-            <button className='flex items-center justify-center text-white size-full'  >
+            <button aria-label='menu button' className='flex items-center justify-center text-white size-full'  >
               <Hamburger 
                 toggled={open} toggle={setOpen}
               />
