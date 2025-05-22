@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "next build && next-image-export-optimizer",
     "export": "next export",
     "start": "next start",
     "lint": "next lint"
@@ -13,9 +13,13 @@
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
     "@mui/material": "^7.1.0",
+    "@types/nodemailer": "^6.4.17",
     "@vercel/speed-insights": "^1.2.0",
     "hamburger-react": "^2.5.2",
+    "handlebars": "^4.7.8",
     "next": "15.3.2",
+    "next-image-export-optimizer": "^1.19.0",
+    "nodemailer": "^7.0.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-fast-marquee": "^1.6.5",

@@ -11,16 +11,14 @@ const inter = Inter({
 const page = () => {
   return (
     <>
-      <header className='pt-[148px] flex flex-col gap-6 mx-5 md:mx-6 lg:max-w-[1104px] lg:mx-auto mb-12'>
-        <ClientHeader 
-          client='GIT Global'
-          url='https://gitsiowa.com/' 
-          projectScope='Web Design & Dev, Social Media Marketing' 
-          year='2024' 
-          projectDetails='GIT Global is an Iowa-based immigration service provider focused on making the U.S. immigration process more accessible, affordable, and transparent. They assist clients with visa applications, green card processing, and general immigration documentation. With a commitment to clarity and care, GIT Global supports individuals and families navigating complex legal systems with professionalism and integrity.' 
-        />
-      </header>  
-      <main className='flex flex-col gap-16 mx-5 md:mx-6 lg:mx-14'>
+      <ClientHeader 
+        client='GIT Global'
+        url='https://gitsiowa.com/' 
+        projectScope='Web Design & Dev, Social Media Marketing' 
+        year='2024' 
+        projectDetails='GIT Global is an Iowa-based immigration service provider focused on making the U.S. immigration process more accessible, affordable, and transparent. They assist clients with visa applications, green card processing, and general immigration documentation. With a commitment to clarity and care, GIT Global supports individuals and families navigating complex legal systems with professionalism and integrity.' 
+      />
+      <main className='flex flex-col gap-16 mx-5 md:mx-6 box-content lg:px-14 max-w-[1328px] lg:mx-auto'>
         <div className="flex flex-col gap-4">
           <div className="h-[250px] md:h-[400px] lg:h-[600px] w-full rounded-[16px] bg-[#001F3C] flex items-center justify-center">
             <h2 className={`${inter.className} text-[44px]/[44px] tracking-[-2.64px] font-semibold text-white capitalize`}>

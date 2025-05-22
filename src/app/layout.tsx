@@ -6,6 +6,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import NavBlock from "@/components/NavBlock";
 
 export const metadata: Metadata = {
   title: "Esper Creations",
@@ -22,8 +23,7 @@ export default function RootLayout({
       <body
         className={`antialiased bg-[#F4F5FA] hide-scrollbar relative scroll-smooth overflow-x-hidden`}
       >
-        <FloatingNav />
-        <Navbar />
+        <NavBlock />
         {children}
         <SpeedInsights />
       </body>

@@ -40,17 +40,16 @@ const PricingCards = (props: Props) => {
                 {props.cta}
             </button>
         </div>
-        <div className="py-6 px-2 rounded-[24px] flex flex-col gap-2 bg-[#F4F5FA] custom-inset-shadow">
-            {
-            props.features.map((feature: string, index: number) => (
-                <div className="flex items-center gap-2" key={index}>
-                <span className="text-[24px]">👌</span>
-                <p className={`${inter.className} text-[16px]/[24px] tracking-[-0.64px] font-normal text-[#666666]`}>
-                    {feature}
-                </p>
-                </div>
-            ))
-            }
+        <div className="py-6 px-2 rounded-[24px] bg-[#F4F5FA] custom-inset-shadow">
+            <ul className=' flex flex-col gap-2'>
+                {
+                    props.features.map((feature: string, index: number) => (
+                        <li className={`${inter.className} text-[16px]/[24px] tracking-[-0.64px] font-normal text-[#666666] list-disc ms-5`} key={index}>
+                            {feature}
+                        </li>
+                    ))
+                }
+            </ul>
         </div>
     </div>
   )

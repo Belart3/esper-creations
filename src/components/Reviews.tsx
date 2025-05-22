@@ -18,7 +18,7 @@ const Reviews = () => {
     const [activeFilter, setActiveFilter] = useState(0);
   return (
         <div className='flex flex-col gap-12 md:gap-16'>
-            <div className="flex flex-col items-center justify-center p-2 rounded-[32px] bg-[#EDEFF7] w-full md:w-fit mx-auto">
+            <div className="flex flex-col items-center justify-center p-2 rounded-[32px] bg-[#EDEFF7] w-full max-w-[400px] md:w-fit md:max-w-none mx-auto">
                 <div className="flex flex-col md:flex-row items-center justify-center relative w-full md:w-fit">
                 {
                     filters.map((filter, index) => (

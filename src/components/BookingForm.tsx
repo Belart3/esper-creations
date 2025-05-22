@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Inter } from "next/font/google";
 import PhoneInput from 'react-phone-number-input';
 import services from "@/data/services.json"
+import { sendBookingMail } from '@/lib/actions/sendMailAction';
 
 const inter = Inter({
   variable: "--font-inter",
@@ -18,7 +19,7 @@ const BookingForm = () => {
         issue: ''
     })
   return (
-    <form action="" className="flex flex-col gap-4 md:gap-6 w-full z-10">
+    <form action={sendBookingMail} className="flex flex-col gap-4 md:gap-6 w-full z-10">
         <input 
         name="name"
         aria-label="name"
@@ -56,13 +57,20 @@ const BookingForm = () => {
         />
         <select 
         defaultValue='What service are you in need of? *'
-        name="" 
+        name="service" 
         id="" 
         className={`${inter.className} text-[14px]/[21px] tracking-[-0.56px] text-[#B3B3B3] p-4 rounded-[16px] bg-[#E6E6E699] focus:outline-[#FF5600] focus:border-[#FF5600] focus:ring-[#FF5600] border-none outline-[#FF5600] transition-all ease-linear duration-300`}
+        value={footerForm.service}
+        onChange={
+            (e) => {
+                setFooterForm({...footerForm, service: e.target.value}),
+                console.log(footerForm.service)
+            }
+        }
         >
-        <option value="A brief description of your issue (Optional)" disabled className={`${inter.className} text-[14px]/[21px] tracking-[-0.56px] text-[#B3B3B3] p-4 rounded-[16px] bg-[#E6E6E699]`}>
-            What service are you in need of? *
-        </option>
+            <option value="A brief description of your issue (Optional)" disabled className={`${inter.className} text-[14px]/[21px] tracking-[-0.56px] text-[#B3B3B3] p-4 rounded-[16px] bg-[#E6E6E699]`}>
+                What service are you in need of? *
+            </option>
         {
         services.map((service, index) => (
             <option value={service.title} className={`${inter.className} text-[14px]/[21px] tracking-[-0.56px] text-[#B3B3B3] p-4 rounded-[16px] bg-[#E6E6E699]`} key={index}>

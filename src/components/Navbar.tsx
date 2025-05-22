@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import {Inter} from 'next/font/google'
 import { Spiral as Hamburger } from 'hamburger-react'
+import ExportedImage from "next-image-export-optimizer";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -18,17 +19,18 @@ const pages = [
     { name: "Contact Us", link: "/#contact-us" },
 ]
 
-const Navbar = () => {
-    const [open, setOpen] = useState(false)
-    const handleToggle = () => {
-        setOpen(!open);
-        document.body.style.overflow = open ? 'auto' : 'hidden';
-    }
+type Props = {
+    open: boolean,
+    setOpen: React.Dispatch<React.SetStateAction<boolean>>,
+    handleToggle: () => void
+}
+
+const Navbar = (props: Props) => {
   return (
     <nav className='p-1 md:p-[10px] rounded-[40px] flex justify-between items-center bg-white w-[calc(100%-40px)] md:w-[calc(100%-48px)] max-w-[1104px] mx-auto absolute top-5 left-1/2 transform -translate-x-1/2 z-50'>
         <Link href="/">
             <div className="flex gap-1 items-center">
-                <img src="/images/logo.png" alt="esper creation's logo" className="size-10" />
+                <ExportedImage src="/images/logo.png" alt="esper creation's logo" className="size-10" width={40} height={40} />
                 <p className={`${inter.className} text-[16px]/[16px] md:text-[20px]/[20px] text-black font-semibold tracking-[-0.8px]`}>
                 Esper Creations
                 </p>
@@ -53,12 +55,12 @@ const Navbar = () => {
                 transform my online presence
             </button>
         </Link>
-        <button className="size-14 rounded-full bg-[#FF5600] flex items-center justify-center shadow-lg shadow-[#FF560060] lg:hidden z-[51]" onClick={handleToggle}>
+        <button className="size-14 rounded-full bg-[#FF5600] flex items-center justify-center shadow-lg shadow-[#FF560060] lg:hidden z-[51]" onClick={props.handleToggle}>
             <Hamburger
                 color="#fff"
                 label="Show menu"
                 distance="sm"
-                toggled={open} toggle={setOpen}
+                toggled={props.open} toggle={props.setOpen}
             />
         </button>
     </nav>

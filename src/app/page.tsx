@@ -15,7 +15,7 @@ import Marquee from "react-fast-marquee";
 import BookingForm from "@/components/BookingForm";
 import HeroForm from "@/components/HeroForm";
 import PricingCards from "@/components/PricingCards";
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -69,46 +69,56 @@ export default function Home() {
               </div>
             </div>
             {/* floating header boxes */}
-            <img 
+            <ExportedImage 
               src={'/images/hero-floats/ad-1.webp'} 
               className={`${float ? ' delay-0' : ''} transition-all duration-300 ease-linear hidden md:flex size-[120px] lg:size-[150px] absolute -top-[100px] lg:-top-[100px] left-1/2 -translate-x-1/2 z-[0] rotate-[-15deg] shadow-2xl shadow-[#00000080]`} 
               alt="Less Average CPC, More Ads Impressions" 
+              width={150}
+              height={150}
               style={{
                 transform: `translateY(-${Math.min(scrollPosition * 40, 220)}%)`,
                 opacity: `${100 - (scrollPosition * 50)}%`
               }}
             />  
-            <img 
+            <ExportedImage 
               src={'/images/hero-floats/ad-2.webp'} 
               className={`${float ? '! delay-0' : ''} transition-all duration-300 ease-linear  hidden md:flex size-[120px] lg:size-[150px] absolute top-[70px] -left-[53px] lg:left-[5px] z-[-10] rotate-[-15deg] shadow-2xl shadow-[#00000080]`} 
-              alt="Git-Global Immigration Services Ad" 
+              alt="Git-Global Immigration Services Ad"  
+              width={150}
+              height={150}
               style={{
                 transform: `translateX(-${Math.min(scrollPosition * 40, 220)}%)`,
                 opacity: `${100 - (scrollPosition * 50)}%`
               }}
             />
-            <img 
+            <ExportedImage 
               src={'/images/hero-floats/ad-3.webp'} 
               className={`${float ? 'delay-0' : ''} transition-all duration-300 ease-linear hidden md:flex size-[120px] lg:size-[150px] absolute top-[344px] lg:top-[350px] left-[80px] z-[-10] rotate-[15deg] shadow-2xl shadow-[#00000080]`} 
-              alt="Increase in Ad Clicks" 
+              alt="Increase in Ad Clicks"  
+              width={150}
+              height={150}
               style={{
                 transform: `translateX(-${Math.min(scrollPosition * 40, 220)}%)`,
                 opacity: `${100 - (scrollPosition * 50)}%`
               }}
             />  
-            <img 
+            <ExportedImage 
               src={'/images/hero-floats/ad-4.webp'} 
               className={`${float ? ' delay-0' : ''} transition-all duration-300 ease-linear hidden md:flex size-[120px] lg:size-[150px] absolute top-[344px] lg:top-[350px] right-[80px] z-[-10] rotate-[-15deg] shadow-2xl shadow-[#00000080]`} 
-              alt="Increase in Average Session Duration"               
+              alt="Increase in Average Session Duration"   
+              width={150}
+              height={150}             
               style={{
                 transform: `translateX(${Math.min(scrollPosition * 40, 220)}%)`,
                 opacity: `${100 - (scrollPosition * 50)}%`
               }}
             />
-            <img 
+            <ExportedImage 
               src={'/images/hero-floats/ad-5.webp'} 
               className={`${float ? 'delay-0' : ''} transition-all duration-300 ease-linear  hidden md:flex size-[120px] lg:size-[150px] absolute top-[70px] -right-[53px] lg:right-[5px] z-[-10] rotate-[15deg] shadow-2xl shadow-[#00000080]`} 
-              alt="Git-Global Website Revivified"
+              alt="Git-Global Website Revivified" 
+              width={150}
+              height={150}
               style={{
                 transform: `translateX(${Math.min(scrollPosition * 40, 220)}%)`,
                 opacity: `${100 - (scrollPosition * 50)}%`
@@ -121,30 +131,30 @@ export default function Home() {
             </h2>
             <Marquee speed={100} loop={0} pauseOnHover={true} gradient={true} gradientWidth={150} gradientColor="#FFEEE6CC" className="cursor-pointer">
               <a href="" className="flex !shrink-0 mx-10">
-                <img src={"/images/partners/acapulco-grocery-and-bakery.png"} alt="acapulco-grocery-and-bakery" className='h-[67px]'/>
+                <ExportedImage src={"/images/partners/acapulco-grocery-and-bakery.png"} alt="acapulco-grocery-and-bakery" className='h-[67px]' width={120} height={67}/>
               </a>
               <a href="" className="flex !shrink-0 w-[84px] md:w-[130px] mx-5 lg:mx-16">
-                <img src={"/images/partners/cardmines.png"} alt="cardmines" className='' />
+                <ExportedImage src={"/images/partners/cardmines.png"} alt="cardmines" className='' width={120} height={67} />
               </a>
               <a href="" className="flex !shrink-0 w-[84px] md:w-[130px] mx-5 lg:mx-16">
-                <img src={"/images/partners/iowa-digital-solutions.png" }alt="iowa-digital-solutions" className='' />
+                <ExportedImage src={"/images/partners/iowa-digital-solutions.png" }alt="iowa-digital-solutions" className='' width={120} height={67} />
               </a>
               <a href="" className="flex !shrink-0 w-[84px] md:w-[130px] mx-5 lg:mx-16">
-                <img src={"/images/partners/esport-iowa-city.png" }alt="esport-iowa-city" className='' />
+                <ExportedImage src={"/images/partners/esport-iowa-city.png" }alt="esport-iowa-city" className='' width={120} height={67} />
               </a>
               <a href="" className="flex !shrink-0 w-[84px] md:w-[130px] mx-5 lg:mx-16">
-                <img src={"/images/partners/magic-bail-bonds.png"} alt="magic-bail-bonds" className='' />
+                <ExportedImage src={"/images/partners/magic-bail-bonds.png"} alt="magic-bail-bonds" className='' width={120} height={67} />
               </a>
               <a href="" className="flex !shrink-0 w-[84px] md:w-[130px] mx-5 lg:mx-16">
-                <img src={"/images/partners/rose-heaven-nursing-home.png"}alt="rose-heaven-nursing-home" className='' />
+                <ExportedImage src={"/images/partners/rose-heaven-nursing-home.png"}alt="rose-heaven-nursing-home" className='' width={120} height={67} />
               </a>      
             </Marquee>
           </div>
         </div>
       </header>
       <main>
-        <section className=" max-w-[1440px] mx-auto py-16 px-5 md:py-[104px] md:px-6 lg:py- lg:px-14 flex flex-col gap-[104px]">
-          <section className="flex flex-col gap-12 md:gap-16 lg:p-5 scroll-mt-25" id="services">
+        <section className=" max-w-[1440px] mx-auto py-16 px-5 md:py-[104px] md:px-6 lg:px-14 flex flex-col gap-[104px]">
+          <section className="flex flex-col gap-12 md:gap-16 scroll-mt-25" id="services">
             <SectionHead title="Results-driven Marketing." description="You deserve more than likes and pretty websites. We build systems designed to convert, scale, and dominate your market." />
             <Services />
           </section>
@@ -222,7 +232,7 @@ export default function Home() {
                   © 2025 Esper Creations All rights reserved
               </p>
             </div>
-            <Image src='/images/transparent-esper-text.png' alt='Esper Creations' className='absolute bottom-[-40px] md:bottom-[-70px] lg:bottom-[-150px] left-0 w-full z-0' width={400} height={200}  />
+            <ExportedImage src='/images/transparent-esper-text.png' alt='Esper Creations' className='absolute bottom-[-40px] md:bottom-[-70px] lg:bottom-[-150px] left-0 w-full z-0' width={400} height={200}  />
           </section>
         </section>
       </main>
