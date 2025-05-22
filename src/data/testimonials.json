@@ -17,13 +17,13 @@
         "clientImage": "/images/testimonials/fatima-saeed.png"
     },
     {
-        "image": "/images/testimonials/jmg-testimonial.webp",
+        "image": "/images/testimonials/colony-heating-testimonial.webp",
         "service": "Web Design & Dev.",
-        "name": "Timothy Furman",
-        "company": "JMG Handyman",
+        "name": "Matt Hanson",
+        "company": "Colony Heating",
         "reviews": [
             {
-                "name": "Timothy Furman",
+                "name": "Matt Hanson",
                 "message": "Our new website helped us get 3X more quote requests within the first 30 days. It's the best investment we've made this year."
             },
             {
@@ -34,13 +34,13 @@
         "clientImage": "/images/testimonials/timothy-furman.png"
     },
     {
-        "image": "/images/testimonials/bcm-testimonial.webp",
+        "image": "/images/testimonials/gregs-lawn-testimonial.webp",
         "service": "Web Design & Dev.",
-        "name": "Cade O’Neil",
-        "company": "BlockChain Management",
+        "name": "Greg Scharf",
+        "company": "Greg's Lawn",
         "reviews": [
             {
-                "name": "Cade O’Neil",
+                "name": "Greg Scharf",
                 "message": "Our website’s churn rate reduced by 30% within the first 5 weeks of Esper redesigning our site."
             },
             {
@@ -68,13 +68,13 @@
         "clientImage": "/images/testimonials/mo-nasr.png"
     },
     {
-        "image": "/images/testimonials/bcm-seo.png",
+        "image": "/images/testimonials/gregs-lawn-seo.webp",
         "service": "SEO",
-        "name": "Cade O’Neil",
-        "company": "BlockChain Management",
+        "name": "Greg Scharf",
+        "company": "Greg's Lawn",
         "reviews": [
             {
-                "name": "Cade O’Neil",
+                "name": "Greg Scharf",
                 "message": "Visitors stay longer on the site, and our domain authority increased by 18 points. Esper’s SEO work had a significant impact."
             },
             {
@@ -85,13 +85,13 @@
         "clientImage": "/images/testimonials/cade-oneil.png"
     },
     {
-        "image": "/images/testimonials/jmg-seo.png",
+        "image": "/images/testimonials/colony-heating-seo.webp",
         "service": "SEO",
-        "name": "Timothy Furman",
-        "company": "JMG Handyman",
+        "name": "Matt Hanson",
+        "company": "Colony Heating",
         "reviews": [
             {
-                "name": "Timothy Furman",
+                "name": "Matt Hanson",
                 "message": "We’re now ranking on page one for 12 more keywords, and impressions are up 540%. That’s real growth we can feel."
             },
             {
@@ -102,13 +102,13 @@
         "clientImage": "/images/testimonials/timothy-furman.png"
     },
     {
-        "image": "/images/testimonials/bcm-marketing.webp",
+        "image": "/images/testimonials/gregs-lawn-marketing.webp",
         "service": "Social Media Marketing",
-        "name": "Cade O’Neil",
-        "company": "BlockChain Management",
+        "name": "Greg Scharf",
+        "company": "Greg's Lawn",
         "reviews": [
             {
-                "name": "Cade O’Neil",
+                "name": "Greg Scharf",
                 "message": "Since Esper revamped our site, engagement time has risen by over 60%. The new layout encourages exploration."
             },
             {
@@ -136,13 +136,13 @@
         "clientImage": "/images/testimonials/darcel-pledge.png"
     },
     {
-        "image": "/images/testimonials/bcm-ppc.webp",
+        "image": "/images/testimonials/gregs-lawn-ppc.webp",
         "service": "PPC Advertising",
-        "name": "Cade O’Neil",
-        "company": "BlockChain Management",
+        "name": "Greg Scharf",
+        "company": "Greg's Lawn",
         "reviews": [
             {
-                "name": "Cade O’Neil",
+                "name": "Greg Scharf",
                 "message": "Since Esper revamped our ad strategy, site traffic from high-converting regions has surged, and our cost per lead has dropped."
             },
             {
@@ -153,13 +153,13 @@
         "clientImage": "/images/testimonials/cade-oneil.png"
     },
     {
-        "image": "/images/testimonials/jmg-ppc.webp",
+        "image": "/images/testimonials/colony-heating-ppc.webp",
         "service": "PPC Advertising",
-        "name": "Timothy Furman",
-        "company": "JMG Handyman",
+        "name": "Matt Hanson",
+        "company": "Colony Heating",
         "reviews": [
             {
-                "name": "Timothy Furman",
+                "name": "Matt Hanson",
                 "message": "We spent less and earned more. Esper’s PPC team tripled our leads without raising our budget. Our most efficient campaign!"
             },
             {

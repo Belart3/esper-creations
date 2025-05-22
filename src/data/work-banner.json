@@ -2,16 +2,19 @@
     {
         "project": "GIT Global",
         "image": "/images/work-banners/git-work-banner.webp",
-        "url": "/clients/git-global"
+        "url": "/clients/git-global",
+        "alt": "GITS – trusted immigration and tax partner in Iowa"
     },
     {
-        "project": "JMG Handyman",
-        "image": "/images/work-banners/jmg-work-banner.webp",
-        "url": "/clients/jmg-handyman"
+        "project": "Colony Heating",
+        "image": "/images/work-banners/colony-heating-work-banner.webp",
+        "url": "/clients/colony-heating",
+        "alt": "Colony Heating – trusted HVAC partner featured by Esper Creations"
     },
     {
-        "project": "BlockChain Management",
-        "image": "/images/work-banners/bcm-work-banner.webp",
-        "url": "/clients/blockchain-management"
+        "project": "Greg’s Lawn",
+        "image": "/images/work-banners/gregs-lawn-work-banner.webp",
+        "url": "/clients/gregs-lawn",
+        "alt": "Proud to work with Gregs Lawn and Landscaping – experts in lawn care and landscape design"
     }
 ]

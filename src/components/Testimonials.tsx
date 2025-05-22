@@ -35,9 +35,9 @@ export default function Testimonials (props: Props) {
                     ${
                     item.company === 'git global' ? 'from-[#001F3D80] lg:group-hover/item:from-[#001F3D80] to-[#001F3D] lg:group-hover/item:to-[#001F3D]' 
                     : 
-                    item.company === 'JMG Handyman' ? 'from-[#DA232780] lg:group-hover/item:from-[#DA232780] to-[#DA2327] lg:group-hover/item:to-[#DA2327]' 
+                    item.company === 'Colony Heating' ? 'from-[#01477180] lg:group-hover/item:from-[#01477180] to-[#014771] lg:group-hover/item:to-[#014771]' 
                     :
-                    item.company === 'BlockChain Management' ? 'from-[#F4844C80] lg:group-hover/item:from-[#F4844C80] to-[#F4844C] lg:group-hover/item:to-[#F4844C]' 
+                    item.company === "Greg's Lawn" ? 'from-[#17A05F80] lg:group-hover/item:from-[#17A05F80] to-[#17A05F] lg:group-hover/item:to-[#17A05F]' 
                     :
                     item.company === 'Weight Loss Paradise' ? 'from-[#31939380] lg:group-hover/item:from-[#31939380] to-[#319393] lg:group-hover/item:to-[#319393]' 
                     :
