@@ -24,6 +24,8 @@
     "react-dom": "^19.0.0",
     "react-fast-marquee": "^1.6.5",
     "react-phone-number-input": "^3.4.12",
+    "react-spinners": "^0.17.0",
+    "react-toastify": "^11.0.5",
     "swiper": "^11.2.6"
   },
   "devDependencies": {

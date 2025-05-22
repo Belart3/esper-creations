@@ -67,6 +67,26 @@ html{
   box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.08);
 }
 
+/* Example: make success toast purple background */
+.Toastify__toast--success {
+  background: #FF5600 !important;
+  color: white !important;
+  z-index: 99999 !important;
+}
 
+.Toastify__toast--error {
+  z-index: 99999 !important;
+}
 
+.Toastify__toast--error .Toastify__progress-bar{
+  background-color: #FF5600 !important;
+}
 
+.Toastify__progress-bar{
+  background-color: white !important;
+}
+.Toastify__toast-icon{
+  color: white !important;
+  background-color: white !important;
+  border-radius: 100% !important;
+}
