@@ -3,13 +3,25 @@ import ClientHeader from '@/components/ClientHeader';
 import ClientFooter from '@/components/ClientFooter';
 import ExportedImage from "next-image-export-optimizer";
 
+export const metadata = {
+  title: 'Gregs Lawn & Landscaping Website Design | Esper Creations',
+  description: 'View snapshots of the website design Esper Creations created for Gregs Lawn. Explore the visual layout, user experience, and visit the live site.',
+  alternates: {
+    canonical: 'http://localhost:3000/clients/gregs-lawn',
+  },
+  openGraph: {
+    title: 'Colony Heating Website Design | Esper Creations',
+    description: 'View snapshots of the website design Esper Creations created for Colony Heating. Explore the visual layout, user experience, and visit the live site.',
+  },
+};
+
 
 const page = () => {
   return (
     <>
       <ClientHeader 
-        client='Greg’s Lawn'
-        url='https://jmghandymania.com/' 
+        client='Greg’s Lawn & Landscaping'
+        url='https://gregslawn.com/' 
         projectScope='Web Design & Dev' 
         year='2025' 
         projectDetails='JMG HandyMania is a reliable handyman service based in Iowa City, offering a wide range of home repair and improvement solutions. From electrical and plumbing fixes to painting, carpentry, and lawn maintenance, their team delivers quality work with efficiency and professionalism. With transparent pricing and a strong focus on customer satisfaction, JMG HandyMania is a go-to choice for both homeowners and small businesses.' 

@@ -1,6 +1,5 @@
 import React from 'react'
 import BtnTransparent from '@/components/BtnTransparent'
-import SectionTitle from '@/components/SectionTitle'
 import { Inter } from 'next/font/google';
 
 const inter = Inter({
@@ -20,9 +19,9 @@ const ClientHeader = (props: Props) => {
   return (
     <header className='pt-[148px] flex flex-col gap-6 box-content px-5 md:px-14 lg:mx-auto lg:max-w-[1104px] mb-12'>
       <div className="flex flex-coInter, l md:flex-row md:justify-between gap-6 items-start">
-        <h2 className={`${inter.className} text-[32px]/[32px] md:text-[53px]/[53px] font-semibold tracking-[-1.92px] md:tracking-[-3.18px] text-start text-black`}>
+        <h1 className={`${inter.className} text-[32px]/[32px] md:text-[53px]/[53px] font-semibold tracking-[-1.92px] md:tracking-[-3.18px] text-start text-black`}>
           {props.client}
-        </h2>
+        </h1>
         <a href={props.url} target='_blank'>
           <BtnTransparent cta="view live site" />
         </a>

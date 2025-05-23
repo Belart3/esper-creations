@@ -8,6 +8,18 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+export const metadata = {
+  title: 'Git Global Website Design | Esper Creations',
+  description: 'View snapshots of the website design Esper Creations created for Git Global. Explore the visual layout, user experience, and visit the live site.',
+  alternates: {
+    canonical: 'http://localhost:3000/clients/git-global',
+  },
+  openGraph: {
+    title: 'Git Global Website Design | Esper Creations',
+    description: 'View snapshots of the website design Esper Creations created for Git Global. Explore the visual layout, user experience, and visit the live site.',
+  },
+};
+
 const page = () => {
   return (
     <>

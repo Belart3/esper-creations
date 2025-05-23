@@ -16,6 +16,7 @@ import BookingForm from "@/components/BookingForm";
 import HeroForm from "@/components/HeroForm";
 import PricingCards from "@/components/PricingCards";
 import ExportedImage from "next-image-export-optimizer";
+import Link from "next/link";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -196,7 +197,9 @@ export default function Home() {
               <p className={`${inter.className} text-[#666666] text-center text-[16px]/[24px] md:text-[18px]/[27px] tracking-[-0.64px] md:tracking-[-0.72px] font-normal`}>
                 Can’t find your answer? please send us a mail by clicking the button below.
               </p>
-              <BtnOrange cta="i still have questions!" />
+              <Link href='/#contact-us'>
+                <BtnOrange cta="i still have questions!" />
+              </Link>
             </div>
             <div className="flex flex-col gap-3">
               {
@@ -205,19 +208,29 @@ export default function Home() {
                 ))
               }
             </div>
-            <button className={`${inter.className} rounded-[32px] bg-[#FF5600] py-5 px-6 capitalize text-white font-semibold text-[16px]/[16px] tracking-[-0.64px] shadow-lg shadow-[#FF560060] w-full md:w-fit mx-auto lg:hidden`}>
-              i still have questions!
-            </button>
+            <Link href='/#contact-us' className="w-fit mx-auto">
+              <button className={`${inter.className} rounded-[32px] bg-[#FF5600] py-5 px-6 capitalize text-white font-semibold text-[16px]/[16px] tracking-[-0.64px] shadow-lg shadow-[#FF560060] w-full md:max-w-[300px] md:w-fit mx-auto lg:hidden cursor-pointer`}>
+                i still have questions!
+              </button>
+            </Link>
           </section>
           <section className="flex flex-col gap-10 bg-black rounded-[40px] py-10 px-5 md:py-14 md:px-10 lg:p-10 scroll-mt-25 bg-contain bg-bottom sm:bg-[50%_110%] lg:bg-[50%_140%] bg-no-repeat relative" id="contact-us">
             <div className="flex flex-col lg:grid lg:grid-cols-2 lg:items-center gap-10">
-              <div className="flex flex-col gap-5">
-                <h2 className={`${inter.className} text-[32px]/[32px] md:text-[53px]/[53px] xl:text-[73px]/[73px] font-semibold tracking-[-1.92px] md:tracking-[-3.18px] text-center lg:text-start text-white`}>
-                  Transform your online presence into a powerful revenue tool.
-                </h2>
-                <p className={`${inter.className} text-[18px]/[27px] tracking-[-0.72px] font-normal text-[#E6E6E6]`}>
-                  We are ready to turn your business into an unforgettable brand and transform your online presence into consistent revenue—at scale.
+              <div className="flex flex-col gap-5 h-full justify-center">
+                <div className="flex flex-col gap-4 items-center lg:items-start">
+                  <ExportedImage src="/images/logo.svg" alt="esper creation's logo" className="size-10 lg:size-15" width={40} height={40} />
+                  <p className={`${inter.className} text-[20px]/[20px] md:text-[24px]/[24px] text-white font-semibold tracking-[-0.8px]`}>
+                  Esper Creations
                 </p>
+                </div>
+                <div className="flex flex-col gap-5">
+                  <h2 className={`${inter.className} text-[32px]/[32px] md:text-[53px]/[53px] xl:text-[73px]/[73px] font-semibold tracking-[-1.92px] md:tracking-[-3.18px] text-center lg:text-start text-white`}>
+                    Transform your online presence into a powerful revenue tool.
+                  </h2>
+                  <p className={`${inter.className} text-[18px]/[27px] tracking-[-0.72px] font-normal text-[#E6E6E6] text-center lg:text-start`}>
+                    We are ready to turn your business into an unforgettable brand and transform your online presence into consistent revenue—at scale.
+                  </p>
+                </div>
               </div>
               <div className="p-4 md:p-6 bg-white rounded-[24px] flex flex-col items-center">
                 <BookingForm />

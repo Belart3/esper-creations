@@ -21,7 +21,7 @@ const PricingCards = (props: Props) => {
     <div className="p-4 rounded-[40px] bg-white flex flex-col gap-16" key={props.index}>
         <div className="flex flex-col gap-8">
             <div className="rounded-[32px] p-6 flex flex-col gap-10 items-start bg-[#FF15491A]" style={{backgroundColor: `${props.productColor}`}}>
-            <button className={`${inter.className} px-4 py-3 bg-white rounded-[32px] text-black text-[16px]/[24px] tracking-[-0.64px] font-semibold`}>
+            <button className={`${inter.className} px-4 py-3 bg-white rounded-[32px] text-black text-[16px]/[24px] tracking-[-0.64px] font-semibold w-full`}>
                 {props.product}
             </button>
             <div className="flex flex-col gap-2">

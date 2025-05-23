@@ -30,7 +30,7 @@ const Navbar = (props: Props) => {
     <nav className='p-1 md:p-[10px] rounded-[40px] flex justify-between items-center bg-white w-[calc(100%-40px)] md:w-[calc(100%-48px)] max-w-[1104px] mx-auto absolute top-5 left-1/2 transform -translate-x-1/2 z-50'>
         <Link href="/">
             <div className="flex gap-1 items-center">
-                <ExportedImage src="/images/logo.png" alt="esper creation's logo" className="size-10" width={40} height={40} />
+                <ExportedImage src="/images/logo.svg" alt="esper creation's logo" className="size-10" width={40} height={40} />
                 <p className={`${inter.className} text-[16px]/[16px] md:text-[20px]/[20px] text-black font-semibold tracking-[-0.8px]`}>
                 Esper Creations
                 </p>
