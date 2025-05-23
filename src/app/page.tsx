@@ -132,22 +132,22 @@ export default function Home() {
             </h2>
             <Marquee speed={100} loop={0} pauseOnHover={true} gradient={true} gradientWidth={150} gradientColor="#FFEEE6CC" className="cursor-pointer">
               <a href="" className="flex !shrink-0 mx-10">
-                <ExportedImage src={"/images/partners/acapulco-grocery-and-bakery.png"} alt="acapulco-grocery-and-bakery" className='h-[67px]' width={120} height={67}/>
+                <ExportedImage src={"/images/partners/acapulco-grocery-and-bakery.webp"} alt="acapulco-grocery-and-bakery" className='h-[67px]' width={120} height={67}/>
               </a>
               <a href="" className="flex !shrink-0 w-[84px] md:w-[130px] mx-5 lg:mx-16">
-                <ExportedImage src={"/images/partners/cardmines.png"} alt="cardmines" className='' width={120} height={67} />
+                <ExportedImage src={"/images/partners/cardmines.webp"} alt="cardmines" className='' width={120} height={67} />
               </a>
               <a href="" className="flex !shrink-0 w-[84px] md:w-[130px] mx-5 lg:mx-16">
-                <ExportedImage src={"/images/partners/iowa-digital-solutions.png" }alt="iowa-digital-solutions" className='' width={120} height={67} />
+                <ExportedImage src={"/images/partners/iowa-digital-solutions.webp" }alt="iowa-digital-solutions" className='' width={120} height={67} />
               </a>
               <a href="" className="flex !shrink-0 w-[84px] md:w-[130px] mx-5 lg:mx-16">
-                <ExportedImage src={"/images/partners/esport-iowa-city.png" }alt="esport-iowa-city" className='' width={120} height={67} />
+                <ExportedImage src={"/images/partners/esport-iowa-city.webp" }alt="esport-iowa-city" className='' width={120} height={67} />
               </a>
               <a href="" className="flex !shrink-0 w-[84px] md:w-[130px] mx-5 lg:mx-16">
-                <ExportedImage src={"/images/partners/magic-bail-bonds.png"} alt="magic-bail-bonds" className='' width={120} height={67} />
+                <ExportedImage src={"/images/partners/magic-bail-bonds.webp"} alt="magic-bail-bonds" className='' width={120} height={67} />
               </a>
               <a href="" className="flex !shrink-0 w-[84px] md:w-[130px] mx-5 lg:mx-16">
-                <ExportedImage src={"/images/partners/rose-heaven-nursing-home.png"}alt="rose-heaven-nursing-home" className='' width={120} height={67} />
+                <ExportedImage src={"/images/partners/rose-heaven-nursing-home.webp"}alt="rose-heaven-nursing-home" className='' width={120} height={67} />
               </a>      
             </Marquee>
           </div>
