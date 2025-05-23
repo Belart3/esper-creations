@@ -97,7 +97,7 @@ const BookingForm = () => {
             }
         }
         >
-            <option value="" selected hidden disabled className={`${inter.className} text-[14px]/[21px] tracking-[-0.56px] text-[#B3B3B3] p-4 rounded-[16px] bg-[#E6E6E699]`}>
+            <option defaultValue='What service are you in need of? *' hidden disabled className={`${inter.className} text-[14px]/[21px] tracking-[-0.56px] text-[#B3B3B3] p-4 rounded-[16px] bg-[#E6E6E699]`}>
                 What service are you in need of? *
             </option>
         {

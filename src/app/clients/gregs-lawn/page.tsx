@@ -24,7 +24,7 @@ const page = () => {
         url='https://gregslawn.com/' 
         projectScope='Web Design & Dev' 
         year='2025' 
-        projectDetails='JMG HandyMania is a reliable handyman service based in Iowa City, offering a wide range of home repair and improvement solutions. From electrical and plumbing fixes to painting, carpentry, and lawn maintenance, their team delivers quality work with efficiency and professionalism. With transparent pricing and a strong focus on customer satisfaction, JMG HandyMania is a go-to choice for both homeowners and small businesses.' 
+        projectDetails="Greg's Lawn & Landscaping is a family-owned company based in Cedar Rapids, Iowa, offering comprehensive services in lawn care, landscaping, irrigation, and snow management. With over 40 years of experience, the company serves both residential and commercial clients across Eastern Iowa. Greg's Lawn & Landscaping is recognized for its sustainable practices, certified expertise, and commitment to delivering high-quality, eco-friendly solutions." 
       />
       <main className='flex flex-col gap-16 mx-5 md:mx-6 lg:px-14 box-content max-w-[1328px] lg:mx-auto'>
         <div className="flex flex-col gap-4">
