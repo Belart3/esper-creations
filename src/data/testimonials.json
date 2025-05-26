@@ -3,7 +3,7 @@
         "image": "/images/testimonials/git-testimonial.webp",
         "service": "Web Design & Dev.",
         "name": "Fatima Saeed",
-        "company": "git global",
+        "company": "CEO of git global",
         "reviews": [
             {
                 "name": "Fatima Saeed",
@@ -37,7 +37,7 @@
         "image": "/images/testimonials/gregs-lawn-testimonial.webp",
         "service": "Web Design & Dev.",
         "name": "Greg Scharf",
-        "company": "Greg's Lawn",
+        "company": "CEO of Greg's Lawn & Landscaping",
         "reviews": [
             {
                 "name": "Greg Scharf",
@@ -51,10 +51,10 @@
         "clientImage": "/images/testimonials/cade-oneil.png"
     },
     {
-        "image": "/images/testimonials/wlp-seo.png",
+        "image": "/images/testimonials/wlp-seo.webp",
         "service": "SEO",
         "name": "Mo Nasr",
-        "company": "Weight Loss Paradise",
+        "company": "CEO of Weight Loss Paradise",
         "reviews": [
             {
                 "name": "Mo Nasr",
@@ -70,11 +70,11 @@
     {
         "image": "/images/testimonials/gregs-lawn-seo.webp",
         "service": "SEO",
-        "name": "Greg Scharf",
-        "company": "Greg's Lawn",
+        "name": "Shareef Madani",
+        "company": "CEO of Tripod Studio HQ",
         "reviews": [
             {
-                "name": "Greg Scharf",
+                "name": "Shareef Madani",
                 "message": "Visitors stay longer on the site, and our domain authority increased by 18 points. Esper’s SEO work had a significant impact."
             },
             {
@@ -82,7 +82,7 @@
                 "message": "Love seeing numbers like that—thank you!"         
             }
         ],
-        "clientImage": "/images/testimonials/cade-oneil.png"
+        "clientImage": "/images/testimonials/shareef-madani.webp"
     },
     {
         "image": "/images/testimonials/colony-heating-seo.webp",
@@ -105,7 +105,7 @@
         "image": "/images/testimonials/gregs-lawn-marketing.webp",
         "service": "Social Media Marketing",
         "name": "Greg Scharf",
-        "company": "Greg's Lawn",
+        "company": "CEO of Greg's Lawn & Landscaping",
         "reviews": [
             {
                 "name": "Greg Scharf",
@@ -122,7 +122,7 @@
         "image": "/images/testimonials/excel-marketing.webp",
         "service": "Social Media Marketing",
         "name": "Darcel Pledge",
-        "company": "Excel Daycare",
+        "company": "CEO of Excel Daycare",
         "reviews": [
             {
                 "name": "Darcel Pledge",
@@ -138,11 +138,11 @@
     {
         "image": "/images/testimonials/gregs-lawn-ppc.webp",
         "service": "PPC Advertising",
-        "name": "Greg Scharf",
-        "company": "Greg's Lawn",
+        "name": "Joshua Tsegba",
+        "company": "CEO of BlockChain Management",
         "reviews": [
             {
-                "name": "Greg Scharf",
+                "name": "Joshua Tsegba",
                 "message": "Since Esper revamped our ad strategy, site traffic from high-converting regions has surged, and our cost per lead has dropped."
             },
             {
@@ -150,16 +150,16 @@
                 "message": "We aim for more reach, less waste."         
             }
         ],
-        "clientImage": "/images/testimonials/cade-oneil.png"
+        "clientImage": "/images/testimonials/joshua-tsegba.webp"
     },
     {
         "image": "/images/testimonials/colony-heating-ppc.webp",
         "service": "PPC Advertising",
-        "name": "Matt Hanson",
-        "company": "Colony Heating",
+        "name": "Zaraiz Ahmad",
+        "company": "Operations Manager at Strategize my Business",
         "reviews": [
             {
-                "name": "Matt Hanson",
+                "name": "Zaraiz Ahmad",
                 "message": "We spent less and earned more. Esper’s PPC team tripled our leads without raising our budget. Our most efficient campaign!"
             },
             {
@@ -167,13 +167,13 @@
                 "message": "Great to see ads bring results."         
             }
         ],
-        "clientImage": "/images/testimonials/timothy-furman.png"
+        "clientImage": "/images/testimonials/zaraiz-ahmad.webp"
     },
     {
         "image": "/images/testimonials/excel-ppc.webp",
         "service": "PPC Advertising",
         "name": "Darcel Pledge",
-        "company": "Excel Daycare",
+        "company": "CEO of Excel Daycare",
         "reviews": [
             {
                 "name": "Darcel Pledge",

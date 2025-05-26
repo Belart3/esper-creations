@@ -33,21 +33,21 @@ export default function Testimonials (props: Props) {
                 <SwiperSlide className='rounded-[40px] bg-white w-full max-w-[400px] md:!w-[400px] h-fit p-[10px] pb-[20px] flex flex-col space-y-[20px] md:space-y-[28px] items-center group/item cursor-pointer' key={index}>
                     <div className={`h-[275px] w-full rounded-[32px] ease-linear transition-colors duration-300 bg-linear-to-b lg:from-[#99999980] lg:to-[#999999] overflow-hidden
                     ${
-                    item.company === 'git global' ? 'from-[#001F3D80] lg:group-hover/item:from-[#001F3D80] to-[#001F3D] lg:group-hover/item:to-[#001F3D]' 
+                    item.company === 'CEO of git global' ? 'from-[#001F3D80] lg:group-hover/item:from-[#001F3D80] to-[#001F3D] lg:group-hover/item:to-[#001F3D]' 
                     : 
                     item.company === 'Colony Heating' ? 'from-[#01477180] lg:group-hover/item:from-[#01477180] to-[#014771] lg:group-hover/item:to-[#014771]' 
                     :
-                    item.company === "Greg's Lawn" ? 'from-[#17A05F80] lg:group-hover/item:from-[#17A05F80] to-[#17A05F] lg:group-hover/item:to-[#17A05F]' 
+                    item.company === "CEO of Greg's Lawn & Landscaping" ? 'from-[#17A05F80] lg:group-hover/item:from-[#17A05F80] to-[#17A05F] lg:group-hover/item:to-[#17A05F]' 
                     :
-                    item.company === 'Weight Loss Paradise' ? 'from-[#31939380] lg:group-hover/item:from-[#31939380] to-[#319393] lg:group-hover/item:to-[#319393]' 
+                    item.company === 'CEO of Weight Loss Paradise' ? 'from-[#31939380] lg:group-hover/item:from-[#31939380] to-[#319393] lg:group-hover/item:to-[#319393]' 
                     :
-                    item.company === 'Excel Daycare' ? 'from-[#69319380] lg:group-hover/item:from-[#69319380] to-[#693193] lg:group-hover/item:to-[#693193]' 
+                    item.company === 'CEO of Excel Daycare' ? 'from-[#69319380] lg:group-hover/item:from-[#69319380] to-[#693193] lg:group-hover/item:to-[#693193]' 
                     :
                     ''
                     } 
                     relative`
                     }>
-                        <div className="absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat" style={{backgroundImage: `url(${item.image})`}}></div>
+                        <div className={` ${item.service === 'Web Design & Dev.' ? 'bg-cover' : 'bg-contain'} absolute top-0 left-0 w-full h-full bg-center bg-no-repeat`} style={{backgroundImage: `url(${item.image})`}}></div>
                     </div>
                     <div className="flex flex-col gap-[12px] px-[10px]">
                         {

@@ -20,7 +20,7 @@ const page = () => {
   return (
     <>
       <ClientHeader 
-        client='Greg’s Lawn & Landscaping'
+        client='Greg’s Lawn and Landscaping'
         url='https://gregslawn.com/' 
         projectScope='Web Design & Dev' 
         year='2025' 
