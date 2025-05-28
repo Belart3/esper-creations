@@ -12,11 +12,15 @@
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
+    "@headlessui/react": "^2.2.4",
+    "@heroicons/react": "^2.2.0",
+    "@mobiscroll/react-lite": "^4.10.9",
     "@mui/material": "^7.1.0",
     "@types/nodemailer": "^6.4.17",
     "@vercel/speed-insights": "^1.2.0",
     "hamburger-react": "^2.5.2",
     "handlebars": "^4.7.8",
+    "mobiscroll-react": "^4.0.0",
     "next": "15.3.2",
     "next-image-export-optimizer": "^1.19.0",
     "nodemailer": "^7.0.3",
@@ -24,6 +28,7 @@
     "react-dom": "^19.0.0",
     "react-fast-marquee": "^1.6.5",
     "react-phone-number-input": "^3.4.12",
+    "react-select": "^5.10.1",
     "react-spinners": "^0.17.0",
     "react-toastify": "^11.0.5",
     "swiper": "^11.2.6"

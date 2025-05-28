@@ -10,9 +10,9 @@ const Footer = () => {
   return (
     <footer className=" bg-[#F4F5FA] border-t-[1px] border-[#E6E6E6]">
         <div className='pt-6 px-5 md:px-6 lg:px-14 pb-10 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-6 md:gap-10 max-w-[1440px] mx-auto'>
-          <h2 className={`${inter.className} text-[#FF5600] text-[16px]/[16px] text-center tracking-[-0.64px] font-semibold my-5 capitalize`}>
-              I want to send an email!
-          </h2>
+          <button className={`${inter.className} text-[#FF5600] text-[16px]/[16px] text-center tracking-[-0.64px] font-semibold my-5 capitalize`}>
+            I want to send an email!
+          </button>
           <p className={`${inter.className} text-[20px]/[20px] md:text-[24px]/[24px] tracking-[-0.8px] md:tracking-[-0.96px] text-black capitalize font-bold text-center`}>
               Esper Creations
           </p>

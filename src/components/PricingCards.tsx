@@ -21,9 +21,9 @@ const PricingCards = (props: Props) => {
     <div className="p-4 rounded-[40px] bg-white flex flex-col gap-16" key={props.index}>
         <div className="flex flex-col gap-8">
             <div className="rounded-[32px] p-6 flex flex-col gap-10 items-start bg-[#FF15491A]" style={{backgroundColor: `${props.productColor}`}}>
-            <button className={`${inter.className} px-4 py-3 bg-white rounded-[32px] text-black text-[16px]/[24px] tracking-[-0.64px] font-semibold w-full`}>
+                <button className={`${inter.className} px-4 py-3 bg-white rounded-[32px] text-black text-[18px]/[20px] tracking-[-1.2px] font-semibold w-full`}>
                 {props.product}
-            </button>
+                </button>
             <div className="flex flex-col gap-2">
                 <p className={`${inter.className} text-[18px]/[27px] tracking-[-0.72px] font-normal text-[#999999]`}>
                 Starts at
@@ -36,15 +36,17 @@ const PricingCards = (props: Props) => {
             <p className={`${inter.className} text-[16px]/[24px] tracking-[-0.64px] font-normal text-black`}>
                 {props.details}
             </p>
-            <button className={`${inter.className} rounded-[32px] bg-[#FF5600] py-5 px-6 capitalize text-white font-semibold text-[16px]/[16px] tracking-[-0.64px] custom-shadow-orange w-full transition-all ease-linear duration-300 hover:!shadow-none cursor-pointer`}>
-                {props.cta}
-            </button>
+            <a href="https://calendly.com/smbmo/30min?back=1&month=2025-05" target='_blank' rel='noopener noreferrer'>
+                <button className={`${inter.className} rounded-[32px] bg-[#FF5600] py-5 px-6 capitalize text-white font-semibold text-[16px]/[16px] tracking-[-0.64px] custom-shadow-orange w-full transition-all ease-linear duration-300 hover:!shadow-none cursor-pointer`}>
+                    {props.cta}
+                </button>
+            </a>
         </div>
         <div className="py-6 px-2 rounded-[24px] bg-[#F4F5FA] custom-inset-shadow">
             <ul className=' flex flex-col gap-2'>
                 {
                     props.features.map((feature: string, index: number) => (
-                        <li className={`${inter.className} text-[16px]/[24px] tracking-[-0.64px] font-normal text-[#666666] list-disc ms-5`} key={index}>
+                        <li className={`${inter.className} text-[16px]/[24px] tracking-[-0.64px] font-normal text-[#666666] ms-5 relative before:size-2 before:top-1/2 before:-translate-y-1/2 before:left-[-20px] before:rounded-full before:bg-[#FF560050] before:absolute`} key={index}>
                             {feature}
                         </li>
                     ))

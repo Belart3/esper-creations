@@ -75,6 +75,8 @@ return (
         }}
         />
         <PhoneInput
+        international
+        countryCallingCodeEditable={false}
         name="phone"
         aria-label="phone"
         placeholder="Phone Number"

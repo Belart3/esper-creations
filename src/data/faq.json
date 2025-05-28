@@ -1,14 +1,18 @@
 [
     {
-        "question": "How soon can you start my project?",
-        "answer": "We can typically get started within 1-3 business days, depending on current availability."
+        "question": "What services do you offer?",
+        "answer": "We offer a full range of digital marketing and web design services, including website design and development, SEO, social media marketing, pay-per-click advertising, email marketing, branding, and content creation."
     },
     {
-        "question": "Do you offer free estimates?",
-        "answer": "Yes, absolutely! We offer free consultations and personalized estimates. Just tell us about your goals, and we’ll put together a custom quote that fits your needs and budget."
+        "question": "Can you redesign my existing website?",
+        "answer": "Absolutely! We can refresh your current site to improve its look, performance, and user experience while aligning it with your brand goals."
     },
     {
-        "question": "What areas do you serve?",
-        "answer": "We work with clients across the U.S. and internationally. Whether you're local or remote, our systems are built to serve you efficiently and effectively—wherever you are."
+        "question": " I need to know more about the cost?",
+        "answer": "Costs vary depending on the project’s size and features. After a consultation, we’ll provide a custom quote based on your specific needs and goals."
+    },
+    {
+        "question": " What platforms do you build websites on?",
+        "answer": "We specialize in platforms like WordPress,  and custom-coded solutions, depending on your business needs and preferences."
     }
 ]

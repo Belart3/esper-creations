@@ -19,7 +19,7 @@ type props = {
 export default function AccordionComponent(props: props) {
   return (
     <>
-      <Accordion className='!shadow-none !border-none before:!hidden !m-0 !p-5 !rounded-[16px] md:!py-10 md:!px-4 [&_.Mui-expanded]:!m-0 [&_.MuiAccordionSummary-root]:p-0 [&_.MuiAccordionDetails-root]:p-0'>
+      <Accordion className='!shadow-none !border-none before:!hidden !m-0 !p-[10px] !rounded-[16px] md:!py-[20px] md:!px-[6px] [&_.Mui-expanded]:!m-0 [&_.MuiAccordionSummary-root]:p-0 [&_.MuiAccordionDetails-root]:p-0'>
         <AccordionSummary
         //   expandIcon={<ExpandMoreIcon />}
           aria-controls={props.question}
@@ -31,7 +31,7 @@ export default function AccordionComponent(props: props) {
             {props.question}
           </h3>
         </AccordionSummary>
-        <AccordionDetails className='!mt-5'>
+        <AccordionDetails className='!mt-[10px]'>
           <p className={`${inter.className} text-[16px]/[24px] text-[#666666]`}>
             {props.answer}
           </p>

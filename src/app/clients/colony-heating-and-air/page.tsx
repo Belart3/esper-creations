@@ -33,9 +33,9 @@ const page = () => {
       /> 
       <main className='flex flex-col gap-12 md:gap-16 mx-5 md:mx-6 lg:px-14 box-content max-w-[1328px] lg:mx-auto'>
         <div className="flex flex-col gap-4">
-          <div className="h-[250px] md:h-[400px] lg:h-[600px] w-full rounded-[16px] md:rounded-[16px] lg:rounded-[40px] bg-white flex items-center justify-center">
+          {/* <div className="h-[250px] md:h-[400px] lg:h-[600px] w-full rounded-[16px] md:rounded-[16px] lg:rounded-[40px] bg-white flex items-center justify-center">
             <ExportedImage src="/images/colony-heating-page/colony-heating-logo.webp" alt="" className='w-[122px] md:w-[400px]' width={400} height={100} />
-          </div>
+          </div> */}
           <div className="bg-cover bg-center bg-no-repeat h-[350px] md:h-[550px] lg:h-[700px] w-full mx-auto rounded-[24px]" style={{ backgroundImage: `url(/images/colony-heating-page/image-1.webp)` }}></div>
           <div className="bg-cover bg-center bg-no-repeat h-[350px] md:h-[550px] lg:h-[700px] w-full mx-auto rounded-[24px]" style={{ backgroundImage: `url(/images/colony-heating-page/image-2.webp)` }}></div>
           <div className="bg-cover bg-center bg-no-repeat h-[250px] md:h-[550px] lg:h-[700px] w-full mx-auto rounded-[24px]" style={{ backgroundImage: `url(/images/colony-heating-page/image-3.webp)` }}></div>

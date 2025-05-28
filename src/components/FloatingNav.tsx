@@ -3,7 +3,10 @@ import { Spiral as Hamburger } from 'hamburger-react'
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link';
 import { Inter } from 'next/font/google';
-// import { useRouter } from 'next/router';
+import BtnOrange from './BtnOrange';
+import { usePathname, useSearchParams } from 'next/navigation';
+
+
 
 const inter = Inter({
   variable: "--font-inter",
@@ -16,31 +19,43 @@ type Props = {
   handleToggle: () => void
 }
 
+const pages = [
+  { name: "Home", link: "/" },
+  { name: "Our Services", link: "/#services" },
+  { name: "See Our Work", link: "/#work" },
+  { name: "Pricing & Packages", link: "/#pricing" }
+]
+
 const FloatingNav = (props: Props) => {
     const [float, setFloat] = useState(false);
+    const [activeLink, setActiveLink] = useState('');
+    // const currentUrl = window.location.href
 
     const handleScroll = () => {
-        const scrollPosition = window.scrollY || window.pageYOffset;
-        if (scrollPosition > 150) {
-          setFloat(true);
-        } else {
-          setFloat(false);
-        }
+      const scrollPosition = window.scrollY || window.pageYOffset;
+      if (scrollPosition > 150) {
+        setFloat(true);
+      } else {
+        setFloat(false);
+      }
     };
 
-    // const router = useRouter();
-    // const isActive = router.pathname;
+    const handleHashChange = () => setActiveLink(window.location.hash);
     
     useEffect(() => {
-      window.addEventListener('scroll', handleScroll);
+      handleHashChange();
 
-      // Clean up the event listener on component unmount
+      window.addEventListener('scroll', handleScroll);
+      window.addEventListener('hashchange', handleHashChange);
+
       return () => {
           window.removeEventListener('scroll', handleScroll);
+          window.removeEventListener('hashchange', handleHashChange);
       };
     }, []);
 
-    const handleLinkClick = () => {
+    const handleLinkClick = () => { 
+      handleHashChange();
       props.setOpen(false),
       document.body.style.overflow = props.open ? 'auto' : 'hidden';
     }
@@ -48,26 +63,37 @@ const FloatingNav = (props: Props) => {
   return (
     <div className={`z-[99] overflow-hidden`}>
         {/* round menu hamburger */}
-        <div className={`size-[64px] md:size-[80px] transition-all bg-[#FF5600] rounded-full duration-300 ease-linear fixed z-[100] flex items-center justify-center right-4 md:right-7 lg:right-10 top-[50px] lg:hover:top-[40px] lg:hover:right-8 group overflow-hidden ${float ? 'translate-x-0' : 'translate-x-[150%]'} transition-all duration-500 cursor-pointer ${props.open == true ? '!translate-x-0' : ''} `} onClick={props.handleToggle} >
+        <div className={`transition-all bg-[#FF5600] rounded-full duration-300 ease-linear fixed z-[100] flex items-center justify-center group overflow-hidden ${float ? 'translate-x-0' : 'translate-x-[200%]'} transition-all duration-300 cursor-pointer ${props.open == true ? '!translate-x-0  top-[20px] md:top-[40px] lg:top-[56px] right-[20px] md:right-[40px] lg:right-[56px] size-[56px]' : 'right-4 md:right-7 lg:right-10 top-[50px] size-[64px] md:size-[80px]'} `} onClick={props.handleToggle} >
             <div className={`absolute top-0 left-0 h-full w-full rounded-full ${props.open ? 'translate-y-0' : 'translate-y-[100%]'} bg-[#FF5622] lg:group-hover:translate-y-0 transition-all duration-300`}></div>
             <button aria-label='menu button' className='flex items-center justify-center text-white size-full'  >
               <Hamburger 
+                size={32}
                 toggled={props.open} toggle={props.setOpen}
               />
             </button>
         </div>
-        <div className={`w-full h-screen fixed right-0 top-0 flex items-center justify-center z-[99] ${props.open ? 'translate-x-0' : 'translate-x-[100%]'} transition-all ease-linear duration-300`}>
-            <div className={` w-full sm:w-1/2 lg:w-1/3 h-full bg-black fixed top-0 right-0 flex items-start justify-start p-10`}>
-                <div className="flex flex-col gap-10 mt-[128px]">
-                    <Link href={'/'} className={`${inter.className} text-[53px]/[53px] font-semibold text-white tracking-[-3.18px] relative before:rounded-full before:size-[10px] before:bg-white rounded-full before:content-[""] before:absolute before:-left-[20px] before:-translate-y-1/2 before:top-1/2`} onClick={handleLinkClick}>
-                        Home
-                    </Link>
-                    <Link href={'/#work'} className={`${inter.className} text-[53px]/[53px] font-semibold text-white tracking-[-3.18px] capitalize`} onClick={handleLinkClick}>
-                        work
-                    </Link>
-                    <Link href={'/#contact-us'} className={`${inter.className} text-[53px]/[53px] font-semibold text-white tracking-[-3.18px] capitalize`} onClick={handleLinkClick}>
-                        contact
-                    </Link>
+        <div className={`w-full h-screen fixed right-0 top-0 flex items-center justify-center z-[99] ${props.open ? 'translate-x-0' : 'translate-x-[100%]'} transition-all ease-linear duration-300`} >
+          {/* onClick={() => props.setOpen(!open)} */}
+            <div className={` w-full sm:w-2/5 lg:w-[27%] min-w-[300px] h-full bg-black fixed top-0 right-0 flex items-start justify-start p-5 ps-10 md:p-10 lg:p-14`}>
+                <div className="flex flex-col mt-[100px] w-full">
+                  {
+                    pages.map((page,index) => (
+                      <Link href={page.link} className='w-full'>
+                        <button className={`${inter.className} text-[16px]/[16px] text-start font-semibold text-white tracking-[-0.64px] px-6 py-5 cursor-pointer hover:bg-[#FFFFFF1A] ease-linear transition-all rounded-[32px] w-max shrink-0 
+                        `}  onClick={handleLinkClick} key={index}>
+                          {page.name}
+                        </button>
+                      </Link>
+                    ))
+                  }
+                  <Link href="/#contact-us" onClick={handleLinkClick} className='mt-10'>
+                    <BtnOrange cta='build your online presence!' />
+                  </Link>
+                  <a href='https://calendly.com/smbmo/30min?back=1&month=2025-05' target='_blank' className='w-full'>
+                    <button className={`${inter.className} text-[16px]/[16px] font-semibold text-[#FF5600] tracking-[-0.64px] px-6 py-5 cursor-pointer relative before:rounded-full before:size-[10px] bg-[#FFEEE6] rounded-[32px] mt-5 capitalize text-center w-full`} onClick={handleLinkClick}>
+                      schedule a call
+                    </button>
+                  </a>
                 </div>
             </div>
         </div>

@@ -2,14 +2,50 @@ import React, { useState } from 'react'
 import { Inter } from "next/font/google";
 import PhoneInput from 'react-phone-number-input';
 import services from "@/data/services.json"
+import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
+import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { sendBookingMail } from '@/lib/actions/sendMailAction';
 import { toast } from 'react-toastify';
 import { ScaleLoader } from 'react-spinners';
+import Select from 'react-select'; 
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
 });
+
+const options = [
+  { 
+    value: 'Website Design & Development', 
+    label: 'Website Design & Development' 
+},
+{ 
+    value: 'Organic SEO', 
+    label: 'Organic SEO' 
+},
+  { 
+    value: 'PPC Advertising', 
+    label: 'PPC Advertising' 
+
+  },
+  { 
+    value: 'Social Media Marketing & Management', 
+    label: 'Social Media Marketing & Management' 
+
+  },
+  { 
+    value: 'Social Media Followers Growth', 
+    label: 'Social Media Followers Growth' 
+  },
+  { 
+    value: 'Full GHL Business Setup', 
+    label: 'Full GHL Business Setup' 
+  },
+  { 
+    value: 'Professional Domain Email Setup', 
+    label: 'Professional Domain Email Setup' 
+  }
+]
 
 const BookingForm = () => {
     const [footerForm, setFooterForm] = useState({
@@ -19,6 +55,8 @@ const BookingForm = () => {
         service: '',
         issue: ''
     })
+    type OptionType = { value: string; label: string };
+    const [selectedService, setSelectedService] = useState<OptionType[]>([]);
 
     const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -84,7 +122,23 @@ const BookingForm = () => {
         }}
         className={`${inter.className} text-[14px]/[21px] tracking-[-0.56px] text-[#666666] p-4 rounded-[16px] placeholder-shown:text-[#666666] placeholder-shown:text-[14px]/[21px] bg-[#E6E6E699] focus:outline-[#FF5600] focus:border-[#FF5600] focus:ring-[#FF5600] border-none outline-[#FF5600] transition-all ease-linear duration-300 ${ footerForm.phone.trim() !== '' ? '!bg-[#FFEEE6]' : '' }`}
         />
-        <select 
+        <Select 
+            options={options}
+            value={selectedService}
+            placeholder="What service are you in need of? *"
+            onChange={
+                (options) => {
+                    const selected = options as OptionType[] || [];
+                    setSelectedService(selected);
+                    setFooterForm({ ...footerForm, service: selected.map(opt => opt.value).join(', ') });
+                }
+            }
+            required
+            isMulti
+            closeMenuOnSelect={false}
+            className={`${inter.className} text-[14px]/[21px] tracking-[-0.56px] text-[#666666] p-4 rounded-[16px] bg-[#E6E6E699] focus:outline-[#FF5600] focus:border-[#FF5600] focus:ring-[#FF5600] border-none outline-[#FF5600] transition-all ease-linear duration-300`}
+        />
+        {/* <select 
         defaultValue='What service are you in need of? *'
         name="service" 
         required
@@ -97,7 +151,7 @@ const BookingForm = () => {
             }
         }
         >
-            <option defaultValue='What service are you in need of? *' hidden disabled className={`${inter.className} text-[14px]/[21px] tracking-[-0.56px] text-[#B3B3B3] p-4 rounded-[16px] bg-[#E6E6E699]`}>
+            <option selected defaultValue='What service are you in need of? *' hidden disabled className={`${inter.className} text-[14px]/[21px] tracking-[-0.56px] text-[#B3B3B3] p-4 rounded-[16px] bg-[#E6E6E699]`}>
                 What service are you in need of? *
             </option>
         {
@@ -107,7 +161,7 @@ const BookingForm = () => {
             </option>
         ))
         }
-        </select>
+        </select> */}
         <textarea 
         aria-label="issue"
         value={footerForm.issue}

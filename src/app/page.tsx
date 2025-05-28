@@ -17,6 +17,7 @@ import HeroForm from "@/components/HeroForm";
 import PricingCards from "@/components/PricingCards";
 import ExportedImage from "next-image-export-optimizer";
 import Link from "next/link";
+import FAQ from "@/components/FAQ";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -53,7 +54,7 @@ export default function Home() {
 
   return (
     <>
-      <header className="bg-[#FFEEE6CC] pt-[150px] pb-9 overflow-hidden" ref={containerRef}>
+      <header className="bg-[#FFEEE6CC] pt-[150px] pb-9 overflow-hidden" id="#" ref={containerRef}>
         <div className=" max-w-[1440px] mx-auto">
           <div className="mx-5 md:mx-6 flex flex-col gap-16 xl:max-w-[1226px] xl:mx-auto relative z-0">
             <div className="flex flex-col gap-12">
@@ -72,7 +73,7 @@ export default function Home() {
             {/* floating header boxes */}
             <ExportedImage 
               src={'/images/hero-floats/ad-1.webp'} 
-              className={`${float ? ' delay-0' : ''} transition-all duration-300 ease-linear hidden md:flex size-[120px] lg:size-[150px] absolute -top-[100px] lg:-top-[100px] left-1/2 -translate-x-1/2 z-[0] rotate-[-15deg] shadow-2xl shadow-[#00000080]`} 
+              className={`${float ? ' delay-0' : ''} transition-all duration-300 ease-linear hidden md:flex size-[120px] lg:size-[150px] absolute -top-[100px] lg:-top-[100px] left-1/2 -translate-x-1/2 z-[0] rotate-[-15deg] shadow-2xl shadow-[#00000080] rounded-[8px] border-[5px] border-white`} 
               alt="Less Average CPC, More Ads Impressions" 
               width={150}
               height={150}
@@ -83,7 +84,7 @@ export default function Home() {
             />  
             <ExportedImage 
               src={'/images/hero-floats/ad-2.webp'} 
-              className={`${float ? '! delay-0' : ''} transition-all duration-300 ease-linear  hidden md:flex size-[120px] lg:size-[150px] absolute top-[70px] -left-[53px] lg:left-[5px] z-[-10] rotate-[-15deg] shadow-2xl shadow-[#00000080]`} 
+              className={`${float ? '! delay-0' : ''} transition-all duration-300 ease-linear  hidden md:flex size-[120px] lg:size-[150px] absolute top-[70px] -left-[53px] lg:left-[5px] z-[-10] rotate-[-15deg] shadow-2xl shadow-[#00000080] rounded-[8px] border-[5px] border-white`} 
               alt="Git-Global Immigration Services Ad"  
               width={150}
               height={150}
@@ -94,7 +95,7 @@ export default function Home() {
             />
             <ExportedImage 
               src={'/images/hero-floats/ad-3.webp'} 
-              className={`${float ? 'delay-0' : ''} transition-all duration-300 ease-linear hidden md:flex size-[120px] lg:size-[150px] absolute top-[344px] lg:top-[350px] left-[80px] z-[-10] rotate-[15deg] shadow-2xl shadow-[#00000080]`} 
+              className={`${float ? 'delay-0' : ''} transition-all duration-300 ease-linear hidden md:flex size-[120px] lg:size-[150px] absolute top-[344px] lg:top-[350px] left-[80px] z-[-10] rotate-[15deg] shadow-2xl shadow-[#00000080] rounded-[8px] border-[5px] border-white`} 
               alt="Increase in Ad Clicks"  
               width={150}
               height={150}
@@ -105,7 +106,7 @@ export default function Home() {
             />  
             <ExportedImage 
               src={'/images/hero-floats/ad-4.webp'} 
-              className={`${float ? ' delay-0' : ''} transition-all duration-300 ease-linear hidden md:flex size-[120px] lg:size-[150px] absolute top-[344px] lg:top-[350px] right-[80px] z-[-10] rotate-[-15deg] shadow-2xl shadow-[#00000080]`} 
+              className={`${float ? ' delay-0' : ''} transition-all duration-300 ease-linear hidden md:flex size-[120px] lg:size-[150px] absolute top-[344px] lg:top-[350px] right-[80px] z-[-10] rotate-[-15deg] shadow-2xl shadow-[#00000080] rounded-[8px] border-[5px] border-white`} 
               alt="Increase in Average Session Duration"   
               width={150}
               height={150}             
@@ -116,7 +117,7 @@ export default function Home() {
             />
             <ExportedImage 
               src={'/images/hero-floats/ad-5.webp'} 
-              className={`${float ? 'delay-0' : ''} transition-all duration-300 ease-linear  hidden md:flex size-[120px] lg:size-[150px] absolute top-[70px] -right-[53px] lg:right-[5px] z-[-10] rotate-[15deg] shadow-2xl shadow-[#00000080]`} 
+              className={`${float ? 'delay-0' : ''} transition-all duration-300 ease-linear  hidden md:flex size-[120px] lg:size-[150px] absolute top-[70px] -right-[53px] lg:right-[5px] z-[-10] rotate-[15deg] shadow-2xl shadow-[#00000080] rounded-[8px]`} 
               alt="Git-Global Website Revivified" 
               width={150}
               height={150}
@@ -154,21 +155,21 @@ export default function Home() {
         </div>
       </header>
       <main>
-        <section className=" max-w-[1440px] mx-auto py-16 px-5 md:py-[104px] md:px-6 lg:px-14 flex flex-col gap-[104px]">
+        <section className=" max-w-[1440px] mx-auto py-16 px-5 md:pt-[104px] pb-5 md:px-6 lg:px-14 flex flex-col gap-[104px]">
           <section className="flex flex-col gap-12 md:gap-16 scroll-mt-25" id="services">
-            <SectionHead title="Results-driven Marketing." description="You deserve more than likes and pretty websites. We build systems designed to convert, scale, and dominate your market." />
+            <SectionHead title="Results-driven Marketing" description="You deserve more than likes and pretty websites. We build systems designed to convert, scale, and dominate your market." />
             <Services />
           </section>
           <section className="flex flex-col gap-12 md:gap-16">
-            <SectionHead title="Remarkable Results." description="See how we helped founders just like you scale traffic, leads, and revenue." />
+            <SectionHead title="Remarkable Results" description="See how we helped founders just like you scale traffic, leads, and revenue." />
             <Reviews />
           </section>
           <section className="flex flex-col gap-12 md:gap-16 scroll-mt-25" id="work">
-            <SectionHead title="See Our Work." description="Still not convinced about us? see what we have created for those who trusted us." />
+            <SectionHead title="See Our Work" description="Still not convinced about us? see what we have created for those who trusted us." />
             <WorkBanner />
           </section>
           <section className="flex flex-col gap-12 md:gap-16 scroll-mt-25" id="pricing">
-            <SectionHead title="Pricing Plans." description="All-in-one marketing solutions built to grow your business—whether you're scaling or just getting started." />
+            <SectionHead title="Pricing Plans" description="All-in-one marketing solutions built to grow your business—whether you're scaling or just getting started." />
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
               {
                 plans.map((plan, index) => (
@@ -187,41 +188,13 @@ export default function Home() {
             </div>
           </section>
           <section className="flex flex-col lg:grid lg:grid-cols-2 lg:items-start gap-10 scroll-mt-25" id="faq">
-            <div className="flex lg:hidden mx-auto">
-              <SectionHead title="Frequently Asked Questions." description="Can’t find your answer? please send us a mail by clicking the button below. " />
-            </div>
-            <div className="flex-col gap-6 hidden justify-center items-start lg:flex">
-              <h2 className={`${inter.className} text-[32px]/[32px] md:text-[53px]/[53px] font-semibold tracking-[-1.92px] md:tracking-[-3.18px] text-start text-black`}>
-                Frequently Asked Questions.
-              </h2>
-              <p className={`${inter.className} text-[#666666] text-center text-[16px]/[24px] md:text-[18px]/[27px] tracking-[-0.64px] md:tracking-[-0.72px] font-normal`}>
-                Can’t find your answer? please send us a mail by clicking the button below.
-              </p>
-              <Link href='/#contact-us'>
-                <BtnOrange cta="i still have questions!" />
-              </Link>
-            </div>
-            <div className="flex flex-col gap-3">
-              {
-                faq.map((item, index) => (
-                  <AccordionComponent question={item.question} answer={item.answer} key={index} />
-                ))
-              }
-            </div>
-            <Link href='/#contact-us' className="w-fit mx-auto">
-              <button className={`${inter.className} rounded-[32px] bg-[#FF5600] py-5 px-6 capitalize text-white font-semibold text-[16px]/[16px] tracking-[-0.64px] shadow-lg shadow-[#FF560060] w-full md:max-w-[300px] md:w-fit mx-auto lg:hidden cursor-pointer`}>
-                i still have questions!
-              </button>
-            </Link>
+            <FAQ />
           </section>
-          <section className="flex flex-col gap-10 bg-black rounded-[40px] py-10 px-5 md:py-14 md:px-10 lg:p-10 scroll-mt-25 bg-contain bg-bottom sm:bg-[50%_110%] lg:bg-[50%_140%] bg-no-repeat relative" id="contact-us">
+          <section className="flex flex-col gap-10 bg-black rounded-[40px] py-10 px-5 md:py-14 md:px-10 lg:p-10 scroll-mt-25 bg-contain bg-bottom sm:bg-[50%_110%] lg:bg-[50%_140%] bg-no-repeat relative overflow-hidden" id="contact-us">
             <div className="flex flex-col lg:grid lg:grid-cols-2 lg:items-center gap-10">
               <div className="flex flex-col gap-5 h-full justify-center">
                 <div className="flex flex-col gap-4 items-center lg:items-start">
-                  <ExportedImage src="/images/logo.svg" alt="esper creation's logo" className="size-10 lg:size-15" width={40} height={40} />
-                  <p className={`${inter.className} text-[20px]/[20px] md:text-[24px]/[24px] text-white font-semibold tracking-[-0.8px]`}>
-                  Esper Creations
-                </p>
+                  <ExportedImage src="/images/logo.svg" alt="esper creation's logo" className="size-8 lg:size-12" width={40} height={40} />
                 </div>
                 <div className="flex flex-col gap-5">
                   <h2 className={`${inter.className} text-[32px]/[32px] md:text-[53px]/[53px] xl:text-[73px]/[73px] font-semibold tracking-[-1.92px] md:tracking-[-3.18px] text-center lg:text-start text-white`}>
@@ -237,10 +210,12 @@ export default function Home() {
               </div>
             </div>
             <div className="h-px w-full bg-[#333]"></div>
-            <div className='flex flex-col lg:flex-row lg:justify-between lg:items-center gap-6 md:gap-10 w-full max-w-[1440px] mx-auto'>
-              <h2 className={`${inter.className} text-[#FF5600] text-[16px]/[16px] text-center tracking-[-0.64px] font-semibold my-5 capitalize`}>
+            <div className='flex flex-col lg:flex-row lg:justify-between lg:items-center gap-6 md:gap-10 w-full max-w-[1440px] mx-auto z-[1]'>
+              <a href="mailto:changes@espercreations.com">
+                <button className={`${inter.className} text-[#FF5600] text-[16px]/[16px] text-center tracking-[-0.64px] font-semibold my-5 capitalize cursor-pointer rounded-[32px] bg-white py-5 px-6 lg:px-10 transition-all ease-linear duration-300 custom-shadow-orange hover:!shadow-none max-w-[300px] mx-auto lg:mx-0`}>
                   I want to send an email!
-              </h2>
+                </button>
+              </a>
               <p className={`${inter.className} text-[14px]/[21px] md:text-[16px]/[24px] tracking-[-0.56px] md:tracking-[-0.64] text-[#666666] capitalize font-normal text-center`}>
                   © 2025 Esper Creations All rights reserved
               </p>

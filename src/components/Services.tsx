@@ -4,6 +4,7 @@ import React from 'react'
 import services from "@/data/services.json"
 import BtnTransparent from "@/components/BtnTransparent";
 import ExportedImage from "next-image-export-optimizer";
+import Link from 'next/link';
 
 const inter = Inter({
   variable: "--font-inter",
@@ -23,7 +24,9 @@ const Services = () => {
                         <p className={`${inter.className} text-[#666666] text-[16px]/[24px] md:text-[18px]/[27px] tracking-[-0.64px] md:tracking-[-0.72px] font-normal`}>
                             {service.description}
                         </p>
-                        <BtnTransparent cta={service.cta} />
+                        <Link href="#contact-us" className="w-full">
+                            <BtnTransparent cta={service.cta} />
+                        </Link>
                     </div>   
                     <div className="w-full h-[200px] md:h-[350px] bg-[E6E6E6] relative">
                         {
@@ -40,8 +43,8 @@ const Services = () => {
                                 </>
                             ) : index === 2 ? (
                                 <>
-                                    <ExportedImage src={"/images/services/social-media-marketing-1.webp"} className='absolute top-0 lg:bottom-[40px] left-1/2 -translate-x-[15%] lg:-translate-x-1/2 size-[150px] md:size-[280px] md:h-[280px] md:w-[290px] rotate-[5deg] lg:rotate-[-3deg] transition-all ease-linear duration-300 lg:group-hover/item:-translate-x-[30%] lg:group-hover/item:rotate-[3deg] z-[1]' alt="Scroll-stopping social media campaign designed by Esper Creations to boost brand awareness and audience engagement" width={290} height={280} />
-                                    <ExportedImage src={"/images/services/social-media-marketing-2.webp"} className='absolute top-0 lg:bottom-[20px] left-1/2 translate-x-[-75%] lg:-translate-x-1/2 rotate-[-9deg] lg:rotate-[-5deg] transition-all ease-linear duration-200 size-[150px] md:h-[280px] md:w-[290px] group-hover/item:translate-x-[-70%] group-hover/item:z-[1] z-0' alt="Scroll-stopping social media campaign designed by Esper Creations to boost brand awareness and audience engagement" width={290} height={280} />
+                                    <ExportedImage src={"/images/services/social-media-marketing-1.webp"} className='absolute top-0 lg:bottom-[40px] left-1/2 -translate-x-[15%] lg:-translate-x-1/2 size-[150px] md:size-[280px] md:h-[280px] md:w-[290px] rounded-[8px] rotate-[5deg] lg:rotate-[-3deg] transition-all ease-linear duration-300 lg:group-hover/item:-translate-x-[30%] lg:group-hover/item:rotate-[3deg] z-[1]' alt="Scroll-stopping social media campaign designed by Esper Creations to boost brand awareness and audience engagement" width={290} height={280} />
+                                    <ExportedImage src={"/images/services/social-media-marketing-2.webp"} className='absolute top-0 lg:bottom-[20px] left-1/2 translate-x-[-75%] lg:-translate-x-1/2 rounded-[8px] rotate-[-9deg] lg:rotate-[-5deg] transition-all ease-linear duration-200 size-[150px] md:h-[280px] md:w-[290px] group-hover/item:translate-x-[-70%] group-hover/item:z-[1] z-0' alt="Scroll-stopping social media campaign designed by Esper Creations to boost brand awareness and audience engagement" width={290} height={280} />
                                 </>
                             ) : index === 3 ? (
                                 <>

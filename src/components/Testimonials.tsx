@@ -33,15 +33,21 @@ export default function Testimonials (props: Props) {
                 <SwiperSlide className='rounded-[40px] bg-white w-full max-w-[400px] md:!w-[400px] h-fit p-[10px] pb-[20px] flex flex-col space-y-[20px] md:space-y-[28px] items-center group/item cursor-pointer' key={index}>
                     <div className={`h-[275px] w-full rounded-[32px] ease-linear transition-colors duration-300 bg-linear-to-b lg:from-[#99999980] lg:to-[#999999] overflow-hidden
                     ${
-                    item.company === 'CEO of git global' ? 'from-[#001F3D80] lg:group-hover/item:from-[#001F3D80] to-[#001F3D] lg:group-hover/item:to-[#001F3D]' 
+                    item.company === 'CEO of Git Global' ? 'from-[#001F3D80] lg:group-hover/item:from-[#001F3D80] to-[#001F3D] lg:group-hover/item:to-[#001F3D]' 
                     : 
                     item.company === 'Colony Heating' ? 'from-[#01477180] lg:group-hover/item:from-[#01477180] to-[#014771] lg:group-hover/item:to-[#014771]' 
                     :
                     item.company === "CEO of Greg's Lawn & Landscaping" ? 'from-[#17A05F80] lg:group-hover/item:from-[#17A05F80] to-[#17A05F] lg:group-hover/item:to-[#17A05F]' 
                     :
+                    item.company === "CEO of Tripod Studio HQ" ? 'from-[#197BFF80] lg:group-hover/item:from-[#197BFF80] to-[#197BFF] lg:group-hover/item:to-[#197BFF]' 
+                    :
+                    item.company === "CEO of BlockChain Management" ? 'from-[#F4844C80] lg:group-hover/item:from-[#F4844C80] to-[#F4844C] lg:group-hover/item:to-[#F4844C]' 
+                    :
                     item.company === 'CEO of Weight Loss Paradise' ? 'from-[#31939380] lg:group-hover/item:from-[#31939380] to-[#319393] lg:group-hover/item:to-[#319393]' 
                     :
                     item.company === 'CEO of Excel Daycare' ? 'from-[#69319380] lg:group-hover/item:from-[#69319380] to-[#693193] lg:group-hover/item:to-[#693193]' 
+                    :
+                    item.company === 'Operations Manager at Strategize My Business' ? 'from-[#3F049C80] lg:group-hover/item:from-[#3F049C80] to-[#3F049C] lg:group-hover/item:to-[#3F049C]' 
                     :
                     ''
                     } 
@@ -69,7 +75,7 @@ export default function Testimonials (props: Props) {
                             <blockquote className={`${inter.className} text-[16px]/[24px] font-semibold tracking-[-0.64px] text-black capitalize`}>
                                 {item.name}
                             </blockquote>
-                            <figcaption className={`${inter.className} text-[12px]/[18px] tracking-[-0.48px] font-normal text-[#999999] capitalize`}>
+                            <figcaption className={`${inter.className} text-[12px]/[18px] tracking-[-0.48px] font-normal text-[#999999]`}>
                                 {item.company}
                             </figcaption>
                         </div>
