@@ -7,7 +7,7 @@ export const metadata = {
   title: 'Gregs Lawn & Landscaping Website Design | Esper Creations',
   description: 'View snapshots of the website design Esper Creations created for Gregs Lawn. Explore the visual layout, user experience, and visit the live site.',
   alternates: {
-    canonical: 'http://localhost:3000/clients/gregs-lawn',
+    canonical: 'https://espercreations.com/clients/gregs-lawn',
   },
   openGraph: {
     title: 'Colony Heating Website Design | Esper Creations',

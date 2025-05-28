@@ -1,12 +1,9 @@
 "use client"
 import { Spiral as Hamburger } from 'hamburger-react'
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import Link from 'next/link';
 import { Inter } from 'next/font/google';
-import BtnOrange from './BtnOrange';
-import { usePathname, useSearchParams } from 'next/navigation';
-
-
+import ExportedImage from 'next-image-export-optimizer';
 
 const inter = Inter({
   variable: "--font-inter",
@@ -27,9 +24,8 @@ const pages = [
 ]
 
 const FloatingNav = (props: Props) => {
-    const [float, setFloat] = useState(false);
-    const [activeLink, setActiveLink] = useState('');
-    // const currentUrl = window.location.href
+  const [float, setFloat] = useState(false);
+  const [activeLink, setActiveLink] = useState('');
 
     const handleScroll = () => {
       const scrollPosition = window.scrollY || window.pageYOffset;
@@ -39,23 +35,16 @@ const FloatingNav = (props: Props) => {
         setFloat(false);
       }
     };
-
-    const handleHashChange = () => setActiveLink(window.location.hash);
     
     useEffect(() => {
-      handleHashChange();
-
       window.addEventListener('scroll', handleScroll);
-      window.addEventListener('hashchange', handleHashChange);
 
       return () => {
           window.removeEventListener('scroll', handleScroll);
-          window.removeEventListener('hashchange', handleHashChange);
       };
     }, []);
 
     const handleLinkClick = () => { 
-      handleHashChange();
       props.setOpen(false),
       document.body.style.overflow = props.open ? 'auto' : 'hidden';
     }
@@ -74,23 +63,30 @@ const FloatingNav = (props: Props) => {
         </div>
         <div className={`w-full h-screen fixed right-0 top-0 flex items-center justify-center z-[99] ${props.open ? 'translate-x-0' : 'translate-x-[100%]'} transition-all ease-linear duration-300`} >
           {/* onClick={() => props.setOpen(!open)} */}
-            <div className={` w-full sm:w-2/5 lg:w-[27%] min-w-[300px] h-full bg-black fixed top-0 right-0 flex items-start justify-start p-5 ps-10 md:p-10 lg:p-14`}>
-                <div className="flex flex-col mt-[100px] w-full">
+            <div className={` w-full sm:w-2/5 lg:w-[27%] min-w-[300px] h-full bg-black fixed top-0 right-0 flex flex-col items-start justify-start p-5 ps-10 md:p-10 lg:p-14`}>
+                <ExportedImage src="/images/logo.svg" alt="esper creation's logo" className="size-10 translate-y-1/4" width={40} height={40} />
+                <div className="flex flex-col mt-[64px] w-full">
                   {
                     pages.map((page,index) => (
-                      <Link href={page.link} className='w-full'>
-                        <button className={`${inter.className} text-[16px]/[16px] text-start font-semibold text-white tracking-[-0.64px] px-6 py-5 cursor-pointer hover:bg-[#FFFFFF1A] ease-linear transition-all rounded-[32px] w-max shrink-0 
-                        `}  onClick={handleLinkClick} key={index}>
+                      <Link href={page.link} className='w-full rounded-[32px]'>
+                        <button className={`${inter.className} text-[16px]/[16px] text-start font-semibold tracking-[-0.64px] px-6 py-5 cursor-pointer hover:bg-[#FFFFFF1A] ease-linear transition-all rounded-[32px] w-full shrink-0 
+                        ${activeLink.includes(page.link) ? 'text-[#FF5622]' : 'text-white'}
+                        `} 
+                        onClick={handleLinkClick}
+                        key={index}
+                      >
                           {page.name}
                         </button>
                       </Link>
                     ))
                   }
-                  <Link href="/#contact-us" onClick={handleLinkClick} className='mt-10'>
-                    <BtnOrange cta='build your online presence!' />
+                  <Link href="/#contact-us" onClick={handleLinkClick} className='mt-10 w-full rounded-[32px]'>
+                    <button className={`${inter.className} rounded-[32px] bg-[#FF5600] py-5 px-6 capitalize text-white font-semibold text-[16px]/[16px] tracking-[-0.64px] w-full custom-shadow-orange cursor-pointer transition-all ease-linear duration-300 hover:!shadow-none`}>
+                      build your online presence!
+                    </button>
                   </Link>
-                  <a href='https://calendly.com/smbmo/30min?back=1&month=2025-05' target='_blank' className='w-full'>
-                    <button className={`${inter.className} text-[16px]/[16px] font-semibold text-[#FF5600] tracking-[-0.64px] px-6 py-5 cursor-pointer relative before:rounded-full before:size-[10px] bg-[#FFEEE6] rounded-[32px] mt-5 capitalize text-center w-full`} onClick={handleLinkClick}>
+                  <a href='https://calendly.com/smbmo/30min?back=1&month=2025-05' target='_blank' className='w-full mt-5 rounded-[32px]'>
+                    <button className={`${inter.className} text-[16px]/[16px] font-semibold text-[#FF5600] tracking-[-0.64px] px-6 py-5 cursor-pointer relative before:rounded-full before:size-[10px] bg-[#FFEEE6] rounded-[32px] capitalize text-center w-full`} onClick={handleLinkClick}>
                       schedule a call
                     </button>
                   </a>

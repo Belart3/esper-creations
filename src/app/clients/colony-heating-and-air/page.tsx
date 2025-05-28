@@ -13,7 +13,7 @@ export const metadata = {
   title: 'Colony Heating Website Design | Esper Creations',
   description: 'View snapshots of the website design Esper Creations created for Colony Heating. Explore the visual layout, user experience, and visit the live site.',
   alternates: {
-    canonical: 'http://localhost:3000/clients/colony-heating',
+    canonical: 'https://espercreations.com//clients/colony-heating',
   },
   openGraph: {
     title: 'Colony Heating Website Design | Esper Creations',

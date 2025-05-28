@@ -10,7 +10,7 @@ export const metadata = {
   title: '#1 Best Rated Digital Marketing Agency | Esper Creations',
   description: 'The best digital marketing agency, Esper Creations delivers top-tier SEO, web design, and branding to help your business grow online.',
   alternates: {
-    canonical: 'http://localhost:3000/',
+    canonical: 'https://espercreations.com/',
   },
   openGraph: {
     title: '#1 Best Rated Digital Marketing Agency | Esper Creations',

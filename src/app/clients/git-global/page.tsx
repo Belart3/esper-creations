@@ -12,7 +12,7 @@ export const metadata = {
   title: 'Git Global Website Design | Esper Creations',
   description: 'View snapshots of the website design Esper Creations created for Git Global. Explore the visual layout, user experience, and visit the live site.',
   alternates: {
-    canonical: 'http://localhost:3000/clients/git-global',
+    canonical: 'https://espercreations.com/clients/git-global',
   },
   openGraph: {
     title: 'Git Global Website Design | Esper Creations',
