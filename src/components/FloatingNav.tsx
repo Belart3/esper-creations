@@ -4,6 +4,8 @@ import React, { useState, useEffect, useRef } from 'react'
 import Link from 'next/link';
 import { Inter } from 'next/font/google';
 import ExportedImage from 'next-image-export-optimizer';
+import { useSelectedLayoutSegment } from 'next/navigation'
+import { usePathname } from 'next/navigation';
 
 const inter = Inter({
   variable: "--font-inter",
@@ -25,7 +27,9 @@ const pages = [
 
 const FloatingNav = (props: Props) => {
   const [float, setFloat] = useState(false);
-  const [activeLink, setActiveLink] = useState('');
+  const [hash, setHash] = useState('')
+  const [selectedId, setSelectedId] = useState<number | null>(null);
+  const currentPath = usePathname();
 
     const handleScroll = () => {
       const scrollPosition = window.scrollY || window.pageYOffset;
@@ -38,11 +42,20 @@ const FloatingNav = (props: Props) => {
     
     useEffect(() => {
       window.addEventListener('scroll', handleScroll);
+      const hash = window.location.href;
+      const currentHash = new URL(hash).hash;
+      setHash(currentHash)
+      currentPath === '/' ? setSelectedId(0) : setSelectedId(null)
 
       return () => {
           window.removeEventListener('scroll', handleScroll);
       };
     }, []);
+
+    const handleActiveLink = (id:number) => {
+      currentPath === '/' ? setSelectedId(id) : setSelectedId(null)
+      handleLinkClick()
+    }
 
     const handleLinkClick = () => { 
       props.setOpen(false),
@@ -70,9 +83,9 @@ const FloatingNav = (props: Props) => {
                     pages.map((page,index) => (
                       <Link href={page.link} className='w-full rounded-[32px]'>
                         <button className={`${inter.className} text-[16px]/[16px] text-start font-semibold tracking-[-0.64px] px-6 py-5 cursor-pointer hover:bg-[#FFFFFF1A] ease-linear transition-all rounded-[32px] w-full shrink-0 
-                        ${activeLink.includes(page.link) ? 'text-[#FF5622]' : 'text-white'}
+                        ${selectedId === index ? 'text-[#FF5622]' : 'text-white'}
                         `} 
-                        onClick={handleLinkClick}
+                        onClick={() => handleActiveLink(index)}
                         key={index}
                       >
                           {page.name}
@@ -85,7 +98,7 @@ const FloatingNav = (props: Props) => {
                       build your online presence!
                     </button>
                   </Link>
-                  <a href='https://calendly.com/smbmo/30min?back=1&month=2025-05' target='_blank' className='w-full mt-5 rounded-[32px]'>
+                  <a href='https://link.elivate.io/widget/booking/laaJVVoiibGzbeaVQE0A' target='_blank' className='w-full mt-5 rounded-[32px]'>
                     <button className={`${inter.className} text-[16px]/[16px] font-semibold text-[#FF5600] tracking-[-0.64px] px-6 py-5 cursor-pointer relative before:rounded-full before:size-[10px] bg-[#FFEEE6] rounded-[32px] capitalize text-center w-full`} onClick={handleLinkClick}>
                       schedule a call
                     </button>

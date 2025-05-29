@@ -73,7 +73,7 @@ export default function Home() {
             {/* floating header boxes */}
             <ExportedImage 
               src={'/images/hero-floats/ad-1.webp'} 
-              className={`${float ? ' delay-0' : ''} transition-all duration-300 ease-linear hidden md:flex size-[120px] lg:size-[150px] absolute -top-[100px] lg:-top-[100px] left-1/2 -translate-x-1/2 z-[0] rotate-[-15deg] shadow-2xl shadow-[#00000080] rounded-[8px] border-[5px] border-white`} 
+              className={`${float ? ' delay-0' : ''} transition-all duration-300 ease-linear hidden md:flex size-[120px] lg:size-[150px] absolute -top-[100px] lg:-top-[100px] left-1/2 -translate-x-1/2 z-[0] rotate-[-15deg] shadow-2xl shadow-[#00000080] rounded-[8px]`} 
               alt="Less Average CPC, More Ads Impressions" 
               width={150}
               height={150}
@@ -84,7 +84,7 @@ export default function Home() {
             />  
             <ExportedImage 
               src={'/images/hero-floats/ad-2.webp'} 
-              className={`${float ? '! delay-0' : ''} transition-all duration-300 ease-linear  hidden md:flex size-[120px] lg:size-[150px] absolute top-[70px] -left-[53px] lg:left-[5px] z-[-10] rotate-[-15deg] shadow-2xl shadow-[#00000080] rounded-[8px] border-[5px] border-white`} 
+              className={`${float ? '! delay-0' : ''} transition-all duration-300 ease-linear  hidden md:flex size-[120px] lg:size-[150px] absolute top-[70px] -left-[53px] lg:left-[5px] z-[-10] rotate-[-15deg] shadow-2xl shadow-[#00000080] rounded-[8px]`} 
               alt="Git-Global Immigration Services Ad"  
               width={150}
               height={150}
@@ -95,7 +95,7 @@ export default function Home() {
             />
             <ExportedImage 
               src={'/images/hero-floats/ad-3.webp'} 
-              className={`${float ? 'delay-0' : ''} transition-all duration-300 ease-linear hidden md:flex size-[120px] lg:size-[150px] absolute top-[344px] lg:top-[350px] left-[80px] z-[-10] rotate-[15deg] shadow-2xl shadow-[#00000080] rounded-[8px] border-[5px] border-white`} 
+              className={`${float ? 'delay-0' : ''} transition-all duration-300 ease-linear hidden md:flex size-[120px] lg:size-[150px] absolute top-[344px] lg:top-[350px] left-[80px] z-[-10] rotate-[15deg] shadow-2xl shadow-[#00000080] rounded-[8px]`} 
               alt="Increase in Ad Clicks"  
               width={150}
               height={150}
@@ -106,7 +106,7 @@ export default function Home() {
             />  
             <ExportedImage 
               src={'/images/hero-floats/ad-4.webp'} 
-              className={`${float ? ' delay-0' : ''} transition-all duration-300 ease-linear hidden md:flex size-[120px] lg:size-[150px] absolute top-[344px] lg:top-[350px] right-[80px] z-[-10] rotate-[-15deg] shadow-2xl shadow-[#00000080] rounded-[8px] border-[5px] border-white`} 
+              className={`${float ? ' delay-0' : ''} transition-all duration-300 ease-linear hidden md:flex size-[120px] lg:size-[150px] absolute top-[344px] lg:top-[350px] right-[80px] z-[-10] rotate-[-15deg] shadow-2xl shadow-[#00000080] rounded-[8px]`} 
               alt="Increase in Average Session Duration"   
               width={150}
               height={150}             
@@ -211,8 +211,8 @@ export default function Home() {
             </div>
             <div className="h-px w-full bg-[#333]"></div>
             <div className='flex flex-col lg:flex-row lg:justify-between lg:items-center gap-6 md:gap-10 w-full max-w-[1440px] mx-auto z-[1]'>
-              <a href="mailto:changes@espercreations.com">
-                <button className={`${inter.className} text-[#FF5600] text-[16px]/[16px] text-center tracking-[-0.64px] font-semibold my-5 capitalize cursor-pointer rounded-[32px] bg-white py-5 px-6 lg:px-10 transition-all ease-linear duration-300 custom-shadow-orange hover:!shadow-none max-w-[300px] mx-auto lg:mx-0`}>
+              <a href="mailto:changes@espercreations.com" className='w-fit mx-auto lg:mx-0'>
+                <button className={`${inter.className} text-[#FF5600] text-[16px]/[16px] text-center tracking-[-0.64px] font-semibold my-5 capitalize cursor-pointer rounded-[32px] bg-white py-5 px-6 lg:px-10 max-w-[300px] mx-auto lg:mx-0`}>
                   I want to send an email!
                 </button>
               </a>
