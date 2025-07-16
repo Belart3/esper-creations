@@ -29,7 +29,7 @@ const HeroForm = () => {
         setIsSubmitting(true);
         console.log(heroForm)
         try {
-            const res = await fetch('https://esper-backend.onrender.com/send-hero-form', {
+            const res = await fetch('https://esper-backend.vercel.app/api/send-hero-form', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(heroForm),

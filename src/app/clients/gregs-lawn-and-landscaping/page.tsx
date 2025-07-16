@@ -6,6 +6,10 @@ import ExportedImage from "next-image-export-optimizer";
 export const metadata = {
   title: 'Gregs Lawn & Landscaping Website Design | Esper Creations',
   description: 'View snapshots of the website design Esper Creations created for Gregs Lawn. Explore the visual layout, user experience, and visit the live site.',
+  robots: {
+    index: false,
+    follow: false,
+  },
   alternates: {
     canonical: 'https://espercreations.com/clients/gregs-lawn',
   },

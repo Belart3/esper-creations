@@ -1,0 +1,59 @@
+[
+  {
+    "title": "Acceptance",
+    "link": "#Acceptance",
+    "content": "By accessing or using https://espercreations.com (“Website”), you agree to these Terms and Conditions (“Terms”) and our Privacy Policy."
+  },
+  {
+    "title": "Intellectual Property",
+    "link": "#Intellectual-Property",
+    "content": "All website content (text, images, designs, logos, software) is owned or licensed by Esper Creations. You may not reproduce, distribute, modify, or commercially use any material without written permission."
+  },
+  {
+    "title": "Use of Website",
+    "link": "#Use-of-Website",
+    "conditions": [
+        "You’ll use the Website lawfully and follow these Terms.",
+        "You won’t misrepresent your identity or interfere with Website functionality."
+    ]
+  },
+  {
+    "title": "Purchases & Orders",
+    "link": "#Purchases-&-Orders",
+    "conditions": [
+        "All orders are subject to acceptance and availability.",
+        "Prices, taxes, and fees are clearly displayed before purchase.",
+        "Payment must be made via approved methods.",
+        "You will receive order confirmation by email."
+    ]
+  },
+  {
+    "title": "Disclaimers",
+    "link": "#Disclaimers",
+    "conditions": [
+        "The Website and products are provided “as is” without warranties.",
+        "We don’t guarantee error-free or uninterrupted access."
+    ]
+  },
+  {
+    "title": "Limitation of Liability",
+    "link": "#Limitation-of-Liability",
+    "conditions": [
+        "To the fullest extent allowed by law, we’re not liable for losses arising from use or inability to use the site or products."
+    ]
+  },
+  {
+    "title": "Indemnification",
+    "link": "#Indemnification",
+    "content": "You agree to indemnify Esper Creations and its team from any claims, liabilities, losses, damages, or expenses resulting from your violation of these Terms or your use of the Website"
+  },
+  {
+    "title": "Changes to Terms",
+    "link": "#Changes-to-Terms",
+    "content": "We may revise these Terms at any time. Updated terms are effective upon posting. Continued use after changes implies acceptance."
+  },
+  {
+    "title": "Contact Us",
+    "link": "#Contact-Us"
+  }
+]

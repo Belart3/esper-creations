@@ -154,75 +154,79 @@ export default function Home() {
           </div>
         </div>
       </header>
-      <main>
-        <section className=" max-w-[1440px] mx-auto py-16 px-5 md:pt-[104px] pb-5 md:px-6 lg:px-14 flex flex-col gap-[104px]">
-          <section className="flex flex-col gap-12 md:gap-16 scroll-mt-25" id="services">
-            <SectionHead title="Results-driven Marketing" description="You deserve more than likes and pretty websites. We build systems designed to convert, scale, and dominate your market." />
-            <Services />
-          </section>
-          <section className="flex flex-col gap-12 md:gap-16">
-            <SectionHead title="Remarkable Results" description="See how we helped founders just like you scale traffic, leads, and revenue." />
-            <Reviews />
-          </section>
-          <section className="flex flex-col gap-12 md:gap-16 scroll-mt-25" id="work">
-            <SectionHead title="See Our Work" description="Still not convinced about us? see what we have created for those who trusted us." />
-            <WorkBanner />
-          </section>
-          <section className="flex flex-col gap-12 md:gap-16 scroll-mt-25" id="pricing">
-            <SectionHead title="Pricing Plans" description="All-in-one marketing solutions built to grow your business—whether you're scaling or just getting started." />
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
-              {
-                plans.map((plan, index) => (
-                  <PricingCards
-                    key={index}
-                    index={index}
-                    productColor={plan.productColor}
-                    product={plan.product}
-                    price={plan.price}
-                    details={plan.details}
-                    features={plan.features}
-                    cta={plan.cta}
-                  />
-                ))
-              }
-            </div>
-          </section>
-          <section className="flex flex-col lg:grid lg:grid-cols-2 lg:items-start gap-10 scroll-mt-25" id="faq">
-            <FAQ />
-          </section>
-          <section className="flex flex-col gap-10 bg-black rounded-[40px] py-10 px-5 md:py-14 md:px-10 lg:p-10 scroll-mt-25 bg-contain bg-bottom sm:bg-[50%_110%] lg:bg-[50%_140%] bg-no-repeat relative overflow-hidden" id="contact-us">
-            <div className="flex flex-col lg:grid lg:grid-cols-2 lg:items-center gap-10">
-              <div className="flex flex-col gap-5 h-full justify-center">
-                <div className="flex flex-col gap-4 items-center lg:items-start">
-                  <ExportedImage src="/images/logo.svg" alt="esper creation's logo" className="size-8 lg:size-12" width={40} height={40} />
-                </div>
-                <div className="flex flex-col gap-5">
-                  <h2 className={`${inter.className} text-[32px]/[32px] md:text-[53px]/[53px] xl:text-[73px]/[73px] font-semibold tracking-[-1.92px] md:tracking-[-3.18px] text-center lg:text-start text-white`}>
-                    Transform your online presence into a powerful revenue tool.
-                  </h2>
-                  <p className={`${inter.className} text-[18px]/[27px] tracking-[-0.72px] font-normal text-[#E6E6E6] text-center lg:text-start`}>
-                    We are ready to turn your business into an unforgettable brand and transform your online presence into consistent revenue—at scale.
-                  </p>
-                </div>
-              </div>
-              <div className="p-4 md:p-6 bg-white rounded-[24px] flex flex-col items-center">
-                <BookingForm />
-              </div>
-            </div>
-            <div className="h-px w-full bg-[#333]"></div>
-            <div className='flex flex-col lg:flex-row lg:justify-between lg:items-center gap-6 md:gap-10 w-full max-w-[1440px] mx-auto z-[1]'>
-              <a href="mailto:changes@espercreations.com" className='w-fit mx-auto lg:mx-0'>
-                <button className={`${inter.className} text-[#FF5600] text-[16px]/[16px] text-center tracking-[-0.64px] font-semibold my-5 capitalize cursor-pointer rounded-[32px] bg-white py-5 px-6 lg:px-10 max-w-[300px] mx-auto lg:mx-0`}>
-                  I want to send an email!
-                </button>
-              </a>
-              <p className={`${inter.className} text-[14px]/[21px] md:text-[16px]/[24px] tracking-[-0.56px] md:tracking-[-0.64] text-[#666666] capitalize font-normal text-center`}>
-                  © 2025 Esper Creations All rights reserved
-              </p>
-            </div>
-            <ExportedImage src='/images/transparent-esper-text.png' alt='Esper Creations' className='absolute bottom-[-40px] md:bottom-[-70px] lg:bottom-[-150px] left-0 w-full z-0' width={400} height={200}  />
-          </section>
+      <main className=" max-w-[1440px] mx-auto py-16 px-5 md:pt-[104px] pb-5 md:px-6 lg:px-14 flex flex-col gap-[104px]">
+        <section className="flex flex-col gap-12 md:gap-16 scroll-mt-25" id="services">
+          <SectionHead title="Results-driven Marketing" description="You deserve more than likes and pretty websites. We build systems designed to convert, scale, and dominate your market." />
+          <Services />
         </section>
+        <section className="flex flex-col gap-12 md:gap-16">
+          <SectionHead title="Remarkable Results" description="See how we helped founders just like you scale traffic, leads, and revenue." />
+          <Reviews />
+        </section>
+        <section className="flex flex-col gap-12 md:gap-16 scroll-mt-25" id="work">
+          <SectionHead title="See Our Work" description="Still not convinced about us? see what we have created for those who trusted us." />
+          <WorkBanner />
+        </section>
+        <section className="flex flex-col gap-12 md:gap-16 scroll-mt-25" id="pricing">
+          <SectionHead title="Pricing Plans" description="All-in-one marketing solutions built to grow your business—whether you're scaling or just getting started." />
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+            {
+              plans.map((plan, index) => (
+                <PricingCards
+                  key={index}
+                  index={index}
+                  productColor={plan.productColor}
+                  product={plan.product}
+                  price={plan.price}
+                  details={plan.details}
+                  features={plan.features}
+                  cta={plan.cta}
+                />
+              ))
+            }
+          </div>
+        </section>
+        <section className="flex flex-col lg:grid lg:grid-cols-2 lg:items-start gap-10 scroll-mt-25" id="faq">
+          <FAQ />
+        </section>
+        <footer className="flex flex-col gap-10 bg-black rounded-[40px] py-10 px-5 md:py-14 md:px-10 lg:p-10 scroll-mt-25 bg-contain bg-bottom sm:bg-[50%_110%] lg:bg-[50%_140%] bg-no-repeat relative overflow-hidden" id="contact-us">
+          <div className="flex flex-col lg:grid lg:grid-cols-2 lg:items-center gap-10">
+            <div className="flex flex-col gap-5 h-full justify-center">
+              <div className="flex flex-col gap-4 items-center lg:items-start">
+                <ExportedImage src="/images/logo.svg" alt="esper creation's logo" className="size-8 lg:size-12" width={40} height={40} />
+              </div>
+              <div className="flex flex-col gap-5">
+                <h2 className={`${inter.className} text-[32px]/[32px] md:text-[53px]/[53px] xl:text-[73px]/[73px] font-semibold tracking-[-1.92px] md:tracking-[-3.18px] text-center lg:text-start text-white`}>
+                  Transform your online presence into a powerful revenue tool.
+                </h2>
+                <p className={`${inter.className} text-[18px]/[27px] tracking-[-0.72px] font-normal text-[#E6E6E6] text-center lg:text-start`}>
+                  We are ready to turn your business into an unforgettable brand and transform your online presence into consistent revenue—at scale.
+                </p>
+              </div>
+            </div>
+            <div className="p-4 md:p-6 bg-white rounded-[24px] flex flex-col items-center">
+              <BookingForm />
+            </div>
+          </div>
+          <div className="h-px w-full bg-[#333]"></div>
+          <div className='flex flex-col lg:flex-row lg:justify-between lg:items-center gap-6 md:gap-10 w-full max-w-[1440px] mx-auto z-[1]'>
+            <a href="mailto:changes@espercreations.com" className='w-fit mx-auto lg:mx-0'>
+              <button className={`${inter.className} text-[#FF5600] text-[16px]/[16px] text-center tracking-[-0.64px] font-semibold my-5 capitalize cursor-pointer rounded-[32px] bg-white py-5 px-6 lg:px-10 max-w-[300px] mx-auto lg:mx-0`}>
+                I want to send an email!
+              </button>
+            </a>
+            <Link href={'/terms-and-conditions'} className={`${inter.className} text-[14px]/[21px] md:text-[16px]/[24px] tracking-[-0.56px] md:tracking-[-0.64] text-[#666666] capitalize font-normal text-center hover:text-white transition-colors duration-300`}>
+              terms and conditions
+            </Link>
+            <Link href={'/privacy-policy'} className={`${inter.className} text-[14px]/[21px] md:text-[16px]/[24px] tracking-[-0.56px] md:tracking-[-0.64] text-[#666666] capitalize font-normal text-center hover:text-white transition-colors duration-300`}>
+              privacy policy
+            </Link>
+            <p className={`${inter.className} text-[14px]/[21px] md:text-[16px]/[24px] tracking-[-0.56px] md:tracking-[-0.64] text-[#666666] capitalize font-normal text-center`}>
+                © 2025 Esper Creations All rights reserved
+            </p>
+          </div>
+          <ExportedImage src='/images/transparent-esper-text.png' alt='Esper Creations' className='absolute bottom-[-40px] md:bottom-[-70px] lg:bottom-[-150px] left-0 w-full z-0' width={400} height={200}  />
+        </footer>
       </main>
     </>
   );

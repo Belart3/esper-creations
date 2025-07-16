@@ -7,8 +7,8 @@ import { Spiral as Hamburger } from 'hamburger-react'
 import ExportedImage from "next-image-export-optimizer";
 
 const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
+variable: "--font-inter",
+subsets: ["latin"],
 });
 
 const pages = [

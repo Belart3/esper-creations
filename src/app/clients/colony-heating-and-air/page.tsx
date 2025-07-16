@@ -12,6 +12,10 @@ const inter = Inter({
 export const metadata = {
   title: 'Colony Heating Website Design | Esper Creations',
   description: 'View snapshots of the website design Esper Creations created for Colony Heating. Explore the visual layout, user experience, and visit the live site.',
+  robots: {
+    index: false,
+    follow: false,
+  },
   alternates: {
     canonical: 'https://espercreations.com//clients/colony-heating',
   },

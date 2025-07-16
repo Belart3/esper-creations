@@ -65,7 +65,7 @@ const BookingForm = () => {
         setIsSubmitting(true);
         console.log(footerForm)
         try {
-            const res = await fetch('https://esper-backend.onrender.com/send-booking-form', {
+            const res = await fetch('https://esper-backend.vercel.app/api/send-booking-form', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(footerForm),
@@ -84,7 +84,7 @@ const BookingForm = () => {
         }
     };
 
-  return (
+    return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-4 md:gap-6 w-full z-10">
         <input 
         name="name"
@@ -175,6 +175,34 @@ const BookingForm = () => {
         className={`${inter.className} text-[14px]/[21px] tracking-[-0.56px] text-[#B3B3B3] p-4 rounded-[16px] bg-[#E6E6E699] focus:outline-[#FF5600] focus:border-[#FF5600] focus:ring-[#FF5600] border-none outline-[#FF5600] transition-all ease-linear duration-300 ${ footerForm.issue.trim() !== '' ? 'bg-[#FFEEE6]' : '' }`} 
         placeholder="A brief description of your issue (Optional)"
         ></textarea>
+        <div className="flex">
+            <input 
+            type="checkbox" 
+            className="mr-2 mt-1" 
+            required 
+            />
+            <label className={`${inter.className} text-[14px]/[21px] tracking-[-0.56px] text-[#666666]`}>
+                By checking this box I agree to the
+                <a href="/privacy-policy" target='_blank' className="text-[#FF5600] underline mx-1">
+                    Privacy Policy
+                </a> 
+                and 
+                <a href="/terms-and-conditions" target='_blank' className="text-[#FF5600] underline mx-1">
+                    Terms and Conditions 
+                </a> 
+                and consent to receive messages and important updates from the Esper Creations. You can reply STOP to unsubscribe at any time.
+            </label>
+        </div>
+        <div className="flex">
+            <input 
+            type="checkbox" 
+            className="mr-2 mt-1" 
+            required 
+            />
+            <label className={`${inter.className} text-[14px]/[21px] tracking-[-0.56px] text-[#666666]`}>
+                I consent to receive non-marketing text messages from Esper Creations about my order updates, appointment reminders etc. Message & data rates may apply.
+            </label>
+        </div>
         <button 
         className={`${inter.className} rounded-[32px] bg-[#FF5600] py-5 px-6 capitalize text-white font-semibold text-[16px]/[16px] tracking-[-0.64px] w-full lg:w-fit custom-shadow-orange cursor-pointer transition-all ease-linear duration-300 hover:!shadow-none max-w-[300px] mx-auto`}
         type='submit'
