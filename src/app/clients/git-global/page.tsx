@@ -11,10 +11,6 @@ const inter = Inter({
 export const metadata = {
   title: 'Git Global Website Design | Esper Creations',
   description: 'View snapshots of the website design Esper Creations created for Git Global. Explore the visual layout, user experience, and visit the live site.',
-  robots: {
-    index: false,
-    follow: false,
-  },
   alternates: {
     canonical: 'https://espercreations.com/clients/git-global',
   },

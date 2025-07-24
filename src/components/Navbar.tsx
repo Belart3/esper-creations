@@ -15,6 +15,7 @@ const pages = [
     { name: "Services", link: "/#services" },
     { name: "Our Work", link: "/#work" },
     { name: "Pricing", link: "/#pricing" },
+    { name: "Blogs", link: "/blogs" },
     { name: "FAQs", link: "/#faq" },
     { name: "Contact Us", link: "/#contact-us" },
 ]

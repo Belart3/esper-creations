@@ -8,10 +8,6 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Terms and Conditions',
   description: 'Terms and Conditions for using our website',
-  robots: {
-    index: false,
-    follow: false,
-  },
   alternates: {
     canonical: 'https://espercreations.com/terms-and-conditions',
   },

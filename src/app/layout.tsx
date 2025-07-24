@@ -51,28 +51,6 @@ export default function RootLayout({
             }}
           />
         {/* End Google Tag Manager */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Service",
-              "name": "Web Design and Digital Marketing Agency",
-              "description":
-                "The best digital marketing agency, Esper Creations delivers top-tier SEO, web design, and branding to help your business grow online.",
-              "url": "https://espercreations.com/",
-              "provider": {
-                "@type": "Organization",
-                "name": "Esper Creations"
-              },
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "5.0",
-                "reviewCount": "11"
-              }
-            })
-          }}
-        />
       </head>
       <body
         className={`antialiased bg-[#F4F5FA] hide-scrollbar relative scroll-smooth overflow-x-hidden`}

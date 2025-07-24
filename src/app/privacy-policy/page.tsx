@@ -8,10 +8,6 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Privacy Policy',
   description: 'Privacy Policy for using our website',
-  robots: {
-    index: false,
-    follow: false,
-  },
   alternates: {
     canonical: 'https://espercreations.com/privacy-policy',
   },
