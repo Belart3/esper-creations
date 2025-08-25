@@ -67,7 +67,7 @@ html{
   box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.08);
 }
 
-/* Example: make success toast purple background */
+
 .Toastify__toast--success {
   background: #FF5600 !important;
   color: white !important;
@@ -90,3 +90,9 @@ html{
   background-color: white !important;
   border-radius: 100% !important;
 }
+
+.mySwiper .swiper-button-next,
+.mySwiper .swiper-button-prev {
+  color: #F4844C; 
+}
+

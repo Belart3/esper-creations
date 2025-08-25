@@ -6,7 +6,7 @@ import 'swiper/css/pagination';
 import NavBlock from "@/components/NavBlock";
 import Script from "next/script";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: '#1 Best Rated Digital Marketing Agency | Esper Creations',
   description: 'The best digital marketing agency, Esper Creations delivers top-tier SEO, web design, and branding to help your business grow online.',
   alternates: {

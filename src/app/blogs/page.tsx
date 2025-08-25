@@ -3,15 +3,16 @@ import { Inter } from 'next/font/google';
 import React from 'react'
 import blogData from '@/data/blogData.json'
 import Link from 'next/link';
+import type { Metadata } from "next";
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
 });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Creative Design Meets SEO Strategy | Esper Creations',
-  description: 'Discover how creative web design and smart SEO strategy work together to boost user experience, search rankings, and online visibility. Learn best practices with Esper Creations.',
+  description: 'How web design and SEO strategy work together to boost user experience, search rankings, and online visibility. Learn best practices with Esper Creations.',
   alternates: {
     canonical: 'https://espercreations.com/blogs',
   },

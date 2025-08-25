@@ -29,9 +29,6 @@ export default function Home() {
   const [float, setFloat] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
 
-  // const router = useRouter();
-  // const isActive = router.pathname;
-
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY || window.pageYOffset;
@@ -169,21 +166,67 @@ export default function Home() {
         </section>
         <section className="flex flex-col gap-12 md:gap-16 scroll-mt-25" id="pricing">
           <SectionHead title="Pricing Plans" description="All-in-one marketing solutions built to grow your business—whether you're scaling or just getting started." />
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
-            {
-              plans.map((plan, index) => (
-                <PricingCards
-                  key={index}
-                  index={index}
-                  productColor={plan.productColor}
-                  product={plan.product}
-                  price={plan.price}
-                  details={plan.details}
-                  features={plan.features}
-                  cta={plan.cta}
-                />
-              ))
-            }
+          <div className="flex flex-col gap-4">
+            <div className="p-4 rounded-[40px] bg-white flex flex-wrap lg:grid lg:grid-cols-3 gap-y-8 gap-x-16 lg:gap-16">
+              <div className="rounded-[32px] p-6 flex flex-col gap-10 items-start bg-cover bg-center bg-[url('/images/esper-ai-agent-tablet.webp')] w-full lg:col-span-1" >
+                  <button className={`${inter.className} px-4 py-3 bg-white rounded-[32px] text-black text-[18px]/[20px] tracking-[-1.2px] font-semibold`}>
+                    AI Agent
+                  </button>
+                  <div className="flex flex-col gap-2">
+                      <p className={`${inter.className} text-[18px]/[27px] tracking-[-0.72px] font-normal text-white`}>
+                        Starts at
+                      </p>
+                      <p className={`${inter.className} text-[53px]/[53px] tracking-[-3.18px] font-semibold text-white`}>
+                        $500
+                      </p>
+                  </div>
+              </div>
+              <div className="sm:flex-1 flex flex-col items-start lg:items-center justify-center gap-8 lg:col-span-1 w-full sm:w-1/2 lg:w-full">
+                <p className={`${inter.className} text-[16px]/[24px] tracking-[-0.64px] font-normal text-black text-start lg:text-center`}>
+                  Let our AI Agent take tedious work off your plate. From automated reporting and call assistance to smart calendar management and ad oversight, it’s your all-in-one digital ally for scaling faster.
+                </p>
+                <a href="https://link.elivate.io/widget/booking/laaJVVoiibGzbeaVQE0A" target='_blank' rel='noopener noreferrer' className="w-full lg:max-w-none mb-8 sm:mb-0">
+                  <button className={`${inter.className} rounded-[32px] bg-[#FF5600] py-5 px-6 capitalize text-white font-semibold text-[16px]/[16px] tracking-[-0.64px] custom-shadow-orange w-full transition-all ease-linear duration-300 hover:!shadow-none cursor-pointer`}>
+                      Activate My AI Agent
+                  </button>
+                </a>
+              </div>
+              <div className="py-6 px-2 rounded-[24px] bg-[#F4F5FA] custom-inset-shadow flex sm:flex-1 items-center justify-center lg:col-span-1 w-full sm:w-1/2 lg:w-full">
+                  <ul className=' flex flex-col gap-2'>
+                    <li className={`${inter.className} text-[16px]/[24px] tracking-[-0.64px] font-normal text-[#666666] ms-5 relative before:size-2 before:top-1/2 before:-translate-y-1/2 before:left-[-20px] before:rounded-full before:bg-[#FF560050] before:absolute`}>
+                      Automated reporting & insights
+                    </li>
+                    <li className={`${inter.className} text-[16px]/[24px] tracking-[-0.64px] font-normal text-[#666666] ms-5 relative before:size-2 before:top-1/2 before:-translate-y-1/2 before:left-[-20px] before:rounded-full before:bg-[#FF560050] before:absolute`}>
+                      Smart call assistant & scheduling
+                    </li>
+                    <li className={`${inter.className} text-[16px]/[24px] tracking-[-0.64px] font-normal text-[#666666] ms-5 relative before:size-2 before:top-1/2 before:-translate-y-1/2 before:left-[-20px] before:rounded-full before:bg-[#FF560050] before:absolute`}>
+                      Calendar management made easy
+                    </li>
+                    <li className={`${inter.className} text-[16px]/[24px] tracking-[-0.64px] font-normal text-[#666666] ms-5 relative before:size-2 before:top-1/2 before:-translate-y-1/2 before:left-[-20px] before:rounded-full before:bg-[#FF560050] before:absolute`}>
+                      Ad campaign oversight & optimization
+                    </li>
+                    <li className={`${inter.className} text-[16px]/[24px] tracking-[-0.64px] font-normal text-[#666666] ms-5 relative before:size-2 before:top-1/2 before:-translate-y-1/2 before:left-[-20px] before:rounded-full before:bg-[#FF560050] before:absolute`}>
+                      Best for: Busy Founders, Sales Teams, Agencies
+                    </li>
+                  </ul>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+              {
+                plans.map((plan, index) => (
+                  <PricingCards
+                    key={index}
+                    index={index}
+                    productColor={plan.productColor}
+                    product={plan.product}
+                    price={plan.price}
+                    details={plan.details}
+                    features={plan.features}
+                    cta={plan.cta}
+                  />
+                ))
+              }
+            </div>
           </div>
         </section>
         <section className="flex flex-col lg:grid lg:grid-cols-2 lg:items-start gap-10 scroll-mt-25" id="faq">

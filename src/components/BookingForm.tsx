@@ -7,7 +7,9 @@ import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { sendBookingMail } from '@/lib/actions/sendMailAction';
 import { toast } from 'react-toastify';
 import { ScaleLoader } from 'react-spinners';
-import Select from 'react-select'; 
+import Select from 'react-select';
+import ReCAPTCHA from 'react-google-recaptcha';
+//6LeLObIrAAAAALm9mHhW_ptfOlM4svjJ3sETMdJA
 
 const inter = Inter({
   variable: "--font-inter",
@@ -59,6 +61,7 @@ const BookingForm = () => {
     const [selectedService, setSelectedService] = useState<OptionType[]>([]);
 
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const [captchaValue, setCaptchaValue] = useState<string | null>(null);
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -78,7 +81,11 @@ const BookingForm = () => {
             toast.success("Email sent successfully!");
         } catch (err) {
             console.error(err);
-            toast.error("Failed to send email.");
+            if (err instanceof Error) {
+                toast.error(err.message);
+            } else {
+                toast.error('An unexpected error occurred.');
+            }
         } finally {
             setIsSubmitting(false);
         }
@@ -138,30 +145,6 @@ const BookingForm = () => {
             closeMenuOnSelect={false}
             className={`${inter.className} text-[14px]/[21px] tracking-[-0.56px] text-[#666666] p-4 rounded-[16px] bg-[#E6E6E699] focus:outline-[#FF5600] focus:border-[#FF5600] focus:ring-[#FF5600] border-none outline-[#FF5600] transition-all ease-linear duration-300`}
         />
-        {/* <select 
-        defaultValue='What service are you in need of? *'
-        name="service" 
-        required
-        className={`${inter.className} text-[14px]/[21px] tracking-[-0.56px] text-[#666666] p-4 rounded-[16px] bg-[#E6E6E699] focus:outline-[#FF5600] focus:border-[#FF5600] focus:ring-[#FF5600] border-none outline-[#FF5600] transition-all ease-linear duration-300`}
-        value={footerForm.service}
-        onChange={
-            (e) => {
-                setFooterForm({...footerForm, service: e.target.value}),
-                console.log(footerForm.service)
-            }
-        }
-        >
-            <option selected defaultValue='What service are you in need of? *' hidden disabled className={`${inter.className} text-[14px]/[21px] tracking-[-0.56px] text-[#B3B3B3] p-4 rounded-[16px] bg-[#E6E6E699]`}>
-                What service are you in need of? *
-            </option>
-        {
-        services.map((service, index) => (
-            <option value={service.title} className={`${inter.className} text-[14px]/[21px] tracking-[-0.56px] text-[#666666] p-4 rounded-[16px] bg-[#E6E6E699]`} key={index}>
-            {service.title}
-            </option>
-        ))
-        }
-        </select> */}
         <textarea 
         aria-label="issue"
         value={footerForm.issue}
@@ -203,7 +186,12 @@ const BookingForm = () => {
                 I consent to receive non-marketing text messages from Esper Creations about my order updates, appointment reminders etc. Message & data rates may apply.
             </label>
         </div>
+        <ReCAPTCHA
+            sitekey="6LeLObIrAAAAALm9mHhW_ptfOlM4svjJ3sETMdJA"
+            onChange={(value) => setCaptchaValue(value)}
+        />
         <button 
+        disabled={!captchaValue || isSubmitting}
         className={`${inter.className} rounded-[32px] bg-[#FF5600] py-5 px-6 capitalize text-white font-semibold text-[16px]/[16px] tracking-[-0.64px] w-full lg:w-fit custom-shadow-orange cursor-pointer transition-all ease-linear duration-300 hover:!shadow-none max-w-[300px] mx-auto`}
         type='submit'
         >

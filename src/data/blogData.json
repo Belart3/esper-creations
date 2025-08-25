@@ -12,5 +12,19 @@
         "date": "July 16,2025",
         "url": "how-much-does-website-design-cost",
         "alt":  "How Much Does Website Design Cost? check out our post and get more insight into the intricacies of web design cost"
+    },
+    {
+        "image": "/images/blogs/how-seo-works.webp",
+        "title": "How SEO Works: A Simple Guide to Search Engine Optimization",
+        "date": "July 24,2025",
+        "url": "how-seo-works-a-simple-guide-to-search-engine-optimization",
+        "alt":  "Learn How SEO Works from our Simple Guide to Search Engine Optimization"
+    },
+    {
+        "image": "/images/blogs/how-seo-helps-your-business-fuel-growth-visibility-trust.webp",
+        "title": "How SEO Helps Your Business: Fuel Growth, Visibility & Trust",
+        "date": "July 25,2025",
+        "url": "how-seo-helps-your-business-fuel-growth-visibility-trust",
+        "alt":  "Learn How SEO Works from our Simple Guide to Search Engine Optimization"
     }
 ]

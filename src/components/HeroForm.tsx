@@ -2,7 +2,7 @@ import { sendHeroFormEmail } from '@/lib/actions/sendMailAction';
 import { Inter } from 'next/font/google';
 import React from 'react'
 import { useState } from 'react'
-import PhoneInput from 'react-phone-number-input';
+import PhoneInput, {isPossiblePhoneNumber} from 'react-phone-number-input';
 import { ScaleLoader } from 'react-spinners';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -27,7 +27,6 @@ const HeroForm = () => {
     const handleSubmit = async (e: SubmitEvent) => {
         e.preventDefault();
         setIsSubmitting(true);
-        console.log(heroForm)
         try {
             const res = await fetch('https://esper-backend.vercel.app/api/send-hero-form', {
             method: 'POST',
@@ -42,7 +41,11 @@ const HeroForm = () => {
             toast.success("Email sent successfully!");
         } catch (err) {
             console.error(err);
-            toast.error("Failed to send email.");
+            if (err instanceof Error) {
+                toast.error(err.message);
+            } else {
+                toast.error('An unexpected error occurred.');
+            }
         } finally {
             setIsSubmitting(false);
         }
@@ -80,18 +83,20 @@ return (
         name="phone"
         aria-label="phone"
         placeholder="Phone Number"
-        defaultCountry="US"
+        defaultCountry='US'
         required
         value={heroForm.phone}
         onChange={(value) => {
             setHeroForm({ ...heroForm, phone: value || '' });
         }}
+        //error={heroForm.phone ? (isPossiblePhoneNumber(heroForm.phone) ? undefined : toast.error('Invalid phone number')) : toast.error('Phone number required')}   
         className={`${inter.className} w-full xl:w-[250px] p-4 rounded-[16px] bg-[#F4F5FA] placeholder-shown:text-[#666666] placeholder-shown:text-[14px]/[21px] tracking-[-0.56px] font-normal focus:outline-[#FF5600] focus:border-[#FF5600] focus:ring-[#FF5600] border-none outline-[#FF5600] transition-all ease-linear duration-300 ${ heroForm.phone.trim() !== '' ? '!bg-[#FFEEE6]' : '' }`}
         />
         <input type="hidden" name="phone" required value={heroForm.phone} />
         <button 
         className={`${inter.className} rounded-[32px] bg-[#FF5600] py-5 px-6 capitalize text-white font-semibold text-[16px]/[16px] tracking-[-0.64px] w-full lg:w-fit custom-shadow-orange cursor-pointer transition-all ease-linear duration-300 hover:!shadow-none mx-auto`}
         type='submit'
+        disabled={isSubmitting}
         >
             {
             isSubmitting ? (

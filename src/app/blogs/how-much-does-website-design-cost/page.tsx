@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { Metadata } from 'next'
 import ClientFooter from '@/components/ClientFooter'
 import { usePathname } from 'next/navigation'
+import MoreArticles from '@/components/MoreArticles'
 
 
 const inter = Inter(
@@ -22,7 +23,7 @@ const truncateText = ( text: string, textLimit: number ) => {
     return text;
 }
 
-const metadata = {
+const metadata: Metadata = {
   title: 'How Much Does Website Design Cost? | Esper Creations',
   description: 'Understand what affects website design pricing and how to plan your web development budget.',
   alternates: {
@@ -34,7 +35,7 @@ const metadata = {
   },
 };
 
-export default async function Page() {
+export default function Page() {
     const path = usePathname().replace('blogs' , '')
     
     return (
@@ -209,34 +210,7 @@ export default async function Page() {
                     </div>
                 </div>
             </div>
-            <div className='flex flex-col gap-12 md:gap-16 w-full my-[104px] md:my-[168px] items-center'>
-                <h2 className={`${inter.className} text-black text-[22px]/[22px] md:text-[30px]/[30px] font-medium capitalize`}>
-                    More Articles For You
-                </h2>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                    {
-                        blogData.map((blog, index) => (
-                            <div className="border border-[#E6E6E6] bg-white rounded-lg group transition-all ease-in-out duration-300 cursor-pointer lg:hover:drop-shadow-lg" key={index}>
-                                <Link href={`/blogs/${blog.url.toLowerCase()}`} >
-                                    <div className="flex flex-col">
-                                        <div className="h-30 md:h-53 w-full bg-cover bg-no-repeat bg-center rounded-t-lg" style={{backgroundImage: `url(${blog.image})`}}>
-                                            <img src={blog.image} alt={blog.alt} className='hidden' />
-                                        </div>
-                                        <div className="flex flex-col p-3 md:p-5 gap-2 md:gap-4">
-                                            <p className={`${inter.className} text-[#F4844C] text-start text-[12px]/[12px] md:text-[16px]/[24px] font-normal capitalize`}>
-                                                {blog.date}
-                                            </p>
-                                            <p className={`${inter.className} text-black text-start text-[18px]/[24px] md:text-[20px]/[26px] font-medium capitalize transition-colors ease-in-out duration-300 lg:group-hover:text-[#F4844C]`}>
-                                                {truncateText(blog.title, 60)}
-                                            </p>
-                                        </div>
-                                    </div>
-                                </Link>
-                            </div>
-                        ))
-                    }
-                </div>
-            </div>
+            <MoreArticles />
             <ClientFooter/>
         </article>
     )
