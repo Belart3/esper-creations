@@ -7,8 +7,8 @@ import ExportedImage from "next-image-export-optimizer";
 import Link from 'next/link';
 
 const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
+    variable: "--font-inter",
+    subsets: ["latin"],
 });
 
 const Services = () => {
@@ -27,7 +27,7 @@ const Services = () => {
                         <BtnTransparent cta='Activate My AI Agent' />
                     </Link>
                 </div>
-                <div className="w-full lg:w-1/2 h-[150px] md:h-[300px] bg-contain xl:bg-cover bg-center bg-no-repeat bg-[url('/images/EsperCreations-AI-Agent_desktop.png')]"></div>
+                <div className="w-full lg:w-1/2 h-[200px] md:h-[300px] bg-contain xl:bg-contain bg-center bg-no-repeat bg-[url('/images/EsperCreations-AI-Agent_desktop.png')]"></div>
             </div>
             <div className="flex flex-col lg:grid lg:grid-cols-2 xl:grid-cols-5 xl:grid-rows-2 xl:gap-x-6 xl:gap-y-4 gap-4 md:gap-6">
                 {services.map((service, index) => (

@@ -43,9 +43,9 @@ export default function Testimonials (props: Props) {
                     :
                     item.company === "CEO of BlockChain Management" ? 'from-[#F4844C80] lg:group-hover/item:from-[#F4844C80] to-[#F4844C] lg:group-hover/item:to-[#F4844C]' 
                     :
-                    item.company === 'CEO of Weight Loss Paradise' ? 'from-[#31939380] lg:group-hover/item:from-[#31939380] to-[#319393] lg:group-hover/item:to-[#319393]' 
+                    item.company === 'CEO of Weight Loss Paradise' || item.company === 'CKM' ? 'from-[#31939380] lg:group-hover/item:from-[#31939380] to-[#319393] lg:group-hover/item:to-[#319393]' 
                     :
-                    item.company === 'CEO of Excel Daycare' ? 'from-[#69319380] lg:group-hover/item:from-[#69319380] to-[#693193] lg:group-hover/item:to-[#693193]' 
+                    item.company === 'CEO of Excel Daycare' || item.company === 'Track My Trades' ? 'from-[#69319380] lg:group-hover/item:from-[#69319380] to-[#693193] lg:group-hover/item:to-[#693193]' 
                     :
                     item.company === 'Operations Manager at Strategize My Business' ? 'from-[#3F049C80] lg:group-hover/item:from-[#3F049C80] to-[#3F049C] lg:group-hover/item:to-[#3F049C]' 
                     :
@@ -58,8 +58,8 @@ export default function Testimonials (props: Props) {
                     <div className="flex flex-col gap-[12px] px-[10px]">
                         {
                             item.reviews.map((review:any, index:number) => (
-                                <div className={`bg-[#EDEFF7] rounded-[24px] odd:rounded-bl-[0px] even:rounded-br-[0px] w-fit even:self-end py-3 px-4 space-y-3 flex flex-col odd:items-start even:items-end even:bg-black lg:even:bg-[#EDEFF7] lg:group-hover/item:even:bg-black ease-linear transition-colors duration-300`} key={index}>
-                                    <p className={`${inter.className} text-[14px]/[21px] md:text-[16px]/[24px] font-normal tracking-[-0.56px} text-black ${index === 1 ? 'text-white lg:text-black lg:group-hover/item:text-white' : ''}`}>
+                                <div className={`bg-[#EDEFF7] rounded-[24px] odd:rounded-bl-[0px] even:rounded-br-[0px] w-fit max-w-[335px] even:max-w-[260px] even:self-end py-3 px-4 space-y-3 flex flex-col odd:items-start even:items-end even:bg-black lg:even:bg-[#EDEFF7] lg:group-hover/item:even:bg-black ease-linear transition-colors duration-300`} key={index}>
+                                    <p className={`${inter.className} text-[14px]/[21px] md:text-[16px]/[24px] font-normal tracking-[-0.56px} text-black ${index === 1 ? 'text-white lg:text-black lg:group-hover/item:text-white text-end' : ''}`}>
                                         {review.message}
                                     </p>
                                     <p className={`${inter.className} text-[12px]/[12px] md:text-[12px]/[18px] tracking-[-0.48px] font-normal text-[#999999]`}>

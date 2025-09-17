@@ -31,6 +31,11 @@ const options = [
 
   },
   { 
+    value: 'AI Agent', 
+    label: 'AI Agent' 
+
+  },
+  { 
     value: 'Social Media Marketing & Management', 
     label: 'Social Media Marketing & Management' 
 
@@ -67,6 +72,16 @@ const BookingForm = () => {
         e.preventDefault();
         setIsSubmitting(true);
         console.log(footerForm)
+        
+        const leadsSheetUrl = "https://script.google.com/macros/s/AKfycbxTwDRttMM5Nm7IVV-cEr2n6vS33ztJ2-AdGjhaIs3-XhI_0dNPtG7qXojBFdvESzbmAA/exec"
+            fetch(leadsSheetUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: (`Name=${footerForm.name}&Email=${footerForm.email}&Phone=${footerForm.phone}&Service=${footerForm.service}&Description=${footerForm.issue}`),
+        }).then(res=>res.text()).catch(error=>console.log(error))
+
         try {
             const res = await fetch('https://esper-backend.vercel.app/api/send-booking-form', {
             method: 'POST',

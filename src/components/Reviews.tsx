@@ -14,7 +14,7 @@ const Reviews = () => {
     const filters = Array.from(
         new Map(testimonial.map(item => [item.service, item])).values()
     );
-    const [selectedService, setSelectedService] = useState('Web Design & Dev.');
+    const [selectedService, setSelectedService] = useState('AI Agent');
     const [activeFilter, setActiveFilter] = useState(0);
   return (
         <div className='flex flex-col gap-12 md:gap-16'>
@@ -30,7 +30,7 @@ const Reviews = () => {
                     </button>
                     ))
                 }
-                <div className="flex md:hidden absolute w-full h-[calc(25%)] bg-white left-1/2 top-0 -translate-x-1/2 rounded-[32px] drop-shadow-xl drop-shadow-[#00000033] z-0 transition-all ease-linear duration-300" style={{ top: `${(activeFilter / 4) * 100}%` }}></div>
+                <div className={`flex md:hidden absolute w-full bg-white left-1/2 -translate-x-1/2 rounded-[32px] drop-shadow-xl drop-shadow-[#00000033] z-0 transition-all ease-linear duration-300`} style={{ top: `${(activeFilter / filters.length) * 100}%`, height: `${100/filters.length}%` }}></div>
                 </div>
             </div>
             <Testimonials selectedService={selectedService} />

@@ -1,5 +1,56 @@
 [
     {
+        "image": "/images/testimonials/colony-heating-ai-agent.webp",
+        "service": "AI Agent",
+        "name": "Zaraiz Ahmad",
+        "company": "Operations Manager at Strategize My Business",
+        "reviews": [
+            {
+                "name": "Zaraiz Ahmad",
+                "message": "Since using the EC AI Agent, I've saved over 15 hours a week on reports and scheduling—it's like having a perfect assistant."
+            },
+            {
+                "name": "Esper Creations",  
+                "message": "Love hearing how much time it’s saving you—that’s exactly what we built it for 🚀"         
+            }
+        ],
+        "clientImage": "/images/testimonials/zaraiz-ahmad.webp"
+    },
+    {
+        "image": "/images/testimonials/wlp-ai-agent.webp",
+        "service": "AI Agent",
+        "name": "Jacob Lentner",
+        "company": "CKM",
+        "reviews": [
+            {
+                "name": "Jacob Lentner",
+                "message": "Our ad performance rose by 40% in two months. The AI Agent handles campaigns, tracks conversions, and reminds me of follow-ups—it's like three tools in one."
+            },
+            {
+                "name": "Esper Creations",  
+                "message": "Wow—40% is amazing! Thrilled to see the AI Agent driving those results 🙌"         
+            }
+        ],
+        "clientImage": "/images/testimonials/jacob-lentner.webp"
+    },
+    {
+        "image": "/images/testimonials/excel-ai-agent.webp",
+        "service": "AI Agent",
+        "name": "Kevin Ross",
+        "company": "Track My Trades",
+        "reviews": [
+            {
+                "name": "Kevin Ross",
+                "message": "I don't worry about missing leads or double-booking anymore. The AI Agent manages reports, calls, calendars, and ads effortlessly—it's a total game-changer."
+            },
+            {
+                "name": "Esper Creations",  
+                "message": "Game-changer is the best compliment—we’re so glad it’s simplifying your workflow ✨"         
+            }
+        ],
+        "clientImage": "/images/testimonials/kevin-ross.webp"
+    },
+    {
         "image": "/images/testimonials/git-testimonial.webp",
         "service": "Web Design & Dev.",
         "name": "Fatima Saeed",

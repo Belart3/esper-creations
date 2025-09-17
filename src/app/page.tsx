@@ -176,8 +176,8 @@ export default function Home() {
                       <p className={`${inter.className} text-[18px]/[27px] tracking-[-0.72px] font-normal text-white`}>
                         Starts at
                       </p>
-                      <p className={`${inter.className} text-[53px]/[53px] tracking-[-3.18px] font-semibold text-white`}>
-                        $500
+                      <p className={`${inter.className} text-[29px]/[29px] tracking-[-1.74px] font-semibold text-[#B3B3B3]`}>
+                        <span className="line-through">$1,100</span> <span className={`${inter.className} text-[53px]/[53px] tracking-[-3.18px] font-semibold text-white`}>$700</span>
                       </p>
                   </div>
               </div>

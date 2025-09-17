@@ -77,7 +77,19 @@ return (
             setHeroForm({ ...heroForm, email: e.target.value });
         }}
         />
-        <PhoneInput
+        <input
+        name="phone"
+        aria-label="phone" 
+        type="number" 
+        required
+        className={`${inter.className} w-full xl:w-[250px] p-4 rounded-[16px] bg-[#F4F5FA] placeholder-shown:text-[#666666] placeholder-shown:text-[14px]/[21px] tracking-[-0.56px] font-normal border-none outline-[#FF5600] focus:outline-[#FF5600] focus:border-[#FF5600] focus:ring-[#FF5600] transition-all ease-linear duration-300 ${ heroForm.phone.trim() !== '' ? '!bg-[#FFEEE6]' : '' }`} 
+        placeholder="Phone Number" 
+        value={heroForm.phone}
+        onChange={(e) => {
+            setHeroForm({ ...heroForm, phone: e.target.value });
+        }}
+        />
+        {/* <PhoneInput
         international
         countryCallingCodeEditable={false}
         name="phone"
@@ -91,8 +103,7 @@ return (
         }}
         //error={heroForm.phone ? (isPossiblePhoneNumber(heroForm.phone) ? undefined : toast.error('Invalid phone number')) : toast.error('Phone number required')}   
         className={`${inter.className} w-full xl:w-[250px] p-4 rounded-[16px] bg-[#F4F5FA] placeholder-shown:text-[#666666] placeholder-shown:text-[14px]/[21px] tracking-[-0.56px] font-normal focus:outline-[#FF5600] focus:border-[#FF5600] focus:ring-[#FF5600] border-none outline-[#FF5600] transition-all ease-linear duration-300 ${ heroForm.phone.trim() !== '' ? '!bg-[#FFEEE6]' : '' }`}
-        />
-        <input type="hidden" name="phone" required value={heroForm.phone} />
+        /> */}
         <button 
         className={`${inter.className} rounded-[32px] bg-[#FF5600] py-5 px-6 capitalize text-white font-semibold text-[16px]/[16px] tracking-[-0.64px] w-full lg:w-fit custom-shadow-orange cursor-pointer transition-all ease-linear duration-300 hover:!shadow-none mx-auto`}
         type='submit'
