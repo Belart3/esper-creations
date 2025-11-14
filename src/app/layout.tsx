@@ -12,18 +12,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://espercreations.com/',
   },
-  keywords: [
-    'web design in iowa',
-    'website designers for small business',
-    'best website design company for small businesses',
-    'digital marketing agency iowa',
-    'affordable websites for small business',
-    'website developers for small business',
-    'small business website redesign',
-    'search engine optimization agency',
-    'iowa city web design',
-    'website design cedar rapids iowa',
-  ],
   openGraph: {
     title: '#1 Best Rated Digital Marketing and Web Design Agency | Esper Creations',
     description: 'The best digital marketing agency, Esper Creations delivers top-tier SEO, web design, and branding to help your business grow online.',
