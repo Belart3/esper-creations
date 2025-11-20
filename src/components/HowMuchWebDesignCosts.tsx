@@ -1,6 +1,5 @@
 'use client'
 import { Inter } from 'next/font/google'
-import { Metadata } from 'next'
 import ClientFooter from '@/components/ClientFooter'
 import { usePathname } from 'next/navigation'
 import MoreArticles from '@/components/MoreArticles'

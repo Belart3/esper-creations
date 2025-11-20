@@ -135,7 +135,7 @@ export default function WebsiteDesignPrinciples() {
                                     Implementing fast-loading CSS and frameworks like Tailwind CSS and Next.js
                                 </li>
                                 <li className={`${inter.className} ms-10 text-[#333333] font-normal text-[16px]/[24px]`}>
-                                    Ensuring SEO-friendly performance to rank higher on search engines
+                                    <a href="https://espercreations.com/blogs/how-seo-works-a-simple-guide-to-search-engine-optimization/" className={`${inter.className} text-[#ff5600] underline font-normal text-[16px]/[24px]`}>Ensuring SEO-friendly performance</a> to rank higher on search engines
                                 </li>
                             </ul>
                         </div>
@@ -167,7 +167,7 @@ export default function WebsiteDesignPrinciples() {
                                 </li>
                             </ul>
                             <p className={`${inter.className} text-[#333333] font-normal text-[16px]/[24px]`}>
-                                Instead, we focus on timeless, functional website design that prioritizes user experience and conversions.
+                                Instead, we focus on timeless, functional <a href="https://espercreations.com/blogs/how-website-design-affects-user-experience/" className={`${inter.className} text-[#ff5622] font-normal text-[16px]/[24px] underline`}> website design that prioritizes user experience</a>  and conversions.
                             </p>
                         </div>
                     </div>
@@ -211,7 +211,7 @@ export default function WebsiteDesignPrinciples() {
                             </ul>
                         </div>
                         <p className={`${inter.className} text-[#333333] font-normal text-[16px]/[24px]`}>
-                            These examples demonstrate the power of combining conversion-focused design with SEO-friendly layouts.
+                            These examples demonstrate the power of combining conversion-focused design with <a href="https://espercreations.com/blogs/how-seo-helps-your-business-fuel-growth-visibility-trust/" className={`${inter.className} text-[#ff5600] underline font-normal text-[16px]/[24px]`}>SEO-friendly layouts</a> .
                         </p>
                     </div>
 
@@ -264,7 +264,7 @@ export default function WebsiteDesignPrinciples() {
                             </ul>
                         </div>
                         <p className={`${inter.className} text-[#333333] font-normal text-[16px]/[24px]`}>
-                            We merge story, brand personality, layout psychology, and SEO optimization to build websites that look great and convert visitors into customers.
+                            We merge story, brand personality, layout psychology, and <a href="https://espercreations.com/blogs/how-seo-helps-your-business-fuel-growth-visibility-trust/" className={`${inter.className} text-[#ff5600] underline font-normal text-[16px]/[24px]`}>SEO optimization to build websites</a> that look great and convert visitors into customers.
                         </p>
                     </div>
 
@@ -272,7 +272,7 @@ export default function WebsiteDesignPrinciples() {
                         A website is more than a digital brochure — it’s a business tool. By applying mobile-first design, conversion-focused layouts, fast load times, and data-driven decisions, you can create a website that drives measurable results. 
                     </p>
                     <p className={`${inter.className} text-[#333333] font-normal text-[16px]/[24px] md:text-[18px]/[27px]`}>
-                        Whether you’re a small business owner, startup founder, or anyone looking to design and build a website, remember: every design choice should drive results. Ready to transform your website into a conversion machine? Contact Esper Creations today to discuss your project and <a href="https://espercreations.com/#contact-us" className={`${inter.className} text-[#ff5622] font-normal text-[16px]/[24px]`}> get started!</a>
+                        Whether you’re a small business owner, startup founder, or anyone looking to <a href="https://espercreations.com/" className={`${inter.className} text-[#ff5600] underline font-normal text-[16px]/[24px]`}>design and build a website</a>, remember: every design choice should drive results. Ready to transform your website into a conversion machine? Contact Esper Creations today to <a href="https://espercreations.com/#contact-us" className={`${inter.className} underline text-[#ff5622] font-normal text-[16px]/[24px]`}>design and build your website</a>
                     </p>
                 </div>
             </div>
