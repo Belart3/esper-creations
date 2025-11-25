@@ -1,5 +1,3 @@
-// app/mypage/page.tsx
-import HowMuchWebDesignCosts from '@/components/HowMuchWebDesignCosts';
 import WhatIsWebsiteDesignAndDevelopment from '@/components/WhatIsWebsiteDesignAndDevelopment';
 import type { Metadata } from 'next';
 
@@ -14,7 +12,6 @@ export const metadata: Metadata = {
         description: 'Discover how strategic website design and development improve UX, boost conversions, and elevate your brand presence online.',
     },
 };
-
 
 export default function Page() {
     return <WhatIsWebsiteDesignAndDevelopment />;
