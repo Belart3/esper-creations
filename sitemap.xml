@@ -41,8 +41,13 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://espercreations.com/blogs/why-website-design-is-important//</loc>
+    <loc>https://espercreations.com/blogs/why-website-design-is-important/</loc>
     <lastmod>2025-11-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://espercreations.com/blogs/what-website-design-strategy-is-best</loc>
+    <lastmod>2025-11-28</lastmod>
     <priority>0.8</priority>
   </url>
 </urlset>

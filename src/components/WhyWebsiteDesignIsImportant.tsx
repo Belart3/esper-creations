@@ -201,7 +201,7 @@ export default function WhyWebsiteDesignIsImportant() {
                             How Esper Creations Builds High-Performing Websites
                         </h2>
                         <p className={`${inter.className} text-[#333333] font-normal text-[16px]/[24px]`}>
-                            Since 2014, we’ve specialized in <span className="font-bold">Web Design, WordPress Development, Shopify Development, Branding, Digital Marketing, and SEO</span>, combining everything a business needs under one roof. Our process blends strategy with creativity:
+                            Since 2014, we’ve specialized in <span className="font-bold">Web Design, WordPress Development, Shopify Development, Branding, Digital Marketing, and SEO</span>, combining everything a business needs under one roof. Our process blends <a href="https://espercreations.com/blogs/what-website-design-strategy-is-best/" className={`${inter.className} text-[#ff5600] underline font-normal capitalize text-[16px]/[24px]`}>strategy with creativity</a>:
                         </p>
                         <div className="flex flex-col gap-2 md:gap-4">
                             <ul className='list-disc space-y-2'>
