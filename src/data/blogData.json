@@ -1,5 +1,12 @@
 [
     {
+        "image": "/images/blogs/beginners-guide-to-seo.webp",
+        "title": "The Ultimate Beginner’s Guide to SEO",
+        "date": "December 08,2025",
+        "url": "beginners-guide-to-seo",
+        "alt":  "quick start guide to SEO covers analytics setup, indexing, keyword research, content optimization, internal linking, and link building"
+    },
+    {
         "image": "/images/blogs/what-website-design-strategy-is-best.webp",
         "title": "What Website Design Strategy Is Best",
         "date": "November 28,2025",
