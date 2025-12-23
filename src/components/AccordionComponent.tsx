@@ -19,9 +19,8 @@ type props = {
 export default function AccordionComponent(props: props) {
   return (
     <>
-      <Accordion className='!shadow-none !border-none before:!hidden !m-0 !p-[10px] !rounded-[16px] md:!py-[20px] md:!px-[6px] [&_.Mui-expanded]:!m-0 [&_.MuiAccordionSummary-root]:p-0 [&_.MuiAccordionDetails-root]:p-0'>
+      <Accordion defaultExpanded className='!shadow-none !border-none before:!hidden !m-0 !p-[10px] !rounded-[16px] md:!py-[20px] md:!px-[6px] [&_.Mui-expanded]:!m-0 [&_.MuiAccordionSummary-root]:p-0 [&_.MuiAccordionDetails-root]:p-0'>
         <AccordionSummary
-        //   expandIcon={<ExpandMoreIcon />}
           aria-controls={props.question}
           id={props.question}
           expandIcon={<PlusIcon />}
