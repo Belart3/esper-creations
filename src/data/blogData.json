@@ -1,5 +1,12 @@
 [
     {
+        "image": "/images/blogs/wordpress.webp",
+        "title": "What Is WordPress",
+        "date": "January 09,2026",
+        "url": "what-is-wordpress",
+        "alt":  "Understand what WordPress is, how it works, and why it’s the platform behind millions of websites worldwide."
+    },
+    {
         "image": "/images/blogs/wordpress-or-custom-website-development.webp",
         "title": " WordPress vs Custom Website Development",
         "date": "January 07,2026",
