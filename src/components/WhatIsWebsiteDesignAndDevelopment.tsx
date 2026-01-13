@@ -244,7 +244,7 @@ export default function WhatIsWebsiteDesignAndDevelopment() {
                                     <span className='font-bold capitalize'>accessibility</span>
                                 </li>
                                 <li className={`${inter.className} ms-10 text-[#333333] font-normal text-[16px]/[24px]`}>
-                                    <span className='font-bold capitalize'><a href="https://espercreations.com/blogs/how-seo-works-a-simple-guide-to-search-engine-optimization/" className={`${inter.className} text-[#ff5600] font-normal text-[16px]/[24px]`}>SEO fundamentals</a></span>
+                                    <span className='font-bold capitalize'><a href="https://espercreations.com/blogs/what-is-seo-and-how-it-works/" className={`${inter.className} text-[#ff5600] font-normal text-[16px]/[24px]`}>SEO fundamentals</a></span>
                                 </li>
                             </ul>
                             <p className={`${inter.className} text-[#333333] font-normal text-[16px]/[24px]`}>

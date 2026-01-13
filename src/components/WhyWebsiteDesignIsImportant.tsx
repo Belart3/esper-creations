@@ -316,7 +316,7 @@ export default function WhyWebsiteDesignIsImportant() {
                                     <span className='font-bold capitalize'> better branding</span>  
                                 </li>
                                 <li className={`${inter.className} ms-10 text-[#333333] font-normal text-[16px]/[24px]`}>
-                                <a href="https://espercreations.com/blogs/how-seo-works-a-simple-guide-to-search-engine-optimization/" className={`${inter.className} text-[#ff5600] underline font-bold capitalize text-[16px]/[24px]`}>stronger SEO</a>
+                                <a href="https://espercreations.com/blogs/what-is-seo-and-how-it-works/" className={`${inter.className} text-[#ff5600] underline font-bold capitalize text-[16px]/[24px]`}>stronger SEO</a>
                                 </li>
                                 <li className={`${inter.className} ms-10 text-[#333333] font-normal text-[16px]/[24px]`}>
                                     <span className='font-bold capitalize'>long-term growth</span>

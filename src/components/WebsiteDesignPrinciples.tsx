@@ -132,7 +132,7 @@ export default function WebsiteDesignPrinciples() {
                                     Implementing fast-loading CSS and frameworks like Tailwind CSS and Next.js
                                 </li>
                                 <li className={`${inter.className} ms-10 text-[#333333] font-normal text-[16px]/[24px]`}>
-                                    <a href="https://espercreations.com/blogs/how-seo-works-a-simple-guide-to-search-engine-optimization/" className={`${inter.className} text-[#ff5600] underline font-normal text-[16px]/[24px]`}>Ensuring SEO-friendly performance</a> to rank higher on search engines
+                                    <a href="https://espercreations.com/blogs/what-is-seo-and-how-it-works/" className={`${inter.className} text-[#ff5600] underline font-normal text-[16px]/[24px]`}>Ensuring SEO-friendly performance</a> to rank higher on search engines
                                 </li>
                             </ul>
                         </div>

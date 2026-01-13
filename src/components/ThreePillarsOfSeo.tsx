@@ -53,7 +53,7 @@ export default function ThreePillarsOfSeo() {
                         Why SEO Is Built on Pillars (And Why They Still Matter)
                     </h2>
                     <p className={`${inter.className} text-[#333333] font-normal text-[16px]/[24px]`}>
-                        Search engine optimization changes constantly in execution but rarely in principle. Algorithms are updated, ranking signals are refined, and user behavior evolves—but the <a href="http://localhost:3000/blogs/how-seo-works-a-simple-guide-to-search-engine-optimization/" className={`${inter.className} text-[#FF5600] font-normal text-[16px]/[24px] underline md:text-[18px]/[27px]`}>core structure of SEO</a> remains the same.
+                        Search engine optimization changes constantly in execution but rarely in principle. Algorithms are updated, ranking signals are refined, and user behavior evolves—but the <a href="https://espercreations.com/blogs/what-is-seo-and-how-it-works" className={`${inter.className} text-[#FF5600] font-normal text-[16px]/[24px] underline md:text-[18px]/[27px]`}>core structure of SEO</a> remains the same.
                     </p>
                     <p className={`${inter.className} text-[#333333] font-normal text-[16px]/[24px]`}>
                         Search engines like Google aim to answer three fundamental questions:
