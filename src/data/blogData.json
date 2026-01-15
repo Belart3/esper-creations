@@ -1,5 +1,12 @@
 [
     {
+        "image": "/images/blogs/seo.webp",
+        "title": "What SEO Does for a Website",
+        "date": "January 15,2026",
+        "url": "what-does-seo-do-for-a-website",
+        "alt":  "What Does SEO Do for a Website? A Complete Guide to Visibility, Traffic, and Growth"
+    },
+    {
         "image": "/images/blogs/wordpress.webp",
         "title": "What Is WordPress",
         "date": "January 09,2026",
