@@ -1,4 +1,3 @@
-import WhatIsWebsiteDesignAndDevelopment from '@/components/WhatIsWebsiteDesignAndDevelopment';
 import WhyWebsiteDesignIsImportant from '@/components/WhyWebsiteDesignIsImportant';
 import type { Metadata } from 'next';
 

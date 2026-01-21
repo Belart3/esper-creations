@@ -21,7 +21,7 @@ export default function HowSeoWorks() {
 
         <div className='flex flex-col gap-2 md:gap-4 items-center '>
             <h4 className={`${inter.className} text-center text-[#666666] text-[14px]/[21px] md:text-[16px]/[24px] font-normal capitalize`}>
-                July 24, 2025 · Updated January 13, 2026
+                July 24, 2025 · Updated January 21, 2026
             </h4>
             <h1 className={`${inter.className} text-center text-black text-[32px]/[32px] md:text-[53px]/[53px] font-medium capitalize`}>
                 What Is SEO and How SEO Works: <br /> A Complete Guide to Search Engine Optimization
@@ -451,33 +451,178 @@ export default function HowSeoWorks() {
                 </p>
             </div>
 
-            <div className="flex flex-col gap-4 md:gap-6">
-                <h2 className={`${inter.className} text-black text-[22px]/[22px] md:text-[30px]/[30px] font-medium`}>
+            <div className="flex flex-col gap-4 ">
+                <h2 className={`${inter.className} text-black text-[22px]/[28px] md:text-[26px]/[32px] font-medium`}>
                     How Long Does SEO Take to Work?
                 </h2>
 
-                <p className={`${inter.className} text-[#333333] font-normal text-[16px]/[24px]`}>
-                    SEO is a long-term strategy.
+                <p className={`${inter.className} text-[#444444] text-[15px]/[26px] md:text-[16px]/[28px] mt-4`}>
+                SEO is a long-term strategy, not an instant fix. Unlike paid advertising, SEO does not deliver results overnight because search engines need time to discover, evaluate, and trust your website.
                 </p>
 
-                <p className={`${inter.className} text-[#333333] font-normal text-[16px]/[24px]`}>
-                    Typical timelines:
+                <p className={`${inter.className} text-[#444444] text-[15px]/[26px] md:text-[16px]/[28px] mt-4`}>
+                In most cases, <a href="https://espercreations.com/blogs/what-happens-after-you-do-seo/" className="text-[#ff5600] underline mx-1">SEO takes several months to show meaningful results</a>, and the timeline depends on factors like competition, website quality, and consistency.
                 </p>
 
-                <ul className="flex flex-col gap-2 md:gap-3 list-disc ms-5">
-                    <li className={`${inter.className} text-[#333333] font-normal text-[16px]/[24px]`}>
-                        Initial improvements: 1–3 months
-                    </li>
-                    <li className={`${inter.className} text-[#333333] font-normal text-[16px]/[24px]`}>
-                        Noticeable growth: 3–6 months
-                    </li>
-                    <li className={`${inter.className} text-[#333333] font-normal text-[16px]/[24px]`}>
-                        Compounding results: 6–12+ months
-                    </li>
+                <h3 className={`${inter.className} text-black text-[18px]/[24px] md:text-[20px]/[26px] font-medium mt-8`}>
+                Typical SEO Timeline
+                </h3>
+
+                <p className={`${inter.className} text-[#444444] text-[15px]/[26px] md:text-[16px]/[28px] mt-4`}>
+                While no two websites are exactly the same, most SEO efforts follow a predictable pattern:
+                </p>
+
+                <h4 className={`${inter.className} text-black text-[16px]/[22px] font-medium mt-6`}>
+                Month 0–1: Foundation and Indexing
+                </h4>
+
+                <p className={`${inter.className} text-[#444444] text-[15px]/[26px] md:text-[16px]/[28px] mt-2`}>
+                During the first few weeks, SEO work focuses on:
+                </p>
+
+                <ul className="list-disc pl-6 mt-3 space-y-2">
+                <li className={`${inter.className} text-[#444444] text-[15px]/[26px] md:text-[16px]/[28px]`}>
+                    Technical improvements
+                </li>
+                <li className={`${inter.className} text-[#444444] text-[15px]/[26px] md:text-[16px]/[28px]`}>
+                    Keyword targeting
+                </li>
+                <li className={`${inter.className} text-[#444444] text-[15px]/[26px] md:text-[16px]/[28px]`}>
+                    Content optimization
+                </li>
+                <li className={`${inter.className} text-[#444444] text-[15px]/[26px] md:text-[16px]/[28px]`}>
+                    Site structure and internal linking
+                </li>
                 </ul>
 
-                <p className={`${inter.className} text-[#333333] font-normal text-[16px]/[24px]`}>
-                    Consistency is key when learning how SEO works over time.
+                <p className={`${inter.className} text-[#444444] text-[15px]/[26px] md:text-[16px]/[28px] mt-4`}>
+                At this stage, search engines begin crawling and indexing changes, but visible ranking improvements are usually minimal.
+                </p>
+
+                <h4 className={`${inter.className} text-black text-[16px]/[22px] font-medium mt-6`}>
+                Months 1–3: Early Signals and Small Improvements
+                </h4>
+
+                <p className={`${inter.className} text-[#444444] text-[15px]/[26px] md:text-[16px]/[28px] mt-2`}>
+                This is when early SEO progress may start to appear:
+                </p>
+
+                <ul className="list-disc pl-6 mt-3 space-y-2">
+                <li className={`${inter.className} text-[#444444] text-[15px]/[26px] md:text-[16px]/[28px]`}>
+                    Pages begin ranking for low-competition keywords
+                </li>
+                <li className={`${inter.className} text-[#444444] text-[15px]/[26px] md:text-[16px]/[28px]`}>
+                    Impressions increase in Google Search Console
+                </li>
+                <li className={`${inter.className} text-[#444444] text-[15px]/[26px] md:text-[16px]/[28px]`}>
+                    Small traffic gains may occur
+                </li>
+                </ul>
+
+                <p className={`${inter.className} text-[#444444] text-[15px]/[26px] md:text-[16px]/[28px] mt-4`}>
+                These early signs indicate that search engines are starting to understand your content better.
+                </p>
+
+                <h4 className={`${inter.className} text-black text-[16px]/[22px] font-medium mt-6`}>
+                Months 3–6: Noticeable Growth
+                </h4>
+
+                <p className={`${inter.className} text-[#444444] text-[15px]/[26px] md:text-[16px]/[28px] mt-2`}>
+                For many websites, this is when SEO begins to work more clearly:
+                </p>
+
+                <ul className="list-disc pl-6 mt-3 space-y-2">
+                <li className={`${inter.className} text-[#444444] text-[15px]/[26px] md:text-[16px]/[28px]`}>
+                    Rankings improve for primary keywords
+                </li>
+                <li className={`${inter.className} text-[#444444] text-[15px]/[26px] md:text-[16px]/[28px]`}>
+                    Organic traffic becomes more consistent
+                </li>
+                <li className={`${inter.className} text-[#444444] text-[15px]/[26px] md:text-[16px]/[28px]`}>
+                    Engagement metrics like time on page improve
+                </li>
+                </ul>
+
+                <p className={`${inter.className} text-[#444444] text-[15px]/[26px] md:text-[16px]/[28px] mt-4`}>
+                If SEO is done correctly and consistently, this phase often brings the first noticeable results.
+                </p>
+
+                <h4 className={`${inter.className} text-black text-[16px]/[22px] font-medium mt-6`}>
+                6–12+ Months: Compounding SEO Results
+                </h4>
+
+                <p className={`${inter.className} text-[#444444] text-[15px]/[26px] md:text-[16px]/[28px] mt-2`}>
+                Long-term SEO success builds over time:
+                </p>
+
+                <ul className="list-disc pl-6 mt-3 space-y-2">
+                <li className={`${inter.className} text-[#444444] text-[15px]/[26px] md:text-[16px]/[28px]`}>
+                    Stronger keyword positions
+                </li>
+                <li className={`${inter.className} text-[#444444] text-[15px]/[26px] md:text-[16px]/[28px]`}>
+                    Higher authority and trust
+                </li>
+                <li className={`${inter.className} text-[#444444] text-[15px]/[26px] md:text-[16px]/[28px]`}>
+                    Steady organic traffic growth
+                </li>
+                </ul>
+
+                <p className={`${inter.className} text-[#444444] text-[15px]/[26px] md:text-[16px]/[28px] mt-4`}>
+                At this stage, SEO becomes a compounding asset, meaning results continue to improve even without constant changes.
+                </p>
+
+                <h3 className={`${inter.className} text-black text-[18px]/[24px] md:text-[20px]/[26px] font-medium mt-10`}>
+                What Affects How Long SEO Takes?
+                </h3>
+
+                <p className={`${inter.className} text-[#444444] text-[15px]/[26px] md:text-[16px]/[28px] mt-4`}>
+                Several factors influence how quickly SEO works:
+                </p>
+
+                <ul className="list-disc pl-6 mt-3 space-y-2">
+                <li className={`${inter.className} text-[#444444] text-[15px]/[26px] md:text-[16px]/[28px]`}>
+                    <strong>Competition:</strong> Highly competitive industries take longer to rank
+                </li>
+                <li className={`${inter.className} text-[#444444] text-[15px]/[26px] md:text-[16px]/[28px]`}>
+                    <strong>Website age:</strong> New websites typically need more time to build trust
+                </li>
+                <li className={`${inter.className} text-[#444444] text-[15px]/[26px] md:text-[16px]/[28px]`}>
+                    <strong>Content quality:</strong> Helpful, well-structured content ranks faster
+                </li>
+                <li className={`${inter.className} text-[#444444] text-[15px]/[26px] md:text-[16px]/[28px]`}>
+                    <strong>Technical SEO:</strong> Poor site performance slows progress
+                </li>
+                <li className={`${inter.className} text-[#444444] text-[15px]/[26px] md:text-[16px]/[28px]`}>
+                    <strong>Consistency:</strong> SEO requires ongoing optimization, not one-time effort
+                </li>
+                </ul>
+
+                <h3 className={`${inter.className} text-black text-[18px]/[24px] md:text-[20px]/[26px] font-medium mt-10`}>
+                Why SEO Takes Time (And Why That’s a Good Thing)
+                </h3>
+
+                <p className={`${inter.className} text-[#444444] text-[15px]/[26px] md:text-[16px]/[28px] mt-4`}>
+                Search engines aim to provide reliable results to users. Because of this, SEO rewards:
+                </p>
+
+                <ul className="list-disc pl-6 mt-3 space-y-2">
+                <li className={`${inter.className} text-[#444444] text-[15px]/[26px] md:text-[16px]/[28px]`}>
+                    Consistency
+                </li>
+                <li className={`${inter.className} text-[#444444] text-[15px]/[26px] md:text-[16px]/[28px]`}>
+                    Quality
+                </li>
+                <li className={`${inter.className} text-[#444444] text-[15px]/[26px] md:text-[16px]/[28px]`}>
+                    Long-term value
+                </li>
+                </ul>
+
+                <p className={`${inter.className} text-[#444444] text-[15px]/[26px] md:text-[16px]/[28px] mt-4`}>
+                While SEO takes longer than paid ads, the results are more sustainable. Once rankings improve, organic traffic can continue growing without paying for every click.
+                </p>
+
+                <p className={`${inter.className} text-[#444444] text-[15px]/[26px] md:text-[16px]/[28px] mt-4`}>
+                <strong>In short:</strong> SEO doesn’t work instantly — but when it works, it keeps working.
                 </p>
             </div>
 
