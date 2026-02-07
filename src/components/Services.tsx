@@ -18,7 +18,7 @@ const Services = () => {
             <div className="flex flex-col lg:flex-row lg:items-center gap-7 lg:gap-10 bg-white p-5 md:p-10 rounded-[8px] md:rounded-[16px]">
                 <div className="flex flex-col justify-start gap-4 w-full lg:w-1/2">
                     <h3 className={`${inter.className} text-black text-[22px]/[22px] md:text-[29px]/[29px] font-semibold tracking-[-1.32px] md:tracking-[-1.74px] capitalize`}>
-                        EC AI Agent
+                        AI Sales & Marketing Automation Agent
                     </h3>
                     <p className={`${inter.className} text-[#666666] text-[16px]/[24px] md:text-[18px]/[27px] tracking-[-0.64px] md:tracking-[-0.72px] font-normal`}>
                         Our AI Agent effortlessly automates your reports and becomes your savvy ally in sales. It also acts as a dedicated call assistant while managing your calendar seamlessly and overseeing your advertising campaigns.

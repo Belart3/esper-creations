@@ -57,10 +57,10 @@ export default function Home() {
             <div className="flex flex-col gap-12">
               <div className="flex flex-col gap-6 max-w-[1050px] mx-auto">
                 <h1 className={`${inter.className} text-[44px]/[44px] md:text-[73px]/[73px] lg:text-[104px]/[104px] font-semibold tracking-[-2.64px] text-center text-black`}>
-                  #1 Web Design & <br /> Digital Marketing Agency.
+                  Web Design & <br /> Digital Marketing Agency in Iowa
                 </h1>
                 <p className={`${inter.className} text-center text-[#666666] text-[16px]/[24px] md:text-[18px]/[27px] font-normal tracking-[-0.64px] md:tracking-[-0.72px] max-w-[600px] mx-auto`}>
-                  Bring your vision to life with results-driven design, optimized funnels, and powerful marketing. We help businesses build unforgettable brands and transform online presence into consistent revenue—at scale.
+                  We design and develop conversion-focused websites and power them with digital marketing strategies that turn online presence into predictable revenue.
                 </p>
               </div>
               <div className="flex p-4 md:p-6 xl:py-8 xl:px-10 rounded-[24px] bg-white flex-col items-center justify-between xl:flex-row xl:justify-around gap-6 xl:gap-10 w-full max-w-[500px] xl:max-w-none mx-auto">
@@ -126,42 +126,42 @@ export default function Home() {
           </div>
           <div className="flex flex-col gap-5 mt-16">
             <h2 className={`${inter.className} text-center text-[#999999] text-[18px]/[18px] md:text-[20px]/[20px] font-semibold tracking-[-1.08px] md:tracking-[-1.2px] max-w-[600px] mx-auto`}>
-              Trusted by 2,500+ modern businesses, founders & creators
+              Helping businesses grow with conversion-focused web design and digital marketing since 2018.
             </h2>
             <Marquee speed={100} loop={0} pauseOnHover={true} gradient={true} gradientWidth={150} gradientColor="#FFEEE6CC" className="cursor-pointer">
-              <a href="" className="flex !shrink-0 mx-10">
+              <div className="flex !shrink-0 mx-10">
                 <ExportedImage src={"/images/partners/acapulco-grocery-and-bakery.webp"} alt="acapulco-grocery-and-bakery" className='h-[67px]' width={120} height={67}/>
-              </a>
-              <a href="" className="flex !shrink-0 w-[84px] md:w-[130px] mx-5 lg:mx-16">
+              </div>
+              <div className="flex !shrink-0 w-[84px] md:w-[130px] mx-5 lg:mx-16">
                 <ExportedImage src={"/images/partners/cardmines.webp"} alt="cardmines" className='' width={120} height={67} />
-              </a>
-              <a href="" className="flex !shrink-0 w-[84px] md:w-[130px] mx-5 lg:mx-16">
+              </div>
+              <div className="flex !shrink-0 w-[84px] md:w-[130px] mx-5 lg:mx-16">
                 <ExportedImage src={"/images/partners/iowa-digital-solutions.webp" }alt="iowa-digital-solutions" className='' width={120} height={67} />
-              </a>
-              <a href="" className="flex !shrink-0 w-[84px] md:w-[130px] mx-5 lg:mx-16">
+              </div>
+              <div className="flex !shrink-0 w-[84px] md:w-[130px] mx-5 lg:mx-16">
                 <ExportedImage src={"/images/partners/esport-iowa-city.webp" }alt="esport-iowa-city" className='' width={120} height={67} />
-              </a>
-              <a href="" className="flex !shrink-0 w-[84px] md:w-[130px] mx-5 lg:mx-16">
+              </div>
+              <div className="flex !shrink-0 w-[84px] md:w-[130px] mx-5 lg:mx-16">
                 <ExportedImage src={"/images/partners/magic-bail-bonds.webp"} alt="magic-bail-bonds" className='' width={120} height={67} />
-              </a>
-              <a href="" className="flex !shrink-0 w-[84px] md:w-[130px] mx-5 lg:mx-16">
+              </div>
+              <div className="flex !shrink-0 w-[84px] md:w-[130px] mx-5 lg:mx-16">
                 <ExportedImage src={"/images/partners/rose-heaven-nursing-home.webp"}alt="rose-heaven-nursing-home" className='' width={120} height={67} />
-              </a>      
+              </div>      
             </Marquee>
           </div>
         </div>
       </header>
       <main className=" max-w-[1440px] mx-auto py-16 px-5 md:pt-[104px] pb-5 md:px-6 lg:px-14 flex flex-col gap-[104px]">
         <section className="flex flex-col gap-12 md:gap-16 scroll-mt-25" id="services">
-          <SectionHead title="Results-driven Marketing" description="You deserve more than likes and pretty websites. We build systems designed to convert, scale, and dominate your market." />
+          <SectionHead title="Results-Driven Web Design, Development & Digital Marketing Services" description="You deserve more than pretty websites and vanity metrics. We design, develop, and market high-performing digital experiences built to convert traffic into leads, customers, and long-term growth." />
           <Services />
         </section>
         <section className="flex flex-col gap-12 md:gap-16">
-          <SectionHead title="Remarkable Results" description="See how we helped founders just like you scale traffic, leads, and revenue." />
+          <SectionHead title="Real Results from Some of Our Clients" description="See how our web design, development, and digital marketing strategies help businesses increase traffic, generate leads, and grow revenue." />
           <Reviews />
         </section>
         <section className="flex flex-col gap-12 md:gap-16 scroll-mt-25" id="work">
-          <SectionHead title="See Our Work" description="Still not convinced about us? see what we have created for those who trusted us." />
+          <SectionHead title="See Our Work" description="Explore real projects we’ve delivered through web design, development, and digital marketing for growing businesses." />
           <WorkBanner />
         </section>
         <section className="flex flex-col gap-12 md:gap-16 scroll-mt-25" id="pricing">

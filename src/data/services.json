@@ -1,22 +1,22 @@
 [
     {
         "title": "Website Design & Development",
-        "description": "Visually stunning. Performance-optimized. Built for conversion. Custom websites that align with your brand & fuel business growth. 🔍 SEO Optimized • 💡 UX-Focused • ⚡ Blazing Fast",
+        "description": "Conversion-focused website design and development built for speed, SEO, and user experience. Custom websites that align with your brand and drive real business growth.",
         "cta": "get a high-converting website"
     },
     {
         "title": "Organic SEO",
-        "description": "Climb search rankings, grow traffic, and get found by customers who are already searching for you. On-page SEO, keyword targeting, and content optimization for sustainable visibility.",
-        "cta": "Boost my site’s visibility!"
+        "description": "Improve search rankings, grow qualified traffic, and get found by customers actively searching for your services. Our organic SEO strategies focus on on-page optimization, keyword targeting, and sustainable growth.",
+        "cta": "Get More Traffic with SEO"
     },
     {
         "title": "Social Media Marketing",
-        "description": "Scale with scroll-stopping content and campaigns that convert. High-performance media, automation, and growth-driven strategies for every platform.",
-        "cta": "run my social campaign!"
+        "description": "Scale your brand with scroll-stopping content and conversion-focused social media campaigns. We combine high-performance creative, automation, and data-driven strategy for consistent growth.",
+        "cta": "Launch My Social Campaign"
     },
         {
         "title": "PPC Advertising",
-        "description": "Every click counts. Maximize ROI with precision-targeted paid ads. Google, Meta, LinkedIn & more—managed by pros using AI + data.",
-        "cta": "manage my pPC ads!"
+        "description": "Maximize ROI with precision-targeted PPC advertising across Google, Meta, LinkedIn, and more. Data-driven campaign management powered by AI and expert optimization.",
+        "cta": "Start My PPC Campaign"
     }
 ]
