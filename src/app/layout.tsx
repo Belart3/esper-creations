@@ -6,13 +6,13 @@ import 'swiper/css/pagination';
 import NavBlock from "@/components/NavBlock";
 
 export const metadata: Metadata = {
-  title: 'Web Design & Digital Marketing Agency in Iowa | Esper Creations',
+  title: 'Web Design & Digital Marketing Agency in Iowa',
   description: 'Iowa-based web design and digital marketing agency helping businesses grow with custom websites, SEO, PPC, and conversion-focused strategies.',
   alternates: {
     canonical: 'https://espercreations.com/',
   },
   openGraph: {
-    title: 'Web Design & Digital Marketing Agency in Iowa | Esper Creations',
+    title: 'Web Design & Digital Marketing Agency in Iowa',
     description: 'Iowa-based web design and digital marketing agency helping businesses grow with custom websites, SEO, PPC, and conversion-focused strategies.',
   },
 };
